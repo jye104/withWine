@@ -1,0 +1,111 @@
+@charset "utf-8";
+@import "_var", "_mixin", "_function";
+
+#cnt1{
+  @include flex;
+  @include justify-content;
+  @include align-items;
+  height: 100vh; background: $lightPink;
+  .move_box{
+    overflow: hidden; width: 600px; height: 600px; border-radius: 50%;
+    .photo{
+      @include transition(transform 0.5s ease);
+      width: 865px; height: 1080px;
+    }
+  }
+  .move_box:hover .photo{transform: scale(1.05);}
+  .photo img{
+    @include transition(transform 0.5s ease);
+    position: absolute; top: 0; left: 0; width: 95%;
+  }
+  .txt{
+    @include flex;
+    @include justify-content(space-between);
+    @include align-items;
+    @include translateY-50;
+    width: 100%; top: 50%; left: 0; padding: 0 15.2vw 0 14vw;
+    h2{font-family: ComicNeue; font-weight: 700; font-size: 6.25vw; color: $red; margin-bottom: 1vw;}
+    p{font-size: 1.1vw; line-height: 2vw; letter-spacing: -0.05vw;}
+    span{color: $beige;}
+    .txt2{text-align: right;}
+  }
+  .scrollDown{
+    position: absolute; top: 93%; left: 3%; font-family: AmaticSC; font-size: 1.7vw;
+  }
+}
+
+#cnt2{
+  @include flex;
+  @include align-items;
+  height: 100vh;
+  h2{
+    background: url("../images/main/cnt2_bg.jpg") no-repeat 50% / cover;  width: 25vw; height: 31vw; /*  width: 573px; height: 678px;*/ max-width: 100%; border-radius: 45%; margin-right: 5vw;
+    span{top: 8vw; right: 0vw; font-family: AmaticSC; font-size: 6vw; margin-right: -3vw;}
+  }
+  .swiper-wrapper{
+    @include align-items(flex-end);
+    width: 65vw;
+    .swiper-slide{
+      .slide{
+        @include flex;
+        @include flex-direction;
+        @include align-items;
+        @include justify-content(flex-end);
+        font-family: ComicNeue; height: 36vw;
+        &::before{
+          content:""; display: block; position: absolute; top: 0; left: 0; background: url("../images/fruit/lime1.png"); width: 10vw; height: 10vw; z-index: 100;}
+        .winePhoto{position: relative; display: block; text-align: center; width: 8.5vw;}
+        .winePhoto img{
+          @include transition(width, 0.5s);
+          width: 6vw;
+        }
+        strong{display: block; text-align: center;  font-size: 1.5vw; margin: 1vw 0;}
+      }
+      .slide:hover, .slide:focus{
+        .winePhoto img{width: 8.5vw;}
+        .btn_more{background: url("../images/icon/btn_red_on.png") no-repeat 50% / cover; color: #fff;}
+      }
+    }
+  }
+  .swiper-button-prev, .swiper-button-next{
+    margin-top: 0; width: 5vw; height: 4.8vw; background: no-repeat 50% / cover;
+    &::after{display: none;}
+  }
+  .swiper-button-prev{background-image: url("../images/icon/slide_left.png"); left: 0;}
+  .swiper-button-next{background-image: url("../images/icon/slide_right.png"); right: 0;}
+}
+
+#cnt3{
+  @include flex;
+  @include justify-content(space-between);
+  @include align-items;
+  height: 100vh;
+  .left_txt{
+    text-align: center;
+    h2{
+      font-size: 6.5vw; font-family: AmaticSC; padding-bottom: 2vw;
+    }
+    article{
+      @include flex;
+      @include flex-wrap;
+      @include justify-content;
+      @include align-items;
+    }
+    .atc_txt{
+      padding: 2vw 5vw; position: relative;
+      .num{
+        @include transition(color 0.3s);
+        position: absolute; top: 0; left: 0;;font-family: AmaticSC; font-weight: 700; font-size: 5vw;}
+      strong{
+        @include transition(color 0.3s);
+        font-family: ComicNeue; font-size: 2vw;}
+      .txt{font-size: 1vw; line-height: 1.5; padding: 1vw 0;}
+    }
+    .atc_txt:hover, .atc_txt:focus{
+      .num, strong{color: $red;}
+      .btn_more_bk{background-image: url("../images/icon/btn_red_on.png"); color: #fff;}
+    }
+  }
+  
+  #video{height: 90vh; width: 40vw; margin-right: 10vw; vertical-align: middle; border-radius: 15vw;}
+}
