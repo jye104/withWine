@@ -97,9 +97,13 @@ header, nav, section, article, address, footer {
 .visible {
   visibility: visible; }
 
+.beige {
+  background: #fdf6ee;
+  border-bottom: 1px solid rgba(225, 218, 209, 0.5); }
+
 .btn_more {
   font-size: 1.2vw;
-  background: url("../images/btn_red.png") no-repeat 50%/cover;
+  background: url("../images/icon/btn_red.png") no-repeat 50%/cover;
   width: 7.14vw;
   height: 2.85vw;
   font-family: ComicNeue; }
@@ -108,7 +112,7 @@ header, nav, section, article, address, footer {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   font-size: 1.2vw;
-  background: url("../images/btn_bk.png") no-repeat 50%/cover;
+  background: url("../images/icon/btn_bk.png") no-repeat 50%/cover;
   width: 7.14vw;
   height: 2.85vw;
   font-family: ComicNeue; }

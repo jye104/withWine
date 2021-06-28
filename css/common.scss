@@ -65,12 +65,13 @@ header, nav, section, article, address, footer{display: block;}
 .max1440{width: 100%; max-width: 1440px; margin: 0 auto;}
 .hidden{visibility: hidden;}
 .visible{visibility: visible;}
+.beige{background: $beige; border-bottom: 1px solid $beige2;}
 .btn_more{
-  font-size: 1.2vw; background: url("../images/btn_red.png")no-repeat 50% / cover; width: 7.14vw; height: 2.85vw; font-family: ComicNeue;
+  font-size: 1.2vw; background: url("../images/icon/btn_red.png")no-repeat 50% / cover; width: 7.14vw; height: 2.85vw; font-family: ComicNeue;
 }
 .btn_more_bk{
   @include transition(all 0.5s);
-  font-size: 1.2vw; background: url("../images/btn_bk.png")no-repeat 50% / cover; width: 7.14vw; height: 2.85vw; font-family: ComicNeue;
+  font-size: 1.2vw; background: url("../images/icon/btn_bk.png")no-repeat 50% / cover; width: 7.14vw; height: 2.85vw; font-family: ComicNeue;
 }
 
 
