@@ -58,13 +58,24 @@
         }
         ul{
           padding: 10px 0 30px;
-          li{padding: 10px 0;
-            a{font-family: Spoqa; font-size: 16px;}
+          li{
+            padding: 10px 0; position: relative;
+            a{
+              font-family: Spoqa; font-size: 16px;
+              }
+            }
           }
         }
       }
-    
   }
+
+#gnbLine{
+  position: absolute;top: -10px;left: 50%; margin-left: -40px; pointer-events: none;
+  #line1{fill: none; stroke: #e23e3d; stroke-linecap: round; stroke-width: 3; stroke-dasharray: 175; stroke-dashoffset: 175; animation: lineGnb 0.5s linear forwards;}
+}
+@keyframes lineGnb {
+  0%{stroke-dashoffset: 175;}
+  100%{stroke-dashoffset: 0;}
 }
 
 // footer 전체 공통& PC
@@ -73,6 +84,7 @@
   @include justify-content;
   @include align-items;
   background: url("../images/common/footer_bg.png") no-repeat top center / cover; height: 80vh; font-size: 0.8333vw;
+  padding-right: 5vw;
   .logo{padding-right: 1vw;}
   .foot_left{
     strong{font-family: ComicNeue; font-size: 1.5vw;}

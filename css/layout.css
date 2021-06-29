@@ -113,11 +113,32 @@
       #pcHeader #gnb > ul > li ul {
         padding: 10px 0 30px; }
         #pcHeader #gnb > ul > li ul li {
-          padding: 10px 0; }
+          padding: 10px 0;
+          position: relative; }
           #pcHeader #gnb > ul > li ul li a {
             font-family: Spoqa;
             font-size: 16px; }
 
+#gnbLine {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin-left: -40px;
+  pointer-events: none; }
+  #gnbLine #line1 {
+    fill: none;
+    stroke: #e23e3d;
+    stroke-linecap: round;
+    stroke-width: 3;
+    stroke-dasharray: 175;
+    stroke-dashoffset: 175;
+    animation: lineGnb 0.5s linear forwards; }
+
+@keyframes lineGnb {
+  0% {
+    stroke-dashoffset: 175; }
+  100% {
+    stroke-dashoffset: 0; } }
 .footer {
   display: -webkit-box;
   display: -moz-box;
@@ -130,7 +151,8 @@
   align-items: center;
   background: url("../images/common/footer_bg.png") no-repeat top center/cover;
   height: 80vh;
-  font-size: 0.8333vw; }
+  font-size: 0.8333vw;
+  padding-right: 5vw; }
   .footer .logo {
     padding-right: 1vw; }
   .footer .foot_left strong {

@@ -18,13 +18,14 @@
   <script src="js/jquery-1.12.4.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/common.js"></script>
+  <script src="js/main.js"></script>
 </head>
 
 <body>
   <div id="skip">
-    <a href="">본문 바로가기</a>
+    <a href="#cnt1">본문 바로가기</a>
   </div>
-  <header id="pcHeader" class="header">
+  <header id="pcHeader" class="header on">
     <div class="headerTop">
       <h1 class="logo">
         <a href=""><span class="blind">with Wine</span></a>
@@ -39,7 +40,7 @@
         <li>
           <a href="">about us</a>
           <ul class="dep2">
-            <li><a href="">회사 소개</a></li>
+            <li><a href="http://wwww.naver.com">회사 소개</a></li>
             <li><a href="">연혁</a></li>
             <li><a href="">CEO 인사말</a></li>
             <li><a href="">사회 공헌 </a></li>
@@ -73,19 +74,25 @@
           </ul>
         </li>
       </ul>
-      <svg>
-        <rect class="shape" />
-      </svg>
+      <div class="hidden">
+        <svg id="gnbLine" width="81.687" height="69.548" viewBox="0 0 81.687 69.548">
+          <g transform="translate(-1638.016 -411.822)" opacity="0.8">
+            <path id="line1" d="M35.92,37.027S-.335,36.189,0,13.925,36.3,2.763,36.3,2.763,67.357,12.724,66.024,28.5c-.92,10.888-7.255,15.157-14.4,15.548-4.172.339-11.395-1.415-17.347-3.271" transform="translate(1639.974 438.528) rotate(-22)"/>
+          </g>
+        </svg>
+      </div>
     </nav>
   </header>
 
   <section class="section p_r" id="cnt1">
-    <div class="move_box p_r">
-      <div class="photo p_r"><img src="images/main/cnt1_bg.jpg" alt=""></div>
+    <div class="move_box_wrap">
+      <div class="move_box p_r">
+        <div class="photo p_r"><img src="images/main/cnt1_bg.jpg" alt=""></div>
+      </div>
     </div>
     <div class="txt p_a">
       <div class="txt1">
-        <h2>Whenev<span>er</span></h2>
+        <h2>Whenever</h2>
         <p>가족들과의 따뜻한 만남,<br>
           공식적인 행사, 언제 어디서든<br>
           와인을 더한다면 더 특별해집니다.</p>
@@ -96,7 +103,7 @@
           풍미를 더하였습니다.<br>
           합리적인 가격으로 <br>
           최고의 품질을 만나보세요.</p>
-        <h2><span>W</span>hatever</h2>
+        <h2>Whatever</h2>
       </div>
     </div>
     <div class="scrollDown">scroll Down<img src="images/icon/scroll_arrow.png" alt=""></div>
@@ -195,6 +202,11 @@
           <p class="txt">다함께 즐기기 좋은 매그넘 와인,<br>가볍게 마시고 싶을 때 딱인<br>하프와인까지 구성<br>3종 패키지를 합리적 가격으로<br>만나보세요!</p>
           <button type="button" class="btn_more_bk">view more</button>
         </a>
+        <div class="hidden">
+          <svg id="hoverLine" width="395.967" height="396.004" viewBox="0 0 395.967 396.004">
+            <path id="line2" d="M119.907,264.366S-20.619,264.893,2.588,110.62C9.851,62.334,30.933,38.49,54.826,21.6c51.957-36.731,121.7-15.489,121.7-15.489S298.152,38.934,276.88,149.427C262.2,225.664,232.123,254.417,200.3,264.636c-18.688,6.73-74.564,19.284-98.939,12.717" transform="matrix(0.574, -0.819, 0.819, 0.574, 3.491, 232.346)"/>
+          </svg>
+        </div>
       </article>
     </div>
     <video id="video" poster="images/main/video_photo.jpg" autoplay muted playsinline loops>
@@ -212,7 +224,7 @@
         또한 와인과 함께 보내드리는 와인노트로<br>
         와인의 문화와 정보를 배우며<br>
         신개념 와인 라이프 스타일을 즐겨보세요.</p>
-      <a href="" class="btn_more_bk">subscription</a>
+      <a href="" class="btn_more_bk">subscription<span class="finger"><img src="images/icon/icon_finger.png" alt=""></span></a>      
     </div>
     <div class="photo_box">
       <div class="box1 box">

@@ -9,27 +9,33 @@
   -webkit-align-items: center;
   align-items: center;
   height: 100vh;
-  background: #FFF1F1;
-  padding-top: 7vw; }
-  #cnt1 .move_box {
+  background: #FFF1F1; }
+  #cnt1 .move_box_wrap {
     overflow: hidden;
     width: 600px;
     height: 600px;
+    border-radius: 50%;
+    margin-top: 5%; }
+  #cnt1 .move_box {
+    width: 550px;
+    height: 550px;
     border-radius: 50%; }
     #cnt1 .move_box .photo {
       -webkit-transition: transform 0.5s ease;
       transition: transform 0.5s ease;
-      width: 865px;
+      width: 958px;
       height: 1080px; }
   #cnt1 .move_box:hover .photo {
-    transform: scale(1.05); }
+    transform: scale(1.03); }
   #cnt1 .photo img {
     -webkit-transition: transform 0.5s ease;
     transition: transform 0.5s ease;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 95%; }
+    top: -10%;
+    left: -15%;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle; }
   #cnt1 .txt {
     display: -webkit-box;
     display: -moz-box;
@@ -57,8 +63,6 @@
       font-size: 1.1vw;
       line-height: 2vw;
       letter-spacing: -0.05vw; }
-    #cnt1 .txt span {
-      color: #fdf6ee; }
     #cnt1 .txt .txt2 {
       text-align: right; }
   #cnt1 .scrollDown {
@@ -246,7 +250,8 @@
       -webkit-align-items: center;
       align-items: center;
       position: relative;
-      margin: 0 10vw; }
+      margin: 0 10vw;
+      display: table; }
       #cnt3 .left_txt article::before {
         -webkit-transform: translateY(-50%);
         -moz-transform: translateY(-50%);
@@ -275,15 +280,36 @@
         width: 1px;
         height: 80%;
         background: rgba(37, 37, 37, 0.3); }
+      #cnt3 .left_txt article #hoverLine {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        margin-left: -40px;
+        pointer-events: none; }
+        #cnt3 .left_txt article #hoverLine #line2 {
+          fill: none;
+          stroke: #e23e3d;
+          stroke-linecap: round;
+          stroke-width: 5;
+          stroke-dasharray: 897;
+          stroke-dashoffset: 897;
+          animation: linehover 0.5s linear forwards; }
+@keyframes lineHover {
+  0% {
+    stroke-dashoffset: 897; }
+  100% {
+    stroke-dashoffset: 0; } }
     #cnt3 .left_txt .atc_txt {
-      padding: 1vw 3vw 2vw;
-      position: relative; }
+      position: relative;
+      padding: 2vw 2vw;
+      padding-left: 3vw;
+      display: table-cell; }
       #cnt3 .left_txt .atc_txt .num {
         -webkit-transition: color 0.3s;
         transition: color 0.3s;
         position: absolute;
         top: 0;
-        left: -1vw;
+        left: -3vw;
         font-family: AmaticSC;
         font-weight: 700;
         font-size: 4vw; }
@@ -335,15 +361,14 @@
     line-height: 55px;
     font-weight: 700;
     margin-left: 18vw; }
-    #cnt4 .txt_box .btn_more_bk::after {
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 100%;
-      display: block;
-      background: url("../images/icon/icon_finger.png") no-repeat center/cover;
-      width: 3vw;
-      height: 3vw; }
+  #cnt4 .txt_box .finger {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    display: block;
+    /* background: url("../images/icon/icon_finger.png") no-repeat center / cover; */
+    width: 3vw;
+    height: 3vw; }
   #cnt4 .photo_box {
     position: relative;
     width: 50%;
