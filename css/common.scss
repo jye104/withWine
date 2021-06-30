@@ -79,6 +79,29 @@ header, nav, section, article, address, footer{display: block;}
   font-size: 1.2vw; background: url("../images/icon/btn_on.png")no-repeat 50% / cover; width: 7.14vw; height: 2.85vw; font-family: ComicNeue; color: #fff; font-weight: 700;
 }
 
+// fade effect
+.fade .fade_up, .fade .fade_down, .fade .fade_right, .fade .fade_left{
+  @include transition(all 1s);
+  opacity: 0;
+}
+.fade.on .fade_up, .fade.on .fade_down, .fade.on .fade_right, .fade.on .fade_left{
+  @include translate-0;
+  opacity: 1;
+}
+.fade .fade_up{
+  @include transform(translate(0,100px));
+}
+.fade .fade_down{
+  @include transform(translate(0,-100px));
+}
+.fade .fade_right{
+  @include transform(translate(-100px,0));
+}
+.fade .fade_left{
+  @include transform(translate(100px,0));
+} 
+.delay-3{-webkit-transition-delay: 0.3s !important; transition-delay: 0.3s !important;}
+.delay-6{-webkit-transition-delay: 0.6s !important; transition-delay: 0.6s !important;}
 
 body{
   font-family: Spoqa, AmaticSC, ComicNeue; font-size: 16px; color: #373737;line-height: 1; font-weight: 400; word-break: keep-all; background: #fdf6ee;

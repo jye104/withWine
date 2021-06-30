@@ -133,6 +133,45 @@ header, nav, section, article, address, footer {
   color: #fff;
   font-weight: 700; }
 
+.fade .fade_up, .fade .fade_down, .fade .fade_right, .fade .fade_left {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 0; }
+
+.fade.on .fade_up, .fade.on .fade_down, .fade.on .fade_right, .fade.on .fade_left {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  transform: translate(0, 0);
+  opacity: 1; }
+
+.fade .fade_up {
+  -webkit-transform: translate(0, 100px);
+  -moz-transform: translate(0, 100px);
+  transform: translate(0, 100px); }
+
+.fade .fade_down {
+  -webkit-transform: translate(0, -100px);
+  -moz-transform: translate(0, -100px);
+  transform: translate(0, -100px); }
+
+.fade .fade_right {
+  -webkit-transform: translate(-100px, 0);
+  -moz-transform: translate(-100px, 0);
+  transform: translate(-100px, 0); }
+
+.fade .fade_left {
+  -webkit-transform: translate(100px, 0);
+  -moz-transform: translate(100px, 0);
+  transform: translate(100px, 0); }
+
+.delay-3 {
+  -webkit-transition-delay: 0.3s !important;
+  transition-delay: 0.3s !important; }
+
+.delay-6 {
+  -webkit-transition-delay: 0.6s !important;
+  transition-delay: 0.6s !important; }
+
 body {
   font-family: Spoqa, AmaticSC, ComicNeue;
   font-size: 16px;

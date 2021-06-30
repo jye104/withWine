@@ -107,3 +107,19 @@ $(document).ready(function () {
     if((!e.shiftKey || e.keyCode !==16) && e.keyCode ===9) $gnb.trigger('mouseleave');
   });
 });
+
+// fade 효과
+$(window).on('scroll', function () {
+  var scrollY = $(this).scrollTop() + $(this).height() * 2/3; 
+  console.log(scrollY);
+
+  $('.fade').each(function (idx) {
+    if (scrollY > $(this).offset().top) {
+      $(this).addClass('on');
+    } else { //반복적인 효과가 필요한 경우만 사용하기
+      $(this).removeClass('on');
+    }
+  });
+});
+
+$(window).trigger('scroll');

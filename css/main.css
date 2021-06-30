@@ -71,14 +71,6 @@
     left: 3%;
     font-family: AmaticSC;
     font-size: 1.7vw; }
-  #cnt1 .circle {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: #e23e3d;
-    color: #fdf6ee;
-    top: 0;
-    left: 0; }
 
 #cnt2 {
   display: -webkit-box;
@@ -228,15 +220,24 @@
     right: 0; }
 
 #cnt3 {
-  position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
   height: 100vh;
-  text-align: center; }
+  text-align: center;
+  margin: 0 1vw; }
   #cnt3 .left_txt {
-    width: 60%;
-    padding-left: 5vw; }
+    width: 60%; }
     #cnt3 .left_txt h2 {
       font-size: 5vw;
-      font-family: AmaticSC; }
+      font-family: AmaticSC;
+      /* padding: 3vw 0; */ }
     #cnt3 .left_txt article {
       display: -webkit-box;
       display: -moz-box;
@@ -316,12 +317,9 @@
   100% {
     stroke-dashoffset: 0; } }
   #cnt3 #video {
-    position: absolute;
-    top: 0;
-    right: 7vw;
+    /*position: absolute; top: 0; right: 7vw; */
     width: 40%;
-    height: 80vh;
-    vertical-align: middle; }
+    height: 80vh; }
 
 #cnt4 {
   display: -webkit-box;
@@ -634,31 +632,26 @@
       font-size: 2.7vw; }
 
   #cnt2 {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
+    display: block;
     height: 100vh; }
     #cnt2 h2 {
-      background: url("../images/main/cnt2_bg.jpg") no-repeat 50%/cover;
-      width: 25vw;
+      background: none;
+      text-align: center;
+      width: 100%;
       height: 31vw;
-      /*  width: 573px; height: 678px;*/
-      max-width: 100%;
-      border-radius: 45%; }
+      max-width: none;
+      border-radius: 45%;
+      padding-top: 10vw; }
       #cnt2 h2 span {
-        top: 8vw;
-        right: 0vw;
-        font-family: AmaticSC;
-        font-size: 6vw;
-        margin-right: -3vw; }
+        position: static;
+        font-size: 9.2vw;
+        margin-right: 0vw; }
     #cnt2 .swiper-wrapper {
       -webkit-align-items: flex-end;
       align-items: flex-end;
-      width: 65vw; }
+      width: auto; }
+      #cnt2 .swiper-wrapper .swiper-slide {
+        width: 200px; }
       #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto::before {
         -webkit-transition: opacity, 0.4s;
         transition: opacity, 0.4s;
@@ -742,25 +735,30 @@
         -webkit-align-items: center;
         align-items: center;
         -webkit-justify-content: flex-end;
-        justify-content: flex-end;
-        font-family: ComicNeue;
-        height: 36vw; }
+        justify-content: flex-end; }
         #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto {
           position: relative;
           display: block;
           text-align: center;
-          width: 8.5vw; }
+          width: 9.5vw; }
         #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto img {
           -webkit-transition: width, 0.4s;
           transition: width, 0.4s;
-          width: 6vw; }
+          width: 8vw; }
         #cnt2 .swiper-wrapper .swiper-slide .slide strong {
           display: block;
           text-align: center;
           font-size: 1.5vw;
           margin: 1vw 0; }
+      #cnt2 .swiper-wrapper .swiper-slide.swiper-slide-next .winePhoto img {
+        width: 15vw; }
+      #cnt2 .swiper-wrapper .swiper-slide.swiper-slide-next .winePhoto::before, #cnt2 .swiper-wrapper .swiper-slide.swiper-slide-next .winePhoto::after {
+        opacity: 1; }
+      #cnt2 .swiper-wrapper .swiper-slide.swiper-slide-next .btn_more {
+        background: url("../images/icon/btn_on.png") no-repeat 50%/cover;
+        color: #fff; }
       #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto img, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto img {
-        width: 8vw; }
+        width: 17vw; }
       #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto::before, #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto::after, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto::before, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto::after {
         opacity: 1; }
       #cnt2 .swiper-wrapper .swiper-slide .slide:hover .btn_more, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .btn_more {
@@ -775,9 +773,72 @@
         display: none; }
     #cnt2 .swiper-button-prev {
       background-image: url("../images/icon/slide_left.png");
-      left: 0; }
+      left: 2vw;
+      top: 2vw; }
     #cnt2 .swiper-button-next {
       background-image: url("../images/icon/slide_right.png");
-      right: 0; } }
+      right: 2vw;
+      top: 2vw; }
+
+  #cnt3 {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin: 0 2vw; }
+    #cnt3 .left_txt {
+      width: 60%; }
+      #cnt3 .left_txt h2 {
+        font-size: 5vw;
+        padding-bottom: 2vw; }
+      #cnt3 .left_txt article {
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        position: relative; }
+        #cnt3 .left_txt article::before, #cnt3 .left_txt article::after {
+          display: none; }
+        #cnt3 .left_txt article .atc_txt {
+          width: 200px;
+          padding: 0vw 0vw;
+          /*  &::before{content:""; display: block;border-radius: 50%;background: rgba(37,37,37,.1); position: absolute; top: 0; left: 0; width: 200px; height: 200px;} */ }
+          #cnt3 .left_txt article .atc_txt .num {
+            font-size: 5vw;
+            top: 0;
+            left: -2vw;
+            font-weight: 700; }
+          #cnt3 .left_txt article .atc_txt strong {
+            font-size: 2vw; }
+          #cnt3 .left_txt article .atc_txt .txt {
+            font-size: 1vw;
+            line-height: 1.5;
+            padding: 1vw 0; }
+        #cnt3 .left_txt article .atc_txt:hover .num, #cnt3 .left_txt article .atc_txt:hover strong, #cnt3 .left_txt article .atc_txt:focus .num, #cnt3 .left_txt article .atc_txt:focus strong {
+          color: #e23e3d;
+          font-weight: 700; }
+        #cnt3 .left_txt article .atc_txt:hover .btn_more_bk, #cnt3 .left_txt article .atc_txt:focus .btn_more_bk {
+          background-image: url("../images/icon/btn_on.png");
+          color: #fff; }
+    #cnt3 #hoverLine {
+      position: absolute;
+      top: 0vw;
+      left: 0;
+      pointer-events: none;
+      z-index: 10;
+      opacity: 0.8; }
+      #cnt3 #hoverLine #line2 {
+        fill: none;
+        stroke: #e23e3d;
+        stroke-linecap: round;
+        stroke-width: 5;
+        stroke-dasharray: 897;
+        stroke-dashoffset: 897;
+        animation: lineHover 0.5s linear forwards; }
+  @keyframes lineHover {
+    0% {
+      stroke-dashoffset: 897; }
+    100% {
+      stroke-dashoffset: 0; } }
+    #cnt3 #video {
+      /*position: absolute; top: 0; right: 7vw; */
+      width: 50%;
+      height: 90vh; } }
 
 /*# sourceMappingURL=main.css.map */
