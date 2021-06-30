@@ -207,7 +207,7 @@
         font-size: 1.5vw;
         margin: 1vw 0; }
     #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto img, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto img {
-      width: 8.5vw; }
+      width: 8vw; }
     #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto::before, #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto::after, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto::before, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto::after {
       opacity: 1; }
     #cnt2 .swiper-wrapper .swiper-slide .slide:hover .btn_more, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .btn_more {
@@ -469,8 +469,6 @@
       font-size: 1.2vw;
       line-height: 2vw;
       letter-spacing: -0.05vw; }
-    #cnt1 .txt .txt2 {
-      text-align: right; }
   #cnt1 .scrollDown {
     font-size: 2vw; }
 
@@ -569,5 +567,217 @@
     position: absolute;
     bottom: 5vw;
     right: 0; } }
+@media screen and (max-width: 1080px) {
+  #cnt1 {
+    display: block; }
+    #cnt1 .move_box_wrap {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      margin-top: 0; }
+    #cnt1 .move_box {
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+      margin-top: 8%;
+      overflow: hidden; }
+      #cnt1 .move_box .photo {
+        -webkit-transition: transform 0.5s ease;
+        transition: transform 0.5s ease;
+        width: 958px;
+        height: 1080px; }
+    #cnt1 .move_box:hover .photo {
+      transform: scale(1.03); }
+    #cnt1 .photo img {
+      -webkit-transition: transform 0.5s ease;
+      transition: transform 0.5s ease;
+      position: absolute;
+      top: -10%;
+      left: -15%;
+      width: 100%;
+      text-align: center;
+      vertical-align: middle; }
+    #cnt1 .txt {
+      display: block;
+      width: 100%;
+      top: 60%;
+      left: 0;
+      height: 100vh;
+      padding: 0 10vw; }
+      #cnt1 .txt h2 {
+        font-family: ComicNeue;
+        font-weight: 700;
+        font-size: 8vw;
+        color: #e23e3d;
+        margin-bottom: 1vw; }
+      #cnt1 .txt p {
+        font-size: 1.8vw;
+        line-height: 3vw;
+        letter-spacing: -0.05vw; }
+      #cnt1 .txt .txt1 {
+        position: absolute;
+        top: 5%; }
+      #cnt1 .txt .txt2 {
+        text-align: right;
+        position: absolute;
+        top: 65%;
+        right: 10vw; }
+    #cnt1 .scrollDown {
+      font-size: 2.7vw; }
+
+  #cnt2 {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    height: 100vh; }
+    #cnt2 h2 {
+      background: url("../images/main/cnt2_bg.jpg") no-repeat 50%/cover;
+      width: 25vw;
+      height: 31vw;
+      /*  width: 573px; height: 678px;*/
+      max-width: 100%;
+      border-radius: 45%; }
+      #cnt2 h2 span {
+        top: 8vw;
+        right: 0vw;
+        font-family: AmaticSC;
+        font-size: 6vw;
+        margin-right: -3vw; }
+    #cnt2 .swiper-wrapper {
+      -webkit-align-items: flex-end;
+      align-items: flex-end;
+      width: 65vw; }
+      #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto::before {
+        -webkit-transition: opacity, 0.4s;
+        transition: opacity, 0.4s;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 5vw;
+        left: -2vw;
+        background: no-repeat top left / cover;
+        z-index: 1;
+        opacity: 0;
+        width: 5.5vw;
+        height: 5.2vw; }
+      #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto::after {
+        -webkit-transition: opacity, 0.4s;
+        transition: opacity, 0.4s;
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: -6vw;
+        background: no-repeat top left / cover;
+        z-index: -1;
+        opacity: 0;
+        width: 10vw;
+        height: 10vw; }
+      #cnt2 .swiper-wrapper #slide1 .slide .winePhoto::before {
+        background-image: url("../images/fruit/lime1.png"); }
+      #cnt2 .swiper-wrapper #slide1 .slide .winePhoto::after {
+        background-image: url("../images/fruit/lime2.png"); }
+      #cnt2 .swiper-wrapper #slide2 .slide .winePhoto::before {
+        background-image: url("../images/fruit/blueberry1.png"); }
+      #cnt2 .swiper-wrapper #slide2 .slide .winePhoto::after {
+        background-image: url("../images/fruit/blueberry2.png");
+        width: 8vw;
+        height: 8vw; }
+      #cnt2 .swiper-wrapper #slide3 .slide .winePhoto::before {
+        background-image: url("../images/fruit/shiitake2.png");
+        width: 8vw;
+        height: 8vw; }
+      #cnt2 .swiper-wrapper #slide3 .slide .winePhoto::after {
+        background-image: url("../images/fruit/shiitake3.png");
+        width: 8vw;
+        height: 7vw;
+        right: -5vw; }
+      #cnt2 .swiper-wrapper #slide4 .slide .winePhoto::before {
+        background-image: url("../images/fruit/pear1.png");
+        width: 7vw;
+        height: 9vw; }
+      #cnt2 .swiper-wrapper #slide4 .slide .winePhoto::after {
+        background-image: url("../images/fruit/pear2.png"); }
+      #cnt2 .swiper-wrapper #slide5 .slide .winePhoto::before {
+        background-image: url("../images/fruit/cherry2.png");
+        width: 8vw;
+        height: 8vw; }
+      #cnt2 .swiper-wrapper #slide5 .slide .winePhoto::after {
+        background-image: url("../images/fruit/cherry.png"); }
+      #cnt2 .swiper-wrapper #slide6 .slide .winePhoto::before {
+        background-image: url("../images/fruit/apple.png");
+        width: 6vw;
+        height: 6vw; }
+      #cnt2 .swiper-wrapper #slide6 .slide .winePhoto::after {
+        background-image: url("../images/fruit/apple1.png"); }
+      #cnt2 .swiper-wrapper #slide7 .slide .winePhoto::before {
+        background-image: url("../images/fruit/chocolate2.png");
+        width: 6.5vw;
+        height: 6vw; }
+      #cnt2 .swiper-wrapper #slide7 .slide .winePhoto::after {
+        background-image: url("../images/fruit/chocolate.png");
+        width: 10vw;
+        height: 7.5vw;
+        right: -5vw; }
+      #cnt2 .swiper-wrapper .swiper-slide .slide {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: flex-end;
+        justify-content: flex-end;
+        font-family: ComicNeue;
+        height: 36vw; }
+        #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto {
+          position: relative;
+          display: block;
+          text-align: center;
+          width: 8.5vw; }
+        #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto img {
+          -webkit-transition: width, 0.4s;
+          transition: width, 0.4s;
+          width: 6vw; }
+        #cnt2 .swiper-wrapper .swiper-slide .slide strong {
+          display: block;
+          text-align: center;
+          font-size: 1.5vw;
+          margin: 1vw 0; }
+      #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto img, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto img {
+        width: 8vw; }
+      #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto::before, #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto::after, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto::before, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto::after {
+        opacity: 1; }
+      #cnt2 .swiper-wrapper .swiper-slide .slide:hover .btn_more, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .btn_more {
+        background: url("../images/icon/btn_on.png") no-repeat 50%/cover;
+        color: #fff; }
+    #cnt2 .swiper-button-prev, #cnt2 .swiper-button-next {
+      margin-top: 0;
+      width: 5vw;
+      height: 4.8vw;
+      background: no-repeat 50% / cover; }
+      #cnt2 .swiper-button-prev::after, #cnt2 .swiper-button-next::after {
+        display: none; }
+    #cnt2 .swiper-button-prev {
+      background-image: url("../images/icon/slide_left.png");
+      left: 0; }
+    #cnt2 .swiper-button-next {
+      background-image: url("../images/icon/slide_right.png");
+      right: 0; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -4,9 +4,14 @@ $(document).ready(function () {
     if ($(this).scrollTop()>10) $('#pcHeader').removeClass('on').addClass('beige');
     else $('#pcHeader').addClass('on').removeClass('beige');
   });
+  // mHeader.on
+  $(window).on('scroll', function(){
+    if ($(this).scrollTop()>10) $('#mHeader').addClass('beige');
+    else $('#pcHeader').removeClass('beige');
+  });
 
   // pcGnb
-  const $gnb = $('#gnb > ul');
+  const $gnb = $('#pcGnb > ul');
   const $gnbD2 = $gnb.find('li ul');
   const $gnbD2a = $gnb.find('li ul li a');
 
@@ -22,6 +27,69 @@ $(document).ready(function () {
       $('#pcHeader').removeClass('active').find('#gnb').removeClass('on');
     });
   });
+
+  // mGnb
+  $('#mGnb ul li a').on('click', function(){
+    if ($(this).next().length === 0){ 
+       return true; 
+    } else {
+       const liHei = $(this).next().children().outerHeight(true);
+       const liSize = $(this).next().children().length;
+       const ulHei = liHei * liSize;
+       console.log(liHei, liSize, ulHei);
+
+       $(this).parent().siblings().removeClass('on').children('ul').stop().animate({maxHeight: 0}, function(){
+           $(this).css({visibility: 'hidden'});
+       });
+
+       if ($(this).parent().hasClass('on')) { 
+           $(this).next().animate({maxHeight: 0}, function(){
+               $(this).css({visibility: 'hidden'});
+           }).parent().removeClass('on');
+       } else{ 
+           $(this).next().css('visibility', 'visible').stop().animate({maxHeight: ulHei}).parent().addClass('on');
+       }
+    }
+    return false;
+});
+  const $mGnb = $('#mHeader #mGnb');
+  $('#mHeader .btn_gnb_open').on('click', function () {
+    const $first =  $mGnb.find('.first');
+    const $last =  $mGnb.find('.last');
+    const $openBtn = $(this);
+    $mGnb.css('visibility', 'visible').stop().animate({left: 0}, 300, function () {
+      $first.focus(); 
+      $('html').css({overflowY: 'hidden', height: '100%'});
+  });
+    $first.on('keydown', function (e) {
+      if ( e.shiftKey && e.keyCode === 9 ) {
+        e.preventDefault();
+        $last.focus();
+      }
+    })
+
+    $last.on('keydown', function (e) {
+      if (!e.shiftKey && e.keyCode === 9) {
+        e.preventDefault();
+        $first.focus();
+      }
+    });
+
+    $mGnb.find('.btn_gnb_close').on('click', function () {
+      $('#mgnbDim').stop().fadeOut('fast', function () {
+        $(this).remove();
+      });
+
+      $mGnb.stop().animate({left: '100%'}, 300, function () {
+        $(this).css('visibility', 'hidden');
+        $openBtn.focus();
+
+        $('#mGnb ul li.on').removeClass('on').children('ul').css({visibility: 'hidden', maxHeight: 0});
+        });      
+    });
+});
+
+
 
   // dep2 a:hover, a:focus 제어
   const $gnbLine = $('#gnbLine');

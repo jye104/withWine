@@ -20,7 +20,7 @@
   <script src="js/common.js"></script>
   <script src="js/main.js"></script>
   <script src="js/gsap.min.js"></script>
-  <script>
+  <!-- <script>
     $(document).ready(function () {
       const cnt1PosX = $('#cnt1').offset().left;
       const cnt1PosY = $('#cnt1').offset().top;
@@ -36,7 +36,7 @@
         gsap.to('.circle', {top: mouseY - cnt1PosY - circleHalfH, left: mouseX - cnt1PosX - circleHalfW, duration: 0.5})
       });
     });
-  </script>
+  </script> -->
 </head>
 
 <body>
@@ -53,7 +53,7 @@
         <button type="button"><img src="images/icon/search.png" alt="검색"></button>
       </div>
     </div>
-    <nav id="gnb">
+    <nav id="pcGnb">
       <ul>
         <li>
           <a href="">about us</a>
@@ -100,6 +100,58 @@
     </nav>
   </header>
 
+  <header id="mHeader" class="header on">
+    <div class="headerTop">
+      <h1 class="logo">
+        <a href=""><img src="images/common/logo_small.png" alt="with Wine"></a>
+      </h1>
+      <button class="btn_gnb_open" type="button">
+        <span class="blind">전체메뉴 열기</span>
+      </button>
+    </div>
+    <nav id="mGnb">
+      <ul>
+        <li>
+          <a href="" class="first">about us</a>
+          <ul class="dep2">
+            <li><a href="http://wwww.naver.com">회사 소개</a></li>
+            <li><a href="">연혁</a></li>
+            <li><a href="">CEO 인사말</a></li>
+            <li><a href="">사회 공헌 </a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">product</a>
+          <ul class="dep2">
+            <li><a href="">new wine</a></li>
+            <li><a href="">best wine</a></li>
+            <li><a href="">red wine</a></li>
+            <li><a href="">white wine</a></li>
+            <li><a href="">sparkling wine</a></li>
+            <li><a href="">champagnes</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">promotion</a>
+          <ul class="dep2">
+            <li><a href="">이달의 프로모션</a></li>
+            <li><a href="">정기 구독</a></li>
+            <li><a href="">한정 특가</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">contact</a>
+          <ul class="dep2">
+            <li><a href="">고객센터</a></li>
+            <li><a href="">매장 안내</a></li>
+            <li><a href="">QnA</a></li>
+          </ul>
+        </li>
+      </ul>
+      <button class="btn_gnb_close last" type="button"><img src="images/icon/btn_nav_close.png" alt="전체메뉴 닫기"></button>
+    </nav>
+  </header>
+
   <section class="section p_r" id="cnt1">
     <div class="move_box_wrap">
       <div class="move_box p_r">
@@ -117,13 +169,12 @@
         <p>어떤 종류의 와인이든 상관없이<br>
           최고의 방식과 재료를 사용하여<br>
           풍미를 더하였습니다.<br>
-          합리적인 가격으로 <br>
-          최고의 품질을 만나보세요.</p>
+          합리적인 가격으로 만나보세요.</p>
         <h2>Whatever</h2>
       </div>
     </div>
-    <div class="scrollDown">scroll Down<img src="images/icon/scroll_arrow.png" alt=""></div>
-    <div class="circle"></div>
+    <div class="scrollDown">scroll Down<img src="images/icon/scroll_down.png" alt=""></div>
+    <!-- <div class="circle"></div> -->
   </section>
 
   <section class="section p_r" id="cnt2">
@@ -137,49 +188,49 @@
           <a href="" class="slide">
             <span class="winePhoto"><img src="images/wineImg/wine1.png" alt=""></span>
             <strong>FIRST DROP FULL FAT WHITE</strong>
-            <button type="button" class="btn_more">view more</button>
+            <button type="button" class="btn_md_open btn_more" aria-haspopup="dialog" title="대화상자" data-href="#modal1">view more</button>
           </a>
         </div>
         <div class="swiper-slide" id="slide2">
           <a href="" class="slide">
             <span class="winePhoto"><img src="images/wineImg/wine2.png" alt=""></span>
             <strong>VIGNO DRY FARMED OLD VINES MAULE VALLEY</strong>
-            <button type="button" class="btn_more">view more</button>
+            <button type="button" class="btn_md_open btn_more" aria-haspopup="dialog" title="대화상자" data-href="#modal2">view more</button>
           </a>
         </div>
         <div class="swiper-slide" id="slide3">
           <a href="" class="slide">
             <span class="winePhoto"><img src="images/wineImg/wine3.png" alt=""></span>
             <strong>ARRAS E.J.CARR LATE DISGOARGED</strong>
-            <button type="button" class="btn_more">view more</button>
+            <button type="button" class="btn_md_open btn_more" aria-haspopup="dialog" title="대화상자" data-href="#modal3">view more</button>
           </a>
         </div>
         <div class="swiper-slide" id="slide4">
           <a href="" class="slide">
             <span class="winePhoto"><img src="images/wineImg/wine4.png" alt=""></span>
             <strong>FIRST DROP MOTHER'S MERE ET FILS CHARDONNAY</strong>
-            <button type="button" class="btn_more">view more</button>
+            <button type="button" class="btn_md_open btn_more" aria-haspopup="dialog" title="대화상자" data-href="#modal4">view more</button>
           </a>
         </div>
         <div class="swiper-slide" id="slide5">
           <a href="" class="slide">
             <span class="winePhoto"><img src="images/wineImg/wine5.png" alt=""></span>
             <strong>FIRST DROP MOTHER'S MILK SHIRAZ</strong>
-            <button type="button" class="btn_more">view more</button>
+            <button type="button" class="btn_md_open btn_more" aria-haspopup="dialog" title="대화상자" data-href="#modal5">view more</button>
           </a>
         </div>
         <div class="swiper-slide" id="slide6">
           <a href="" class="slide">
             <span class="winePhoto"><img src="images/wineImg/wine6.png" alt=""></span>
             <strong>PAIS-CARIGNERA SINGLE FERMENT SERIES</strong>
-            <button type="button" class="btn_more">view more</button>
+            <button type="button" class="btn_md_open btn_more" aria-haspopup="dialog" title="대화상자" data-href="#modal6">view more</button>
           </a>
         </div>
         <div class="swiper-slide" id="slide7">
           <a href="" class="slide">
             <span class="winePhoto"><img src="images/wineImg/wine7.png" alt=""></span>
             <strong>FIRST DROP THE CREAM SHIRAZs</strong>
-            <button type="button" class="btn_more">view more</button>
+            <button type="button" class="btn_md_open btn_more" aria-haspopup="dialog" title="대화상자" data-href="#modal7">view more</button>
           </a>
         </div>
       </div>

@@ -17,7 +17,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 500px;
+    height: 400px;
     background: #ffe2e2;
     z-index: -1;
     border-radius: 0 0 30% 30%; }
@@ -42,6 +42,16 @@
       line-height: 70px; }
       #pcHeader.on .headerTop .util button {
         margin-left: 20px; }
+  #pcHeader.on.active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background: #ffe2e2;
+    z-index: -1;
+    border-radius: 0 0 30% 30%; }
   #pcHeader .headerTop {
     position: absolute;
     margin: 30px 0 10px;
@@ -63,7 +73,7 @@
       right: 3%; }
       #pcHeader .headerTop .util button {
         margin-left: 20px; }
-  #pcHeader #gnb > ul {
+  #pcHeader #pcGnb > ul {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -76,7 +86,7 @@
     font-family: ComicNeue;
     font-size: 24px;
     margin-top: 15px; }
-    #pcHeader #gnb > ul::after {
+    #pcHeader #pcGnb > ul::after {
       -webkit-transform: translateX(-50%);
       -moz-transform: translateX(-50%);
       transform: translateX(-50%);
@@ -90,21 +100,21 @@
       height: 1px;
       background: #373737;
       opacity: 0; }
-    #pcHeader #gnb > ul > li {
+    #pcHeader #pcGnb > ul > li {
       text-align: center; }
-      #pcHeader #gnb > ul > li:hover, #pcHeader #gnb > ul > li:focus, #pcHeader #gnb > ul > li.on {
+      #pcHeader #pcGnb > ul > li:hover, #pcHeader #pcGnb > ul > li:focus, #pcHeader #pcGnb > ul > li.on {
         border-radius: 44px;
         background: #FFF1F1;
         padding-bottom: 5px; }
-      #pcHeader #gnb > ul > li:hover a::after, #pcHeader #gnb > ul > li:focus a::after, #pcHeader #gnb > ul > li.on a::after {
+      #pcHeader #pcGnb > ul > li:hover a::after, #pcHeader #pcGnb > ul > li:focus a::after, #pcHeader #pcGnb > ul > li.on a::after {
         opacity: 1; }
-      #pcHeader #gnb > ul > li > a {
+      #pcHeader #pcGnb > ul > li > a {
         position: relative;
         display: block;
         padding: 0 50px;
         height: 60px;
         line-height: 60px; }
-        #pcHeader #gnb > ul > li > a::after {
+        #pcHeader #pcGnb > ul > li > a::after {
           -webkit-transition: opacity 0.5s;
           transition: opacity 0.5s;
           position: absolute;
@@ -116,14 +126,19 @@
           width: 7px;
           height: 7px;
           opacity: 0; }
-      #pcHeader #gnb > ul > li ul {
+      #pcHeader #pcGnb > ul > li ul {
         padding: 10px 0 30px; }
-        #pcHeader #gnb > ul > li ul li {
+        #pcHeader #pcGnb > ul > li ul li {
           padding: 10px 0;
           position: relative; }
-          #pcHeader #gnb > ul > li ul li a {
+          #pcHeader #pcGnb > ul > li ul li a {
             font-family: Spoqa;
             font-size: 16px; }
+
+#mHeader {
+  visibility: hidden;
+  height: 0;
+  overflow: hidden; }
 
 #gnbLine {
   position: absolute;
@@ -226,18 +241,18 @@
       #pcHeader .headerTop .util {
         top: 15%;
         right: 3%; }
-    #pcHeader #gnb > ul {
+    #pcHeader #pcGnb > ul {
       font-size: 24px;
       margin-top: 15px; }
-      #pcHeader #gnb > ul > li:hover, #pcHeader #gnb > ul > li:focus, #pcHeader #gnb > ul > li.on {
+      #pcHeader #pcGnb > ul > li:hover, #pcHeader #pcGnb > ul > li:focus, #pcHeader #pcGnb > ul > li.on {
         padding-bottom: 10px; }
-      #pcHeader #gnb > ul > li > a {
+      #pcHeader #pcGnb > ul > li > a {
         line-height: 50px; }
-      #pcHeader #gnb > ul > li ul {
+      #pcHeader #pcGnb > ul > li ul {
         padding: 0; }
-        #pcHeader #gnb > ul > li ul li {
+        #pcHeader #pcGnb > ul > li ul li {
           padding: 10px 0; }
-          #pcHeader #gnb > ul > li ul li a {
+          #pcHeader #pcGnb > ul > li ul li a {
             font-family: Spoqa;
             font-size: 18px; }
 
@@ -290,5 +305,101 @@
         padding-bottom: 1.7vw; }
         .footer .foot_right .help li {
           margin-right: 1.5vw; } }
+@media screen and (max-width: 1080px) {
+  #pcHeader {
+    display: none; }
+
+  #mHeader {
+    visibility: visible;
+    height: 120px;
+    overflow: visible;
+    position: fixed;
+    z-index: 900;
+    width: 100%; }
+    #mHeader .headerTop {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
+      -webkit-align-items: center;
+      align-items: center;
+      width: 100%;
+      height: 120px;
+      padding: 0 40px 0 40px; }
+      #mHeader .headerTop .btn_gnb_open {
+        position: relative;
+        width: 46px;
+        height: 32px;
+        background: url("../images/icon/btn_nav_open.png") no-repeat; }
+    #mHeader #mGnb {
+      visibility: hidden;
+      left: 100%;
+      position: fixed;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: #ffe2e2;
+      overflow-y: auto;
+      z-index: 950;
+      padding: 20vw 10vw 7vw; }
+      #mHeader #mGnb::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: url("../images/common/nav_bg.png");
+        width: 634px;
+        height: 500px;
+        z-index: -1;
+        opacity: 0.7; }
+      #mHeader #mGnb .btn_gnb_close {
+        position: absolute;
+        top: 5vw;
+        right: 5vw;
+        width: 5vw;
+        height: 5vw; }
+      #mHeader #mGnb > ul > li {
+        margin-bottom: 8vw; }
+        #mHeader #mGnb > ul > li:last-child {
+          margin-bottom: 0; }
+        #mHeader #mGnb > ul > li > a {
+          position: relative;
+          display: block;
+          font-family: ComicNeue;
+          font-size: 7vw;
+          font-weight: 700; }
+          #mHeader #mGnb > ul > li > a::before {
+            -webkit-transform: rotate(135deg);
+            -moz-transform: rotate(135deg);
+            transform: rotate(135deg);
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+            content: "";
+            display: block;
+            width: 2vw;
+            height: 2vw;
+            border-top: 0.5vw solid #373737;
+            border-right: 0.5vw solid #373737;
+            position: absolute;
+            top: 50%;
+            right: 5vw;
+            margin-top: -1vw; }
+        #mHeader #mGnb > ul > li.on > a {
+          color: #e23e3d; }
+          #mHeader #mGnb > ul > li.on > a::before {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            border-color: #e23e3d; }
+      #mHeader #mGnb .dep2 {
+        visibility: hidden;
+        max-height: 0;
+        overflow: hidden; }
+        #mHeader #mGnb .dep2 > li {
+          padding: 6vw 0 0 3vw;
+          font-size: 3.5vw; } }
 
 /*# sourceMappingURL=layout.css.map */
