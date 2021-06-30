@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> With Wine </title>
-  <link rel="apple-touch-icon" href="images/common/favicon/apple-icon-180x180.png">
-  <link rel="shortcut icon" href="images/common/favicon/android-icon-192x192.png">
+  <link rel="apple-touch-icon" href="images/favicon/apple-icon-180x180.png">
+  <link rel="shortcut icon" href="images/favicon/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
@@ -19,6 +19,24 @@
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/common.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/gsap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      const cnt1PosX = $('#cnt1').offset().left;
+      const cnt1PosY = $('#cnt1').offset().top;
+      const circleHalfW = $('#cnt1 .circle').outerWidth() / 2;
+      const circleHalfH = $('#cnt1 .circle').outerHeight() / 2;
+
+      // console.log(cnt1PosX, cnt1PosY);
+      $('#cnt1').on('mousemove', function(e){
+        // 스크롤바의 이동거리를 포함하는 마우스 좌표 알아오기
+        const mouseX = e.pageX;
+        const mouseY = e.pageY;
+        console.log(mouseX, mouseY);
+        gsap.to('.circle', {top: mouseY - cnt1PosY - circleHalfH, left: mouseX - cnt1PosX - circleHalfW, duration: 0.5})
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -76,10 +94,8 @@
       </ul>
       <div class="hidden">
         <svg id="gnbLine" width="81.687" height="69.548" viewBox="0 0 81.687 69.548">
-          <g transform="translate(-1638.016 -411.822)" opacity="0.8">
-            <path id="line1" d="M35.92,37.027S-.335,36.189,0,13.925,36.3,2.763,36.3,2.763,67.357,12.724,66.024,28.5c-.92,10.888-7.255,15.157-14.4,15.548-4.172.339-11.395-1.415-17.347-3.271" transform="translate(1639.974 438.528) rotate(-22)"/>
-          </g>
-        </svg>
+          <path id="line1" d="M35.92,37.027S-.335,36.189,0,13.925,36.3,2.763,36.3,2.763,67.357,12.724,66.024,28.5c-.92,10.888-7.255,15.157-14.4,15.548-4.172.339-11.395-1.415-17.347-3.271" transform="translate(1.958 26.707) rotate(-22)" fill="none" stroke="#e23e3d" stroke-linecap="round" stroke-width="3"/>
+        </svg>       
       </div>
     </nav>
   </header>
@@ -107,6 +123,7 @@
       </div>
     </div>
     <div class="scrollDown">scroll Down<img src="images/icon/scroll_arrow.png" alt=""></div>
+    <div class="circle"></div>
   </section>
 
   <section class="section p_r" id="cnt2">
@@ -119,7 +136,7 @@
         <div class="swiper-slide" id="slide1">
           <a href="" class="slide">
             <span class="winePhoto"><img src="images/wineImg/wine1.png" alt=""></span>
-            <strong>FIRST DROP FULL FAT WHIT</strong>
+            <strong>FIRST DROP FULL FAT WHITE</strong>
             <button type="button" class="btn_more">view more</button>
           </a>
         </div>
@@ -179,7 +196,7 @@
       <article>
         <a href="" class="atc_txt">
           <p class="num">01</p>
-          <strong>Wine Tasting Event</strong>
+          <strong>Wine Tasting</strong>
           <p class="txt">클래식의 정수 프랑스<br>부르고뉴의 그랑 크뤼 와인과<br>최고의 품질 미국 나파 밸리<br>프리미엄 와인의<br>비교 테스팅의 기회</p>
           <button type="button" class="btn_more_bk">view more</button>
         </a>
@@ -206,12 +223,12 @@
           <svg id="hoverLine" width="395.967" height="396.004" viewBox="0 0 395.967 396.004">
             <path id="line2" d="M119.907,264.366S-20.619,264.893,2.588,110.62C9.851,62.334,30.933,38.49,54.826,21.6c51.957-36.731,121.7-15.489,121.7-15.489S298.152,38.934,276.88,149.427C262.2,225.664,232.123,254.417,200.3,264.636c-18.688,6.73-74.564,19.284-98.939,12.717" transform="matrix(0.574, -0.819, 0.819, 0.574, 3.491, 232.346)"/>
           </svg>
-        </div>
+        </div>        
       </article>
     </div>
     <video id="video" poster="images/main/video_photo.jpg" autoplay muted playsinline loops>
-    <source src="video/cnt3_bg.mp4" type="video/mp4">
-    현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
+      <source src="video/cnt3_bg.mp4" type="video/mp4">
+      현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
     </video>
   </section>
 
@@ -219,27 +236,29 @@
     <div class="txt_box">
       <h2>Wine subscription</h2>
       <p>매달 와인 전문가가 당신과 가장 잘 어울리는<br>
-        와인을  엄선하여 보내드립니다.<br>
-         합리적인 가격으로 전세계의  와인을 느껴보세요.<br>
+        와인을 엄선하여 보내드립니다.<br>
+        합리적인 가격으로 전세계의 와인을 느껴보세요.<br>
         또한 와인과 함께 보내드리는 와인노트로<br>
         와인의 문화와 정보를 배우며<br>
         신개념 와인 라이프 스타일을 즐겨보세요.</p>
-      <a href="" class="btn_more_bk">subscription<span class="finger"><img src="images/icon/icon_finger.png" alt=""></span></a>      
+      <a href="" class="btn_subscript">subscription
+        <span class="finger"><img src="images/icon/icon_finger.png" alt=""></span>
+      </a>
     </div>
-    <div class="photo_box">
-      <div class="box1 box">
+    <div id="photo_box">
+      <div id="box1" class="box">
         <h3>매월 다른 나만의 와인</h3>
         <p>수많은 와인들 속에 나에게 맞는 '인생와인'<br>매월, 기대감에 설레이는 시간</p>
       </div>
-      <div class="box2 box">
+      <div id="box2" class="box">
         <h3>소울 와인 발견</h3>
         <p>와인을 받아 피드백에 참여하시면 피드백에 따라<br>당신의 소울와인을 찾아드립니다.</p>
       </div>
-      <div class="box3 box">
+      <div id="box3" class="box">
         <h3>집 앞 정기배송</h3>
         <p>당신의 스타일에 맞는 와인을 찾아<br>매달 집 앞으로 보내드립니다.</p>
       </div>
-      <div class="box4 box">
+      <div id="box4" class="box">
         <h3>와인 컨텐츠 제공</h3>
         <p>원산지, 품종 등 기본 정보부터 자세한 정보까지<br>제공한 컨텐츠를 통해 와인을 알아가면서 즐겨보세요.</p>
       </div>

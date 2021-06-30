@@ -101,12 +101,16 @@ header, nav, section, article, address, footer {
   background: #fdf6ee;
   border-bottom: 1px solid rgba(225, 218, 209, 0.5); }
 
+.m_0 {
+  margin-left: 0; }
+
 .btn_more {
   font-size: 1.2vw;
   background: url("../images/icon/btn_red.png") no-repeat 50%/cover;
   width: 7.14vw;
   height: 2.85vw;
-  font-family: ComicNeue; }
+  font-family: ComicNeue;
+  font-weight: 700; }
 
 .btn_more_bk {
   -webkit-transition: all 0.5s;
@@ -115,7 +119,19 @@ header, nav, section, article, address, footer {
   background: url("../images/icon/btn_bk.png") no-repeat 50%/cover;
   width: 7.14vw;
   height: 2.85vw;
-  font-family: ComicNeue; }
+  font-family: ComicNeue;
+  font-weight: 700; }
+
+.btn_more_on {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-size: 1.2vw;
+  background: url("../images/icon/btn_on.png") no-repeat 50%/cover;
+  width: 7.14vw;
+  height: 2.85vw;
+  font-family: ComicNeue;
+  color: #fff;
+  font-weight: 700; }
 
 body {
   font-family: Spoqa, AmaticSC, ComicNeue;

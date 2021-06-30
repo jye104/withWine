@@ -71,6 +71,14 @@
     left: 3%;
     font-family: AmaticSC;
     font-size: 1.7vw; }
+  #cnt1 .circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #e23e3d;
+    color: #fdf6ee;
+    top: 0;
+    left: 0; }
 
 #cnt2 {
   display: -webkit-box;
@@ -87,8 +95,7 @@
     height: 31vw;
     /*  width: 573px; height: 678px;*/
     max-width: 100%;
-    border-radius: 45%;
-    margin-right: 5vw; }
+    border-radius: 45%; }
     #cnt2 h2 span {
       top: 8vw;
       right: 0vw;
@@ -204,7 +211,7 @@
     #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto::before, #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto::after, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto::before, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto::after {
       opacity: 1; }
     #cnt2 .swiper-wrapper .swiper-slide .slide:hover .btn_more, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .btn_more {
-      background: url("../images/icon/btn_red_on.png") no-repeat 50%/cover;
+      background: url("../images/icon/btn_on.png") no-repeat 50%/cover;
       color: #fff; }
   #cnt2 .swiper-button-prev, #cnt2 .swiper-button-next {
     margin-top: 0;
@@ -221,116 +228,99 @@
     right: 0; }
 
 #cnt3 {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  align-items: center;
-  height: 100vh; }
+  position: relative;
+  height: 100vh;
+  text-align: center; }
   #cnt3 .left_txt {
-    text-align: center; }
+    width: 60%;
+    padding-left: 5vw; }
     #cnt3 .left_txt h2 {
       font-size: 5vw;
-      font-family: AmaticSC;
-      padding: 2vw 0; }
+      font-family: AmaticSC; }
     #cnt3 .left_txt article {
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex;
-      flex-wrap: wrap;
-      -webkit-flex-wrap: wrap;
-      -webkit-justify-content: space-between;
-      justify-content: space-between;
       -webkit-align-items: center;
       align-items: center;
-      position: relative;
-      margin: 0 10vw;
-      display: table; }
+      -webkit-justify-content: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      position: relative; }
       #cnt3 .left_txt article::before {
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        transform: translateY(-50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
         content: "";
-        display: block;
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 90%;
+        width: 60%;
         height: 1px;
-        background: rgba(37, 37, 37, 0.3);
-        margin-left: -45%; }
+        background: rgba(37, 37, 37, 0.3); }
       #cnt3 .left_txt article::after {
-        -webkit-transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        transform: translateX(-50%);
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        transform: translateY(-50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
         content: "";
-        display: block;
         position: absolute;
         top: 50%;
         left: 50%;
         width: 1px;
         height: 80%;
         background: rgba(37, 37, 37, 0.3); }
-      #cnt3 .left_txt article #hoverLine {
-        position: absolute;
-        top: -10px;
-        left: 50%;
-        margin-left: -40px;
-        pointer-events: none; }
-        #cnt3 .left_txt article #hoverLine #line2 {
-          fill: none;
-          stroke: #e23e3d;
-          stroke-linecap: round;
-          stroke-width: 5;
-          stroke-dasharray: 897;
-          stroke-dashoffset: 897;
-          animation: linehover 0.5s linear forwards; }
+      #cnt3 .left_txt article .atc_txt {
+        width: 400px;
+        position: relative;
+        padding: 2vw 2vw; }
+        #cnt3 .left_txt article .atc_txt .num {
+          font-family: AmaticSC;
+          font-size: 4vw;
+          position: absolute;
+          top: 1vw;
+          left: 1.5vw; }
+        #cnt3 .left_txt article .atc_txt strong {
+          font-family: ComicNeue;
+          font-size: 1.5vw; }
+        #cnt3 .left_txt article .atc_txt .txt {
+          font-size: 0.8vw;
+          line-height: 1.5;
+          padding: 1vw 0; }
+      #cnt3 .left_txt article .atc_txt:hover .num, #cnt3 .left_txt article .atc_txt:hover strong, #cnt3 .left_txt article .atc_txt:focus .num, #cnt3 .left_txt article .atc_txt:focus strong {
+        color: #e23e3d;
+        font-weight: 700; }
+      #cnt3 .left_txt article .atc_txt:hover .btn_more_bk, #cnt3 .left_txt article .atc_txt:focus .btn_more_bk {
+        background-image: url("../images/icon/btn_on.png");
+        color: #fff; }
+  #cnt3 #hoverLine {
+    position: absolute;
+    top: -2vw;
+    left: 0;
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0.8; }
+    #cnt3 #hoverLine #line2 {
+      fill: none;
+      stroke: #e23e3d;
+      stroke-linecap: round;
+      stroke-width: 5;
+      stroke-dasharray: 897;
+      stroke-dashoffset: 897;
+      animation: lineHover 0.5s linear forwards; }
 @keyframes lineHover {
   0% {
     stroke-dashoffset: 897; }
   100% {
     stroke-dashoffset: 0; } }
-    #cnt3 .left_txt .atc_txt {
-      position: relative;
-      padding: 2vw 2vw;
-      padding-left: 3vw;
-      display: table-cell; }
-      #cnt3 .left_txt .atc_txt .num {
-        -webkit-transition: color 0.3s;
-        transition: color 0.3s;
-        position: absolute;
-        top: 0;
-        left: -3vw;
-        font-family: AmaticSC;
-        font-weight: 700;
-        font-size: 4vw; }
-      #cnt3 .left_txt .atc_txt strong {
-        -webkit-transition: color 0.3s;
-        transition: color 0.3s;
-        font-family: ComicNeue;
-        font-size: 1.7vw; }
-      #cnt3 .left_txt .atc_txt .txt {
-        font-size: 0.8vw;
-        line-height: 1.5;
-        padding: 1vw 0 0.5vw; }
-    #cnt3 .left_txt .atc_txt:hover .num, #cnt3 .left_txt .atc_txt:hover strong, #cnt3 .left_txt .atc_txt:focus .num, #cnt3 .left_txt .atc_txt:focus strong {
-      color: #e23e3d; }
-    #cnt3 .left_txt .atc_txt:hover .btn_more_bk, #cnt3 .left_txt .atc_txt:focus .btn_more_bk {
-      background-image: url("../images/icon/btn_red_on.png");
-      color: #fff; }
   #cnt3 #video {
-    height: 85vh;
-    width: 40vw;
-    margin-right: 10vw;
+    position: absolute;
+    top: 0;
+    right: 7vw;
+    width: 40%;
+    height: 80vh;
     vertical-align: middle; }
 
 #cnt4 {
@@ -345,7 +335,7 @@
   align-items: center;
   height: 100vh;
   position: relative;
-  margin: 0 10vw; }
+  margin: 0 0 0 8vw; }
   #cnt4 .txt_box h2 {
     font-family: AmaticSC;
     font-size: 5vw; }
@@ -353,88 +343,231 @@
     font-size: 0.9vw;
     line-height: 1.6;
     padding: 1.5vw 0.5vw 3vw; }
-  #cnt4 .txt_box .btn_more_bk {
+  #cnt4 .txt_box .btn_subscript {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
     position: relative;
     display: block;
+    background: url("../images/icon/btn_bk.png") no-repeat 50%/cover;
+    width: 7.14vw;
+    height: 2.85vw;
+    font-family: ComicNeue;
     font-size: 1vw;
     text-align: center;
-    line-height: 55px;
+    line-height: 2.85vw;
     font-weight: 700;
     margin-left: 18vw; }
+  #cnt4 .txt_box .btn_subscript_on {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    position: relative;
+    display: block;
+    background: url("../images/icon/btn_on.png") no-repeat 50%/cover;
+    width: 7.14vw;
+    height: 2.85vw;
+    font-family: ComicNeue;
+    font-size: 1vw;
+    text-align: center;
+    line-height: 2.85vw;
+    font-weight: 700;
+    margin-left: 17.9vw;
+    margin-top: 0.1vw;
+    color: #fff; }
   #cnt4 .txt_box .finger {
     position: absolute;
     top: 100%;
     left: 100%;
     display: block;
-    /* background: url("../images/icon/icon_finger.png") no-repeat center / cover; */
     width: 3vw;
-    height: 3vw; }
-  #cnt4 .photo_box {
+    height: 3vw;
+    visibility: hidden; }
+  #cnt4 #photo_box {
     position: relative;
     width: 50%;
-    height: 100%; }
-    #cnt4 .photo_box .box {
+    height: 100%;
+    overflow: hidden; }
+    #cnt4 #photo_box .box {
       position: absolute;
-      top: 50%;
-      margin-top: -19vw;
-      left: 50%;
-      margin-left: -12.5vw;
+      top: 10%;
+      left: 10%;
       width: 25vw;
       height: 38vw;
       background: no-repeat 50% / cover; }
-      #cnt4 .photo_box .box h3 {
+      #cnt4 #photo_box .box h3 {
         padding-top: 2vw;
         padding-left: 1vw;
         font-size: 1.5vw; }
-      #cnt4 .photo_box .box p {
+      #cnt4 #photo_box .box p {
         padding-top: 1vw;
         padding-left: 1.2vw;
         font-size: 0.9vw;
         line-height: 1.3; }
-      #cnt4 .photo_box .box.box1 {
+      #cnt4 #photo_box .box#box1 {
         background-image: url("../images/main/cnt5_photo1.jpg"); }
-      #cnt4 .photo_box .box.box2 {
+      #cnt4 #photo_box .box#box2 {
         -webkit-transform: rotate(7deg);
         -moz-transform: rotate(7deg);
         transform: rotate(7deg);
         background-image: url("../images/main/cnt5_photo2.jpg"); }
-      #cnt4 .photo_box .box.box3 {
+      #cnt4 #photo_box .box#box3 {
         -webkit-transform: rotate(-7deg);
         -moz-transform: rotate(-7deg);
         transform: rotate(-7deg);
         background-image: url("../images/main/cnt5_photo3.jpg"); }
-      #cnt4 .photo_box .box.box4 {
+      #cnt4 #photo_box .box#box4 {
         -webkit-transform: rotate(5deg);
         -moz-transform: rotate(5deg);
         transform: rotate(5deg);
         background-image: url("../images/main/cnt5_photo4.jpg"); }
-    #cnt4 .photo_box .controller {
+    #cnt4 #photo_box .box:not(#box1) {
+      margin-left: 33vw; }
+    #cnt4 #photo_box .controller {
+      position: absolute;
+      bottom: 5%;
+      left: 0;
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex;
-      -webkit-justify-content: space-between;
-      justify-content: space-between;
+      -webkit-justify-content: flex-start;
+      justify-content: flex-start;
       -webkit-align-items: center;
       align-items: center;
       background: no-repeat 50% / cover;
       width: 100%;
       height: 70px;
       z-index: 10; }
-      #cnt4 .photo_box .controller .button-prev {
+      #cnt4 #photo_box .controller .button-prev {
         background-image: url("../images/icon/slide_left_small.png");
         width: 72px;
         height: 70px;
-        position: absolute;
-        bottom: 5vw;
-        left: 0; }
-      #cnt4 .photo_box .controller .button-next {
+        margin-right: 27vw; }
+      #cnt4 #photo_box .controller .button-next {
         background-image: url("../images/icon/slide_right_small.png");
         width: 72px;
-        height: 70px;
-        position: absolute;
-        bottom: 5vw;
-        right: 0; }
+        height: 70px; }
+
+@media screen and (max-width: 1440px) {
+  #cnt1 .move_box_wrap {
+    overflow: hidden;
+    width: 41.6666666667vw;
+    height: 41.6666666667vw;
+    margin-top: 8%; }
+  #cnt1 .move_box {
+    width: 34.7222222222vw;
+    height: 34.7222222222vw; }
+    #cnt1 .move_box .photo {
+      width: 66.5277777778vw;
+      height: 75vw; }
+  #cnt1 .txt {
+    top: 55%;
+    padding: 0 8vw 0 8vw; }
+    #cnt1 .txt h2 {
+      font-size: 7vw; }
+    #cnt1 .txt p {
+      font-size: 1.2vw;
+      line-height: 2vw;
+      letter-spacing: -0.05vw; }
+    #cnt1 .txt .txt2 {
+      text-align: right; }
+  #cnt1 .scrollDown {
+    font-size: 2vw; }
+
+  #cnt2 h2 {
+    width: 31vw;
+    height: 37vw; }
+    #cnt2 h2 span {
+      top: 8vw;
+      right: -1vw;
+      font-size: 6.5vw;
+      margin-right: -3vw; }
+  #cnt2 .swiper-wrapper .swiper-slide .slide {
+    height: 40vw; }
+    #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto img {
+      width: 7vw; }
+    #cnt2 .swiper-wrapper .swiper-slide .slide strong {
+      margin: 1.5vw 0;
+      font-size: 1.7vw; }
+  #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto img, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto img {
+    width: 9vw; }
+
+  #cnt3 {
+    position: relative;
+    height: 100vh;
+    text-align: center; }
+    #cnt3 .left_txt h2 {
+      padding-bottom: 2vw; }
+    #cnt3 .left_txt article .atc_txt {
+      width: 300px;
+      padding: 0;
+      margin: 2vw 1vw; }
+      #cnt3 .left_txt article .atc_txt .num {
+        font-size: 5vw;
+        top: -1.5vw;
+        left: 0.5vw; }
+      #cnt3 .left_txt article .atc_txt strong {
+        font-size: 1.9vw; }
+      #cnt3 .left_txt article .atc_txt .txt {
+        font-size: 1vw;
+        line-height: 1.5;
+        padding: 1.5vw 0; }
+    #cnt3 #hoverLine {
+      top: -7vw;
+      left: -4vw; }
+
+  #cnt4 .txt_box h2 {
+    font-size: 6vw; }
+  #cnt4 .txt_box p {
+    font-size: 1.1vw;
+    line-height: 1.8;
+    padding: 1.7vw 0.7vw 5vw; }
+  #cnt4 .txt_box .btn_subscript {
+    position: relative;
+    display: block;
+    background: url("../images/icon/btn_bk.png") no-repeat 50%/cover;
+    width: 10vw;
+    height: 4vw;
+    font-size: 1.5vw;
+    line-height: 4vw;
+    margin-left: 20vw; }
+  #cnt4 .txt_box .btn_subscript_on {
+    width: 10vw;
+    height: 4vw;
+    font-size: 1.5vw;
+    line-height: 4vw;
+    margin-left: 19.7vw; }
+  #cnt4 .txt_box .finger {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    display: block;
+    width: 5vw;
+    height: 5vw; }
+  #cnt4 #photo_box .box {
+    top: 15%;
+    left: 17.5%;
+    width: 27vw;
+    height: 40vw; }
+    #cnt4 #photo_box .box h3 {
+      padding-top: 2.5vw;
+      padding-left: 2vw;
+      font-size: 1.7vw; }
+    #cnt4 #photo_box .box p {
+      padding-left: 2.2vw;
+      font-size: 1.15vw;
+      line-height: 1.5; }
+  #cnt4 #photo_box .box:not(#box1) {
+    margin-left: 33.5vw; }
+  #cnt4 #photo_box .controller .button-prev {
+    bottom: 5vw;
+    left: 0vw; }
+  #cnt4 #photo_box .controller .button-next {
+    background-image: url("../images/icon/slide_right_small.png");
+    width: 63px;
+    height: 60px;
+    position: absolute;
+    bottom: 5vw;
+    right: 0; } }
 
 /*# sourceMappingURL=main.css.map */

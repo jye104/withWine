@@ -1,10 +1,15 @@
 @charset "utf-8";
 @import "_var", "_mixin", "_function";
 
+@keyframes lineGnb {
+  0%{stroke-dashoffset: 175;}
+  100%{stroke-dashoffset: 0;}
+}
+
 // header 전체 공통& PC
 #pcHeader{
   position: fixed; width: 100%; height: 100px; z-index: 900;
-  ::before{
+  &::before{
     @include transition(all 0.5s)
   }
   &.active::before{
@@ -47,7 +52,7 @@
       > li{
         // @include transition(background 0.5s);
         text-align: center;
-        &:hover, &:focus, &.on{border-radius: 44px; background: $lightPink;}
+        &:hover, &:focus, &.on{border-radius: 44px; background: $lightPink; padding-bottom: 5px;}
         &:hover a::after, &:focus a::after, &.on a::after{opacity: 1;}
         > a{        
           position: relative; display: block; padding: 0 50px; height: 60px; line-height: 60px;
@@ -67,18 +72,13 @@
           }
         }
       }
-  }
+}
 
 #gnbLine{
   position: absolute;top: -10px;left: 50%; margin-left: -40px; pointer-events: none;
   #line1{fill: none; stroke: #e23e3d; stroke-linecap: round; stroke-width: 3; stroke-dasharray: 175; stroke-dashoffset: 175; animation: lineGnb 0.5s linear forwards;}
 }
-@keyframes lineGnb {
-  0%{stroke-dashoffset: 175;}
-  100%{stroke-dashoffset: 0;}
-}
 
-// footer 전체 공통& PC
 .footer{
   @include flex;
   @include justify-content;
@@ -117,3 +117,80 @@
   }
 }
 
+// 작은 pc
+@media screen and (max-width: 1440px) {
+  #pcHeader{
+    height: 80px;
+    &.active::before{height: 500px;}
+    &.on .headerTop{
+     margin: 10px 0 10px; height: 70px; line-height: 70px;
+      .logo{
+        a{top: 20%; width: 50px; height: 42px; background: url("../images/common/logo_50.png"); line-height: 70px;}
+      }
+      .util{right: 5%; line-height: 70px;}
+    }
+    .headerTop{
+     margin: 10px 0 0px; height: 80px;
+      .logo{
+        a{top: 10%; left: 5vw; width: 50px; height: 46px; background-image: url("../images/common/logo_50.png");}
+      }
+      .util{top: 15%; right: 3%;}
+    }
+    #gnb > ul{
+        font-size: 24px; margin-top: 15px;
+        > li{
+          &:hover, &:focus, &.on{padding-bottom: 10px;}
+          > a{line-height: 50px;
+            }
+          ul{
+            padding: 0;
+            li{
+              padding: 10px 0;
+              a{
+                font-family: Spoqa; font-size: 18px;
+                  }
+              }
+            }
+          }
+    }
+  }
+  
+  #gnbLine{
+    position: absolute;top: -10px;left: 50%; margin-left: -40px; pointer-events: none; opacity: 0.8;
+    #line1{fill: none; stroke: #e23e3d; stroke-linecap: round; stroke-width: 3; stroke-dasharray: 175; stroke-dashoffset: 175; animation: lineGnb 0.5s linear forwards;}
+  }
+
+  // footer 전체 공통& PC
+  .footer{
+    font-size: 1vw;
+    .logo{padding-right: 1.5vw; margin-left: -3vw;}
+    .foot_left{
+      strong{font-size: 1.85vw;}
+      address p{padding-top: 1.3vw;}
+      span{padding-right: 1.5vw;}
+    }
+    .foot_center{
+      padding: 0 5vw 0 4vw;
+      p{padding-top: 1.3vw;}
+      .copy{font-size: 0.85vw;}
+      span{padding-right: 1.5vw;}
+    }
+
+    .foot_right{
+      font-size: 1vw;
+      p{
+        padding-bottom: 0.7vw;
+      }
+      .sns{
+        padding-bottom: 1.7vw;
+        li{width: 1.9vw; height: 1.9vw; margin-right: 1.5vw;}
+      }
+      .help{
+        padding-bottom: 1.7vw;
+        li{
+          margin-right: 1.5vw;
+        }
+      }
+    }
+  }
+}
