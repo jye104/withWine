@@ -13,6 +13,7 @@ $(document).ready(function() {
   // #cnt2 swiper
   const swiper = new Swiper('#cnt2 .swiper-container', {
     loop: true,
+    effect: 'slide',//,'coverflow'
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -23,23 +24,23 @@ $(document).ready(function() {
     // Responsive breakpoints
     breakpoints: {
       // when window width is >= 320px
-      320: {
+      360: {
         slidesPerView: 3,
         spaceBetween: 8
       },
       // when window width is >= 480px
-      480: {
+      1080: {
         slidesPerView: 3,
         spaceBetween: 8
       },
       // when window width is >= 640px
-      640: {
+      1440: {
         slidesPerView: 3,
         spaceBetween: 8
       },
-      1080: {
+      1920: {
         slidesPerView: 3,
-        spaceBetween: 3,
+        spaceBetween: 8,
       }
     }
   });
@@ -47,20 +48,23 @@ $(document).ready(function() {
 
   // #cnt3 hover, focus
     const $hoverLine = $('#hoverLine');
-    // $('#cnt3 .atc_txt').on('mouseenter focusin', function(){
-    //   $(this).append($hoverLine);
-    //   $('#cnt3 .atc_txt').on('mouseleave', function(){
-    //     $(this).children($hoverLine).remove();
-    //   });
-    // });
-    $('#cnt3 .atc_txt').on({
-      'mouseenter focus': function(){
-        $(this).append($hoverLine);
-      },
-      'mouseleave blur': function(){
-        $(this).find('svg').remove();
-      }
+    let timer = 0;
+    $(window).on('resize', function(){
+      clearTimeout(timer);
+      timer = setTimeout(function(){
+        if ($(this).width() > 1080) { 
+          $('#cnt3 .atc_txt').on({
+            'mouseenter focus': function(){
+              $(this).append($hoverLine);
+            },
+            'mouseleave blur': function(){
+              $(this).find('svg').remove();
+            }
+          });
+        }
+      }, 100);
     });
+    $(window).trigger('resize');
 
 
   // #cnt4 hover-finger

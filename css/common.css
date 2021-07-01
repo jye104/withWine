@@ -60,6 +60,9 @@ address {
 header, nav, section, article, address, footer {
   display: block; }
 
+section {
+  overflow: hidden; }
+
 .p_r {
   position: relative; }
 
@@ -105,10 +108,10 @@ header, nav, section, article, address, footer {
   margin-left: 0; }
 
 .btn_more {
-  font-size: 1.2vw;
+  font-size: 1.3vw;
   background: url("../images/icon/btn_red.png") no-repeat 50%/cover;
   width: 7.14vw;
-  height: 2.85vw;
+  height: 2.95vw;
   font-family: ComicNeue;
   font-weight: 700; }
 

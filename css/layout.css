@@ -401,5 +401,86 @@
         #mHeader #mGnb .dep2 > li {
           padding: 6vw 0 0 3vw;
           font-size: 3.5vw; } }
+@media screen and (max-width: 770px) {
+  #mHeader {
+    height: 12.2727272727vw; }
+    #mHeader .headerTop {
+      height: 12.2727272727vw;
+      padding: 0 5.4545454545vw; }
+      #mHeader .headerTop .logo {
+        width: 52px;
+        height: 52px; }
+      #mHeader .headerTop .btn_gnb_open {
+        position: relative;
+        width: 26px;
+        height: 22px;
+        background: url("../images/icon/btn_nav_open.png") no-repeat; }
+    #mHeader #mGnb {
+      visibility: hidden;
+      left: 100%;
+      position: fixed;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: #ffe2e2;
+      overflow-y: auto;
+      z-index: 950;
+      padding: 20vw 10vw 7vw; }
+      #mHeader #mGnb::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: url("../images/common/nav_bg.png");
+        width: 634px;
+        height: 500px;
+        z-index: -1;
+        opacity: 0.7; }
+      #mHeader #mGnb .btn_gnb_close {
+        position: absolute;
+        top: 5vw;
+        right: 5vw;
+        width: 5vw;
+        height: 5vw; }
+      #mHeader #mGnb > ul > li {
+        margin-bottom: 8vw; }
+        #mHeader #mGnb > ul > li:last-child {
+          margin-bottom: 0; }
+        #mHeader #mGnb > ul > li > a {
+          position: relative;
+          display: block;
+          font-family: ComicNeue;
+          font-size: 7vw;
+          font-weight: 700; }
+          #mHeader #mGnb > ul > li > a::before {
+            -webkit-transform: rotate(135deg);
+            -moz-transform: rotate(135deg);
+            transform: rotate(135deg);
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+            content: "";
+            display: block;
+            width: 2vw;
+            height: 2vw;
+            border-top: 0.5vw solid #373737;
+            border-right: 0.5vw solid #373737;
+            position: absolute;
+            top: 50%;
+            right: 5vw;
+            margin-top: -1vw; }
+        #mHeader #mGnb > ul > li.on > a {
+          color: #e23e3d; }
+          #mHeader #mGnb > ul > li.on > a::before {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            border-color: #e23e3d; }
+      #mHeader #mGnb .dep2 {
+        visibility: hidden;
+        max-height: 0;
+        overflow: hidden; }
+        #mHeader #mGnb .dep2 > li {
+          padding: 6vw 0 0 3vw;
+          font-size: 3.5vw; } }
 
 /*# sourceMappingURL=layout.css.map */

@@ -245,10 +245,54 @@
       .dep2{
         visibility: hidden;max-height: 0;overflow: hidden;
         > li {padding: 6vw 0 0 3vw; font-size: 3.5vw;}
-      }
-
-      
+      }     
     }
-
   }
+}
+@media screen and (max-width: 770px) {
+    // header
+    // pcHeader는 태블릿에서 보이지 않게 숨긴다
+    #mHeader{
+      height: vw-calc770(90); 
+      .headerTop{
+        .logo{width: 52px; height: 52px;}
+        height: vw-calc770(90); padding: 0 vw-calc770(40);
+        .btn_gnb_open{
+          position: relative; width: 26px; height: 22px;
+          background: url("../images/icon/btn_nav_open.png") no-repeat;
+          }
+      }
+      #mGnb{
+        visibility: hidden; left: 100%; position: fixed; top: 0; height: 100%; width: 100%;background: $pink; overflow-y: auto; z-index: 950; padding: 20vw 10vw 7vw;
+        &::after{content: "";position: absolute; top: 100%; right: 0; background: url("../images/common/nav_bg.png"); width: 634px; height: 500px; z-index: -1; opacity: 0.7;}
+        .btn_gnb_close{
+          position: absolute; top: 5vw; right: 5vw; width: 5vw; height: 5vw;
+        }
+        > ul{
+          > li{
+            margin-bottom: 8vw;
+           &:last-child{margin-bottom: 0;}
+           > a{
+             position: relative; display: block; font-family: ComicNeue; font-size: 7vw; font-weight: 700;
+             &::before{
+               @include transform(rotate(135deg));
+               @include transition(all 0.5s);
+               content:""; display: block; width: 2vw; height: 2vw; border-top: 0.5vw solid $bk;border-right: 0.5vw solid $bk; position: absolute; top:50%; right: 5vw; margin-top: -1vw;
+             }
+           }
+           &.on > a{
+             color: $red;
+             &::before{
+               @include transform(rotate(-45deg));
+               border-color: $red;
+             }
+           }
+         }
+        }
+        .dep2{
+          visibility: hidden;max-height: 0;overflow: hidden;
+          > li {padding: 6vw 0 0 3vw; font-size: 3.5vw;}
+        }     
+      }
+    }
 }
