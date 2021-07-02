@@ -6,7 +6,7 @@
   @include flex;
   @include justify-content;
   @include align-items;
-  height: 100vh; background: $lightPink;
+   min-height: 100vh; background: $lightPink;
   .move_box_wrap{
     overflow: hidden; width: 600px; height: 600px; border-radius: 50%; margin-top: 5%;
   }
@@ -40,10 +40,10 @@
 #cnt2{
   @include flex;
   @include align-items;
-  height: 100vh;
+  min-height: 100vh;
   h2{
-    background: url("../images/main/cnt2_bg.jpg") no-repeat 50% / cover;  width: 25vw; height: 31vw; /*  width: 573px; height: 678px;*/ max-width: 100%; border-radius: 45%;
-    span{top: 8vw; right: 0vw; font-family: AmaticSC; font-size: 6vw; margin-right: -3vw;}
+    background: url("../images/main/cnt2_bg.jpg") no-repeat 50% / cover;  width: 25vw; height: 31vw; max-width: 100%; border-radius: 45%;
+    span{font-family: AmaticSC; font-size: 6vw; margin-right: -3vw;}
   }
   .swiper-wrapper{
     @include align-items(flex-end);
@@ -109,7 +109,7 @@
           position: relative; display: block; text-align: center; width: 8.5vw;
         }
         .winePhoto img{
-          @include transition(width, 0.4s);
+          @include transition(width, 0.35s);
           width: 6vw;
         }
         strong{display: block; text-align: center;  font-size: 1.5vw; margin: 1vw 0;}
@@ -133,7 +133,7 @@
   @include flex;
   @include justify-content;
   @include align-items;
-  height: 100vh; text-align: center; margin: 0 1vw;
+  min-height: 100vh; text-align: center; margin: 0 1vw;
   .left_txt{
     width: 60%;
     h2{font-size: 5vw; font-family: AmaticSC; /* padding: 3vw 0; */}
@@ -152,10 +152,15 @@
         content: ""; position: absolute; top: 50%; left: 50%; width: 1px; height: 80%; background: $bk2;
       }
       .atc_txt{
-        width: 400px; position: relative; padding: 2vw 2vw;
-        .num{font-family: AmaticSC; font-size: 4vw; position: absolute; top: 1vw;left: 1.5vw;}
+        width: 400px; position: relative; padding: 1.5vw 2vw;
+        .num{font-family: AmaticSC; font-size: 4vw; position: absolute; top: 1vw;left: 1.5vw; font-weight: 700;}
         strong{font-family: ComicNeue; font-size: 1.5vw;}
         .txt{font-size: 0.8vw; line-height: 1.5; padding: 1vw 0;}
+        .btn_more_bk{
+          @include transition(all 0.5s);
+          font-size: 1vw; width: 5.6vw; height: 2.3vw;
+        }
+        
       }
       .atc_txt:hover, .atc_txt:focus{
         .num, strong{color: $red; font-weight: 700;}
@@ -180,7 +185,7 @@
   @include flex;
   @include justify-content(space-between);
   @include align-items;
-  height: 100vh; position: relative; margin: 0 0 0 8vw;
+  height: 100vh; min-height: 100vh; position: relative; margin: 0 0 0 8vw;
   .txt_box{
     h2{font-family: AmaticSC; font-size: 5vw;}
     p{font-size: 0.9vw; line-height: 1.6; padding: 1.5vw 0.5vw 3vw;}
@@ -188,7 +193,6 @@
       @include transition(all 0.5s);
       position: relative; display: block; background: url("../images/icon/btn_bk.png") no-repeat 50% / cover; width: 7.14vw; height: 2.85vw; font-family: ComicNeue;
       font-size: 1vw; text-align: center; line-height: 2.85vw; font-weight: 700; margin-left: 18vw;
-
     }
     .btn_subscript_on{
       @include transition(all 0.5s);
@@ -206,26 +210,27 @@
       p{padding-top: 1vw; padding-left: 1.2vw; font-size: 0.9vw; line-height: 1.3;}
       &#box1{background-image: url("../images/main/cnt5_photo1.jpg");}
       &#box2{
-        @include transform(rotate(7deg));
+        @include transform(rotate(10deg));
         background-image: url("../images/main/cnt5_photo2.jpg");
       }
       &#box3{
-        @include transform(rotate(-7deg));
+        @include transform(rotate(-10deg));
         background-image: url("../images/main/cnt5_photo3.jpg");}
       &#box4{
-        @include transform(rotate(5deg));
+        @include transform(rotate(7deg));
         background-image: url("../images/main/cnt5_photo4.jpg");
       }      
     }
     .box:not(#box1){margin-left: 33vw;}
     .controller{
-      position: absolute; bottom: 5%; left: 0;
+      position: absolute; bottom: 10%; left: 0;
       @include flex;
       @include justify-content(flex-start);
       @include align-items;
-      background: no-repeat 50% / cover; width: 100%; height: 70px; z-index: 10; 
-      .button-prev{background-image: url("../images/icon/slide_left_small.png");  width: 72px; height: 70px; margin-right: 27vw;}
-      .button-next{background-image: url("../images/icon/slide_right_small.png"); width: 72px; height: 70px;}
+      width: 100%; height: 70px; z-index: 10; 
+      .button-prev,.button-next{background: no-repeat 50% / cover; width: 72px; height: 70px;}
+      .button-prev{background-image: url("../images/icon/slide_left_small.png");   margin-right: 27vw;}
+      .button-next{background-image: url("../images/icon/slide_right_small.png");}
     }
   }
 }
@@ -237,46 +242,45 @@
       overflow: hidden; width: vw-calc1440(600); height: vw-calc1440(600); margin-top: 8%;
     }
     .move_box{
-      width: vw-calc1440(500); height: vw-calc1440(500);
+      width: vw-calc1440(450); height: vw-calc1440(450);
       .photo{      
         width: vw-calc1440(958); height: vw-calc1440(1080);
       }
     }
     .txt{
-      top: 55%; padding: 0 8vw 0 8vw;
-      h2{font-size: 7vw; }
+      top: 55%; padding: 0 7vw;
       p{font-size: 1.2vw; line-height: 2vw; letter-spacing: -0.05vw;}
     }
     .scrollDown{font-size: 2vw;}
   }
   #cnt2{
     h2{
-      width: 31vw; height: 37vw;
-      span{top: 8vw; right: -1vw;font-size: 6.5vw; margin-right: -3vw;}
+      width: 31vw; height: 37vw; margin-top: 5vw; line-height: 37vh;
+      span{font-size: 6.5vw; margin-right: -3vw;}
     }
     .swiper-wrapper{
       .swiper-slide{
         .slide{
           height: 40vw;        
-          .winePhoto img{width: 7vw;}
+          .winePhoto img{width: 6vw;}
           strong{margin: 1.5vw 0; font-size: 1.7vw;}
         }
         .slide:hover, .slide:focus{
-          .winePhoto img{width: 9vw;}
+          .winePhoto img{width: 8.5vw;}
         }
       }
     }
   }
   #cnt3{
-    position: relative; height: 100vh; text-align: center;
     .left_txt{
-      h2{padding-bottom: 2vw;}
+      h2{padding-bottom: 1vw;}
       article{
         .atc_txt{
-          width: 300px; padding: 0; margin: 2vw 1vw;
-          .num{font-size: 5vw; top: -1.5vw;left: 0.5vw;}
-          strong{font-size: 1.9vw;}
-          .txt{font-size: 1vw; line-height: 1.5; padding: 1.5vw 0;}
+          width: 300px; padding: 0vw; margin: 1.5vw;
+          .num{font-size: 4.5vw; top: -1.5vw;left: 0.5vw;}
+          strong{font-size: 2vw;}
+          .txt{font-size: 1.1vw; line-height: 1.5; padding: 1.2vw 0;}
+          .btn_more_bk{width: 6vw; height: 2.4vw; font-size: 1.2vw;}
         }
       }
     }
@@ -302,8 +306,10 @@
       }
       .box:not(#box1){margin-left: 33.5vw;}
       .controller{
-        bottom: 0; left: 2.5vw;
-        .button-prev{margin-right: 27.5vw;}
+        position: absolute; bottom: 10%; left: 8%;
+        .button-prev,.button-next{background: no-repeat 50% / cover; width: 52px; height: 50px;}
+        .button-prev{background-image: url("../images/icon/slide_left_small.png");   margin-right: 28vw;}
+        .button-next{background-image: url("../images/icon/slide_right_small.png");}
       }
     }
   }
@@ -316,7 +322,7 @@
       @include flex;
       @include justify-content;
       @include align-items;
-      width: 100%; height: 100vh;margin-top: 0;
+      width: 100%; height: 100vh;min-height: 100vh; margin-top: 0;
     }
     .move_box{
       width: 450px; height: 450px; border-radius: 50%; margin-top: 8%;overflow: hidden;
@@ -332,11 +338,11 @@
     }
     .txt{
       display: block;
-      width: 100%; top: 60%; left: 0; height: 100vh;padding: 0 10vw;
+      width: 100%; top: 60%; left: 0; height: 100vh;padding: 0 7vw;
       h2{font-family: ComicNeue; font-weight: 700; font-size: 8vw; color: $red; margin-bottom: 1vw;}
       p{font-size: 1.8vw; line-height: 3vw; letter-spacing: -0.05vw;}
       .txt1{position: absolute; top: 5%;}
-      .txt2{text-align: right; position: absolute; top: 65%; right: 10vw;}
+      .txt2{text-align: right; position: absolute; top: 65%; right: 7vw;}
     }
     .scrollDown{
       font-size: 2.7vw;
@@ -345,49 +351,96 @@
   }
   #cnt2{
     display: block;
-    height: 60vw;
+    min-height: 90vh;
     h2{
-      background: none;  text-align: center; width: 100%; height: 20vw;
-      max-width: none; border-radius: 45%; padding-top: 5vw;
+      background: none; text-align: center; width: 100%; height: 15vw; line-height: 15vw;
+      /* max-width: none; */ border-radius: 45%; padding: 0; margin: 2vw 0;
       span{position: static; font-size: 9.2vw; margin-right: 0vw; }
+    }
+    .swiper-container{
+      width: 75vw; height: 80vh;
     }
     .swiper-wrapper{
       @include align-items(flex-end);
+      height: 50vh;
+      width: auto;
       .swiper-slide .slide .winePhoto{
         &::before{
-          @include transition(opacity, 0.4s);
+          @include transition(opacity, 0s);
           content:""; display: block; position: absolute; top: 5vw; left: -2vw; background: no-repeat top left / cover; z-index: 1;opacity: 0; width: 5.5vw; height: 5.2vw;}
         &::after{
-          @include transition(opacity, 0.4s);
+          @include transition(opacity, 0s);
           content:""; display: block; position: absolute; bottom: 0; right: -6vw; background: no-repeat top left / cover; z-index: -1;opacity: 0; width: 10vw; height: 10vw;}
       }
       .swiper-slide{
-        .slide{
-          @include flex;
+        @include flex;
           @include flex-direction;
           @include align-items;
-          @include justify-content(flex-end);
+          @include justify-content;
+        .slide{
+          width: 35vh; height: 85vh; min-height: 85vh;
           > *:not(.winePhoto){visibility: hidden;}
           .winePhoto{
-            position: relative; display: block; text-align: center; width: 9.5vw;
-          }
+            position: relative; display: block; text-align: center; width: 13.5vw; min-width: 13.5vw;
+            &::before{
+              @include transition(opacity, 0s);
+              content:""; display: block; position: absolute; top: 5vw; left: -2vw; background: no-repeat top left / cover; z-index: 1;opacity: 0; width: 8.9vw; height: 8.5vw;}
+            &::after{
+              @include transition(opacity, 0s);
+              content:""; display: block; position: absolute; bottom: 0; right: -7vw; background: no-repeat top left / cover; z-index: -1;opacity: 0; width: 15vw; height: 15vw;}              
+          }  
           .winePhoto img{
             @include transition(all, 0s);
-            width: 5vw;
+            width: 8vw;
           }
           strong{display: block; text-align: center;  font-size: 1.5vw; margin: 1vw 0;}
         }
-        &.swiper-slide-next{
+        &#slide2 .slide .winePhoto{          
+          &::after{
+            width: 11vw; height: 11vw; right: -7.5vw;}
+        }
+        &#slide3 .slide .winePhoto{
+          &::before{
+            width: 12vw; height: 12vw;}
+          &::after{
+            width: 17vw; height: 14vw; right: -8vw;}
+        }
+        &#slide4 .slide .winePhoto{
+          &::before{
+            width: 10vw; height: 12vw;}
+          &::after{
+            width: 17vw; height: 17vw; right: -9vw;}
+        }
+        &#slide5 .slide .winePhoto{
+          &::before{
+           width: 13vw; height: 13vw;}
+          &::after{
+            width: 17vw; height: 17vw; right: -10vw; bottom: -25px;
+            }            
+        }
+        &#slide6 .slide .winePhoto{
+          &::before{
+           width: 11vw; height: 11vw;}
+        }
+        &#slide7 .slide .winePhoto{
+          &::before{
+           width: 11vw; height: 10vw;}
+          &::after{
+            width: 18vw; height: 13vw; right: -8vw;
+            }            
+        }
+        &.swiper-slide-active{
           *{visibility: visible !important;}
           .winePhoto img{width: 15vw;}
           .winePhoto::before, .winePhoto::after{opacity: 1;}
-          .btn_more{background: url("../images/icon/btn_on.png") no-repeat 50% / cover; color: #fff;}
-        }
-        &.swiper-slide-active{width: 200px;}
+          strong{font-size: 2vw; margin: 2vw 0;}
+          .btn_more{
+            background: url("../images/icon/btn_on.png") no-repeat 50% / cover; color: #fff;
+            font-size: 1.8vw; width: 10vw; height: 4vw;}
+          }
         .slide:hover, .slide:focus{
-          .winePhoto img{width: 17vw;}
+          .winePhoto img{width: 15vw;}
           .winePhoto::before, .winePhoto::after{opacity: 1;}
-          .btn_more{background: url("../images/icon/btn_on.png") no-repeat 50% / cover; color: #fff;}
         }
       }
     }
@@ -395,26 +448,31 @@
       margin-top: 0; width: 7vw; height: 6vw; background: no-repeat 50% / cover;
       &::after{display: none;}
     }
-    .swiper-button-prev{background-image: url("../images/icon/slide_left.png"); left: 5vw; top: 50%; margin-top: -3vw}
-    .swiper-button-next{background-image: url("../images/icon/slide_right.png"); right: 5vw; top: 50%; margin-top: -3vw}
+    .swiper-button-prev{background-image: url("../images/icon/slide_left.png"); left: 0vw; top: 20%; margin-top: -3vw}
+    .swiper-button-next{background-image: url("../images/icon/slide_right.png"); right: 0vw; top: 20%; margin-top: -3vw}
   }
   #cnt3{
-    @include justify-content(space-between);
-    margin: 0 2vw; height: 100vw;
+    @include justify-content(space-evenly);
+    min-height: 95vh; margin: 0 0vw;
     .left_txt{
-      h2{font-size: 6vw;}
+      width: auto; height: 80vh; margin-right: -7vw;
+      h2{font-size: 5vw; padding-bottom: 1vw; margin-left: -5vw;}
       article{
+        @include flex;
+        @include align-items;
+        @include justify-content;
+        @include flex-wrap;
         @include flex-direction;
         position: relative; 
         &::before, &::after{
-          display: none;
+         display: none;
         }
         .atc_txt{
-          padding: 0; margin: 1vw 0vw;
-          .num{font-size: 5vw; top: 0;left: 0vw; font-weight: 700;}
-          strong{font-size: 2.2vw;}
-          .txt{font-size: 1.2vw; line-height: 1.5; padding: 1vw 0;}
-         /*  &::before{content:""; display: block;border-radius: 50%;background: rgba(37,37,37,.1); position: absolute; top: 0; left: 0; width: 200px; height: 200px;} */
+          width: 100%; position: relative; padding: 0; margin: 0.7vw 0;
+          .num{font-weight: 700; font-size: 4vw; position: absolute; top: 0vw;left: -1.5vw;}
+          strong{font-family: ComicNeue; font-size: 2vw;}
+          .txt{font-size: 1.15vw; line-height: 1.5; padding: 1vw 0;}
+          .btn_more_bk{position: absolute; top: 5vw;left: -3vw;}
         }
         .atc_txt:hover, .atc_txt:focus{
           .num, strong{color: $red; font-weight: 700;}
@@ -422,47 +480,36 @@
         }
       }
     }
-    #hoverLine{
-      position: absolute;top: 0vw;left: 0; pointer-events: none; z-index: 10; opacity: 0.8;
-      #line2{fill: none; stroke: #e23e3d; stroke-linecap: round; stroke-width: 5; stroke-dasharray: 897; stroke-dashoffset: 897; animation: lineHover 0.5s linear forwards;}
-    }
-    @keyframes lineHover {
-      0%{stroke-dashoffset: 897;}
-      100%{stroke-dashoffset: 0;}
-    }
     #video{
-       /*position: absolute; top: 0; right: 7vw; */width: 50%;  height: 80vw;
+       width: auto;  height: 80vh; padding: 0vw;
     }
   }
   #cnt4{
     @include flex;
-    @include justify-content(space-between);
+    @include flex-direction;
     @include align-items;
-    height: 60vw;
+    height: 100vh; min-height: 100vh;
     .txt_box{
-      h2{font-size: 6vw;}
-      p{font-size: 1.3vw; line-height: 1.6; padding: 1.7vw 0.5vw;}
+      h2{font-size: 5.5vw; margin-left: -1vw; margin-top: 2vw;}
+      p{font-size: 1.3vw; line-height: 1.5; padding: 2vw 0 2.5vw;}
       .btn_subscript{
         @include transition(all 0.5s);
-        position: relative; display: block; background: url("../images/icon/btn_bk.png") no-repeat 50% / cover; width: 10vw; height: 4vw; font-family: ComicNeue;
-        font-size: 1.5vw; text-align: center; line-height: 4vw; font-weight: 700; margin-left: 18vw;  
+        position: absolute; bottom: 5vw; right: -10vw; display: block; background: url("../images/icon/btn_red.png") no-repeat 50% / cover; width: 10vw; height: 4vw; font-family: ComicNeue;
+        font-size: 1.5vw; text-align: center; line-height: 4vw; font-weight: 700; margin-left: 18vw;
       }  
+      .finger{position: absolute; top: 90%; left: 70%; display: block; width: 5vw; height: 5vw; visibility: visible;}
     }
     #photo_box{
+      width: 85%;
       .box{
-        top: 15%; left: 15%; width: 30vw; height: 43vw; 
-        h3{padding-top: 2.5vw; padding-left: 2vw; font-size: 1.8vw;}
-        p{padding-top: 1.3vw; padding-left: 2.2vw; font-size: 1.3vw; line-height: 1.5;}        
+        top: 50%; left: 50%; width: 38vw; height: 48vw; margin-left: -17.4vw; margin-top: -24vw; padding-bottom: 20px;
+        h3{font-size: 2vw;}
+        p{padding-left: 2.5vw; font-size: 1.4vw; line-height: 1.5;}
       }
-      .box:not(#box1){margin-left: 33vw;}
+      .box:not(#box1){margin-left: 50vw;}
       .controller{
-        position: absolute; bottom: 0; left: 0;
-        @include flex;
-        @include justify-content;
-        @include align-items;
-        background: no-repeat 50% / cover; width: 100%; height: 70px; z-index: 10; 
-        .button-prev{background-image: url("../images/icon/slide_left_small.png");  width: 72px; height: 70px; margin-right: 27vw;}
-        .button-next{background-image: url("../images/icon/slide_right_small.png"); width: 72px; height: 70px;}
+        position: absolute; top: 50%; left: 1.5vw;
+        @include justify-content(space-around);
       }
     }
   }
@@ -471,22 +518,65 @@
 @media screen and (max-width: 770px) {
   #cnt1{
     .move_box{
-      width: vw-calc770(450); height: vw-calc770(450); overflow: hidden;
+      width: vw-calc770(450); height: vw-calc770(450);
       .photo{
         width: vw-calc770(958); height: vw-calc770(1080);
       }
     }
     .txt{
-      width: 100%; top: 60%; left: 0; height: 100vh;padding: 0 10vw;
-      h2{font-family: ComicNeue; font-weight: 700; font-size: 8vw; color: $red; margin-bottom: 1vw;}
-      p{font-size: 1.8vw; line-height: 3vw; letter-spacing: -0.05vw;}
-      .txt1{position: absolute; top: 5%;}
-      .txt2{text-align: right; position: absolute; top: 65%; right: 10vw;}
+      h2{font-size: 8vw; color: $red; margin-bottom: 1vw;}
+      p{font-size: 2vw; line-height: 3.5vw; letter-spacing: -0.05vw;}
     }
     .scrollDown{
-      font-size: 2.7vw;
-    }
-    
+      font-size: 4vw;
+    }    
   }
-
+  #cnt2{
+    min-height: auto; height: 90vh;
+    h2 span{margin-top: 5vw;}
+    .swiper-container{
+      width: 75vw; height: 80vh;
+    }
+    .swiper-wrapper{
+      height: 70vh; width: auto;
+      .swiper-slide{
+        .slide{
+          @include justify-content(center);
+          width: 20vh; height: 75vh; min-height: 75vh;
+          .winePhoto img{
+            @include transition(all, 0.2s);
+            width: 9vw;
+          }
+        }
+      }
+    }
+  }
+  #cnt3{
+    display: block;
+    min-height: 95vh; margin: 0 0vw; color: #fff; text-align: center;
+    .left_txt{
+      width: auto; height: 80vh; margin-right: 0vw; padding-top: 10vw;
+      h2{font-size: 5vw;margin-left: 0vw; position: absolute;}
+      article{
+        position: relative;  margin: 5vw 0vw;
+        .atc_txt{
+          width: auto; position: relative; padding: 0 0 2vw; margin-left: 5vw;
+          .num{font-weight: 700; font-size: 6vw; position: absolute; top: 0vw;left: -7vw;}
+          strong{font-family: ComicNeue; font-size: 3vw;}
+          .txt{font-size: 1.15vw; line-height: 1.5; padding: 1vw 0;}
+          .btn_more_bk{position: absolute; top: 8vw;left: -8vw; background-image: url("../images/icon/button_white.png");}
+          &::before{
+            content: ""; width: 21vw; height: 21vw; position: absolute; top: -5vw; left: -2vw; background: rgba(37,37,37,.3); border-radius: 50%; z-index: -3;}
+        }
+        .atc_txt:hover, .atc_txt:focus{
+          .num, strong{color: $red; font-weight: 700;}
+          .btn_more_bk{background-image: url("../images/icon/btn_on.png"); color: #fff;}
+        }
+      }
+    }
+    #video{
+      @include translate-50;
+      position: absolute; z-index: -5; height: 80vh; top: 50%; left: 50%; margin: 5vw 0;
+    }
+  }
 }

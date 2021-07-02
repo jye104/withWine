@@ -36,7 +36,6 @@ $(document).ready(function () {
        const liHei = $(this).next().children().outerHeight(true);
        const liSize = $(this).next().children().length;
        const ulHei = liHei * liSize;
-       console.log(liHei, liSize, ulHei);
 
        $(this).parent().siblings().removeClass('on').children('ul').stop().animate({maxHeight: 0}, function(){
            $(this).css({visibility: 'hidden'});

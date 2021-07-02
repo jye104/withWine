@@ -110,7 +110,7 @@ section {
 .btn_more {
   font-size: 1.3vw;
   background: url("../images/icon/btn_red.png") no-repeat 50%/cover;
-  width: 7.14vw;
+  width: 7.4vw;
   height: 2.95vw;
   font-family: ComicNeue;
   font-weight: 700; }
@@ -120,8 +120,8 @@ section {
   transition: all 0.5s;
   font-size: 1.2vw;
   background: url("../images/icon/btn_bk.png") no-repeat 50%/cover;
-  width: 7.14vw;
-  height: 2.85vw;
+  width: 7.4vw;
+  height: 2.95vw;
   font-family: ComicNeue;
   font-weight: 700; }
 
@@ -130,8 +130,8 @@ section {
   transition: all 0.5s;
   font-size: 1.2vw;
   background: url("../images/icon/btn_on.png") no-repeat 50%/cover;
-  width: 7.14vw;
-  height: 2.85vw;
+  width: 7.4vw;
+  height: 2.95vw;
   font-family: ComicNeue;
   color: #fff;
   font-weight: 700; }
