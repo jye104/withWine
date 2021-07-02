@@ -928,7 +928,7 @@
       #cnt4 .txt_box h2 {
         font-size: 5.5vw;
         margin-left: 0;
-        margin-top: 2vw; }
+        margin-top: 10vw; }
       #cnt4 .txt_box p {
         font-size: 1.5vw;
         line-height: 1.5;
@@ -990,12 +990,15 @@
     #cnt1 .move_box .photo {
       width: 130.6363636364vw;
       height: 147.2727272727vw; }
-  #cnt1 .txt h2 {
-    font-size: 7vw; }
-  #cnt1 .txt p {
-    font-size: 2vw; }
-  #cnt1 .txt .txt2 {
-    top: 66%; }
+  #cnt1 .txt {
+    padding: 0 5vw; }
+    #cnt1 .txt h2 {
+      font-size: 7vw; }
+    #cnt1 .txt p {
+      font-size: 2vw; }
+    #cnt1 .txt .txt2 {
+      top: 66%;
+      right: 3vw; }
   #cnt1 .scrollDown {
     font-size: 3vw; }
 
@@ -1092,7 +1095,7 @@
       vertical-align: middle; }
 
   #cnt4 {
-    height: 100vh; }
+    height: 80vh; }
     #cnt4 .txt_box {
       text-align: center;
       margin-left: 3vw; }
