@@ -6,7 +6,7 @@
   @include flex;
   @include justify-content;
   @include align-items;
-   min-height: 100vh; background: $lightPink;
+   min-height: 100vh; background: $pink;
   .move_box_wrap{
     overflow: hidden; width: 600px; height: 600px; border-radius: 50%; margin-top: 5%;
   }
@@ -42,8 +42,8 @@
   @include align-items;
   min-height: 100vh;
   h2{
-    background: url("../images/main/cnt2_bg.jpg") no-repeat 50% / cover;  width: 25vw; height: 31vw; max-width: 100%; border-radius: 45%;
-    span{font-family: AmaticSC; font-size: 6vw; margin-right: -3vw;}
+    background: url("../images/main/cnt2_bg.jpg") no-repeat 50% / cover;  width: 25vw; height: 31vw; max-width: 100%; border-radius: 45%; position: relative;
+    span{position: absolute; top: 5vw; right: -1vw;font-family: AmaticSC; font-size: 6vw; margin-right: -3vw;}
   }
   .swiper-wrapper{
     @include align-items(flex-end);
@@ -127,6 +127,9 @@
   }
   .swiper-button-prev{background-image: url("../images/icon/slide_left.png"); left: 0;}
   .swiper-button-next{background-image: url("../images/icon/slide_right.png"); right: 0;}
+
+  .md_cnt{display: none}
+
 }
 
 #cnt3{
@@ -136,7 +139,7 @@
   min-height: 100vh; text-align: center; margin: 0 1vw;
   .left_txt{
     width: 60%;
-    h2{font-size: 5vw; font-family: AmaticSC; /* padding: 3vw 0; */}
+    h2{font-size: 5vw; font-family: AmaticSC; padding: 3vw 0;}
     article{
       @include flex;
       @include align-items;
@@ -158,7 +161,7 @@
         .txt{font-size: 0.8vw; line-height: 1.5; padding: 1vw 0;}
         .btn_more_bk{
           @include transition(all 0.5s);
-          font-size: 1vw; width: 5.6vw; height: 2.3vw;
+          font-size: 1vw; width: 5.8vw; height: 2.3vw;
         }
         
       }
@@ -169,7 +172,7 @@
     }
   }
   #hoverLine{
-    position: absolute;top: -2vw;left: 0; pointer-events: none; z-index: 10; opacity: 0.8;
+    position: absolute;top: -6vw;left: 0; pointer-events: none; z-index: 10; opacity: 0.8;
     #line2{fill: none; stroke: #e23e3d; stroke-linecap: round; stroke-width: 5; stroke-dasharray: 897; stroke-dashoffset: 897; animation: lineHover 0.5s linear forwards;}
   }
   @keyframes lineHover {
@@ -203,7 +206,7 @@
     .finger{position: absolute; top: 100%; left: 100%; display: block; width: 3vw; height: 3vw; visibility: hidden;}
   }
   #photo_box{
-    position: relative; width: 50%; height: 100%; overflow: hidden;
+    position: relative; width: 60%; height: 47vw; overflow: hidden;
     .box{
       position: absolute; top: 10%; left: 10%; width: 25vw; height: 38vw; background: no-repeat 50% / cover;
       h3{padding-top: 2vw; padding-left: 1vw; font-size: 1.5vw;}
@@ -223,13 +226,13 @@
     }
     .box:not(#box1){margin-left: 33vw;}
     .controller{
-      position: absolute; bottom: 10%; left: 0;
+      position: absolute; top: 80%; left: 0;
       @include flex;
       @include justify-content(flex-start);
       @include align-items;
       width: 100%; height: 70px; z-index: 10; 
       .button-prev,.button-next{background: no-repeat 50% / cover; width: 72px; height: 70px;}
-      .button-prev{background-image: url("../images/icon/slide_left_small.png");   margin-right: 27vw;}
+      .button-prev{background-image: url("../images/icon/slide_left_small.png");   margin-right: 26.25vw;}
       .button-next{background-image: url("../images/icon/slide_right_small.png");}
     }
   }
@@ -314,7 +317,21 @@
     }
   }
 }
-
+@media screen and (max-width: 1440px) {
+  #cnt3{
+    .left_txt{
+      width: 58%;
+      h2{margin-bottom: 2vw;}
+      article{
+        .atc_txt{
+          width: 280px;
+          .txt{font-size: 1.1vw; line-height: 1.5; padding: 1.2vw 0;}
+        }
+      }
+    }
+    #hoverLine{top: -9vw;left: -6vw;}
+  }
+}
 @media screen and (max-width: 1080px) {
   #cnt1{
     display : block;
@@ -325,7 +342,7 @@
       width: 100%; height: 100vh;min-height: 100vh; margin-top: 0;
     }
     .move_box{
-      width: 450px; height: 450px; border-radius: 50%; margin-top: 8%;overflow: hidden;
+      width: 500px; height: 500px; border-radius: 50%; margin-top: 8%;overflow: hidden;
       .photo{
         @include transition(transform 0.5s ease);
         width: 958px; height: 1080px;
@@ -339,8 +356,8 @@
     .txt{
       display: block;
       width: 100%; top: 60%; left: 0; height: 100vh;padding: 0 7vw;
-      h2{font-family: ComicNeue; font-weight: 700; font-size: 8vw; color: $red; margin-bottom: 1vw;}
-      p{font-size: 1.8vw; line-height: 3vw; letter-spacing: -0.05vw;}
+      h2{font-family: ComicNeue; font-weight: 700; font-size: 6vw; color: $red; margin-bottom: 1vw;}
+      p{font-size: 1.5vw; line-height: 2.5vw; letter-spacing: -0.05vw;}
       .txt1{position: absolute; top: 5%;}
       .txt2{text-align: right; position: absolute; top: 65%; right: 7vw;}
     }
@@ -355,14 +372,14 @@
     h2{
       background: none; text-align: center; width: 100%; height: 15vw; line-height: 15vw;
       /* max-width: none; */ border-radius: 45%; padding: 0; margin: 2vw 0;
-      span{position: static; font-size: 9.2vw; margin-right: 0vw; }
+      span{position: static; font-size: 8vw; margin-right: 0vw; }
     }
     .swiper-container{
-      width: 75vw; height: 80vh;
+      width: 75vw; height: 90vh;
     }
     .swiper-wrapper{
       @include align-items(flex-end);
-      height: 50vh;
+      height: 80vh;
       width: auto;
       .swiper-slide .slide .winePhoto{
         &::before{
@@ -453,10 +470,10 @@
   }
   #cnt3{
     @include justify-content(space-evenly);
-    min-height: 95vh; margin: 0 0vw;
+    min-height: 100vh; margin: 0 0vw;
     .left_txt{
       width: auto; height: 80vh; margin-right: -7vw;
-      h2{font-size: 5vw; padding-bottom: 1vw; margin-left: -5vw;}
+      h2{font-size: 6vw; padding-bottom: 2vw; margin-left: -5vw;}
       article{
         @include flex;
         @include align-items;
@@ -472,11 +489,11 @@
           .num{font-weight: 700; font-size: 4vw; position: absolute; top: 0vw;left: -1.5vw;}
           strong{font-family: ComicNeue; font-size: 2vw;}
           .txt{font-size: 1.15vw; line-height: 1.5; padding: 1vw 0;}
-          .btn_more_bk{position: absolute; top: 5vw;left: -3vw;}
+          .btn_more_bk{position: absolute; top: 5vw;left: -3vw;
+            background-image: url("../images/icon/btn_on.png"); color: #fff;}
         }
         .atc_txt:hover, .atc_txt:focus{
-          .num, strong{color: $red; font-weight: 700;}
-          .btn_more_bk{background-image: url("../images/icon/btn_on.png"); color: #fff;}
+          .num, strong{color: $red; font-weight: 700;}          
         }
       }
     }
@@ -488,23 +505,25 @@
     @include flex;
     @include flex-direction;
     @include align-items;
-    height: 100vh; min-height: 100vh;
+    @include justify-content(flex-start);
+    height: 100vh; min-height: auto; margin: 8vw 0;
     .txt_box{
-      h2{font-size: 5.5vw; margin-left: -1vw; margin-top: 2vw;}
-      p{font-size: 1.3vw; line-height: 1.5; padding: 2vw 0 2.5vw;}
+      text-align: center;
+      h2{font-size: 5.5vw; margin-left: 0; margin-top: 2vw;}
+      p{font-size: 1.5vw; line-height: 1.5; padding: 2vw 0 2.5vw;}
       .btn_subscript{
         @include transition(all 0.5s);
-        position: absolute; bottom: 5vw; right: -10vw; display: block; background: url("../images/icon/btn_red.png") no-repeat 50% / cover; width: 10vw; height: 4vw; font-family: ComicNeue;
-        font-size: 1.5vw; text-align: center; line-height: 4vw; font-weight: 700; margin-left: 18vw;
+        position: absolute; top: 18vw; right: 22vw;  width: 10vw; height: 4vw; 
+        font-size: 1.5vw;line-height: 4vw; font-weight: 700; margin-left: 18vw; background-image: url("../images/icon/btn_on.png"); color: #fff;
       }  
       .finger{position: absolute; top: 90%; left: 70%; display: block; width: 5vw; height: 5vw; visibility: visible;}
     }
     #photo_box{
-      width: 85%;
+      width: 100%; text-align: center; height: 60vh;
       .box{
-        top: 50%; left: 50%; width: 38vw; height: 48vw; margin-left: -17.4vw; margin-top: -24vw; padding-bottom: 20px;
-        h3{font-size: 2vw;}
-        p{padding-left: 2.5vw; font-size: 1.4vw; line-height: 1.5;}
+        top: 50%; left: 50%; width: 38vw; height: 48vw; margin-left: -17.4vw; margin-top: -24vw; padding-bottom: 2vw;
+        h3{font-size: 2vw; padding-bottom: 1vw; padding-left: 0;}
+        p{padding: 0vw; font-size: 1.4vw; line-height: 1.5;}
       }
       .box:not(#box1){margin-left: 50vw;}
       .controller{
@@ -518,65 +537,54 @@
 @media screen and (max-width: 770px) {
   #cnt1{
     .move_box{
-      width: vw-calc770(450); height: vw-calc770(450);
+      width: vw-calc770(500); height: vw-calc770(500);
       .photo{
         width: vw-calc770(958); height: vw-calc770(1080);
       }
     }
     .txt{
-      h2{font-size: 8vw; color: $red; margin-bottom: 1vw;}
-      p{font-size: 2vw; line-height: 3.5vw; letter-spacing: -0.05vw;}
+      p{font-size: 1.6vw;}
+      .txt2{top: 66%;}
     }
     .scrollDown{
-      font-size: 4vw;
+      font-size: 3vw;
     }    
   }
   #cnt2{
-    min-height: auto; height: 90vh;
-    h2 span{margin-top: 5vw;}
-    .swiper-container{
-      width: 75vw; height: 80vh;
-    }
-    .swiper-wrapper{
-      height: 70vh; width: auto;
-      .swiper-slide{
-        .slide{
-          @include justify-content(center);
-          width: 20vh; height: 75vh; min-height: 75vh;
-          .winePhoto img{
-            @include transition(all, 0.2s);
-            width: 9vw;
-          }
-        }
-      }
-    }
+    height: 95vh; min-height: 95vh;
+    h2{margin-top: 5vw;}
+    .swiper-container{width: 75vw; height: 80vh;}
+    .swiper-wrapper{height: 45vh;}
+    .swiper-button-prev{background-image: url("../images/icon/slide_left.png"); left: 0vw; top: 40%; margin-top: -3vw}
+    .swiper-button-next{background-image: url("../images/icon/slide_right.png"); right: 0vw; top: 40%; margin-top: -3vw}
   }
   #cnt3{
-    display: block;
-    min-height: 95vh; margin: 0 0vw; color: #fff; text-align: center;
+    min-height: 100vh; margin: 0 0vw; color: #fff;
     .left_txt{
-      width: auto; height: 80vh; margin-right: 0vw; padding-top: 10vw;
-      h2{font-size: 5vw;margin-left: 0vw; position: absolute;}
+      @include flex;
+      @include flex-direction;
+      @include align-items;
+      width: auto; height: 80vh; margin-right: -7vw;
+      h2{font-size: 6vw; padding: 2.5vw 0; margin: -12vw 0 3vw;}
       article{
-        position: relative;  margin: 5vw 0vw;
         .atc_txt{
-          width: auto; position: relative; padding: 0 0 2vw; margin-left: 5vw;
-          .num{font-weight: 700; font-size: 6vw; position: absolute; top: 0vw;left: -7vw;}
+          width: 100%; position: relative; padding: 0; margin: 2vw 0;
+          .num{font-weight: 700; font-size: 5vw; position: absolute; top: 0vw;left: -5.5vw; color: $red;}
           strong{font-family: ComicNeue; font-size: 3vw;}
-          .txt{font-size: 1.15vw; line-height: 1.5; padding: 1vw 0;}
-          .btn_more_bk{position: absolute; top: 8vw;left: -8vw; background-image: url("../images/icon/button_white.png");}
-          &::before{
-            content: ""; width: 21vw; height: 21vw; position: absolute; top: -5vw; left: -2vw; background: rgba(37,37,37,.3); border-radius: 50%; z-index: -3;}
+          .txt{font-size: 1.7vw; line-height: 1.5; padding: 1vw 0;}
+          .btn_more_bk{position: absolute; top: 5vw;left: -7vw;
+            background-image: url("../images/icon/btn_on.png"); font-size: 1.7vw;}
+          &::before{content: "";position: absolute;top: -4vw;left: -1vw; width: 25vw; height: 25vw; background: rgba(37,37,37,.4); border-radius: 50%; z-index: -5;}
         }
         .atc_txt:hover, .atc_txt:focus{
-          .num, strong{color: $red; font-weight: 700;}
-          .btn_more_bk{background-image: url("../images/icon/btn_on.png"); color: #fff;}
+          .num, strong{color: $red; font-weight: 700;}          
         }
       }
     }
     #video{
       @include translate-50;
-      position: absolute; z-index: -5; height: 80vh; top: 50%; left: 50%; margin: 5vw 0;
+      position: absolute; top: 50%;left: 50%; z-index: -3;
+       width: auto;  height: 100vh; padding: 0vw; vertical-align: middle;
     }
   }
 }
