@@ -66,7 +66,7 @@ section{overflow: hidden;}
 .max1440{width: 100%; max-width: 1440px; margin: 0 auto;}
 .hidden{visibility: hidden;}
 .visible{visibility: visible;}
-.beige{background: $beige; border-bottom: 1px solid $beige2;}
+.beige{background: $beige;/*  border-bottom: 1px solid $beige2; */}
 .m_0{margin-left: 0;}
 .btn_more{
   font-size: 1.3vw; background: url("../images/icon/btn_red.png")no-repeat 50% / cover; width: 7.4vw; height: 2.95vw; font-family: ComicNeue; font-weight: 700;

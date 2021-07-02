@@ -102,7 +102,7 @@ section {
 
 .beige {
   background: #fdf6ee;
-  border-bottom: 1px solid rgba(225, 218, 209, 0.5); }
+  /*  border-bottom: 1px solid $beige2; */ }
 
 .m_0 {
   margin-left: 0; }

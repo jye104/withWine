@@ -236,11 +236,11 @@
   text-align: center;
   margin: 0 1vw; }
   #cnt3 .left_txt {
-    width: 60%; }
+    width: 50%; }
     #cnt3 .left_txt h2 {
       font-size: 5vw;
       font-family: AmaticSC;
-      padding: 3vw 0; }
+      padding: 1.5vw 0; }
     #cnt3 .left_txt article {
       display: -webkit-box;
       display: -moz-box;
@@ -308,7 +308,7 @@
         color: #fff; }
   #cnt3 #hoverLine {
     position: absolute;
-    top: -6vw;
+    top: -3vw;
     left: 0;
     pointer-events: none;
     z-index: 10;
@@ -424,15 +424,15 @@
         transform: rotate(-10deg);
         background-image: url("../images/main/cnt5_photo3.jpg"); }
       #cnt4 #photo_box .box#box4 {
-        -webkit-transform: rotate(7deg);
-        -moz-transform: rotate(7deg);
-        transform: rotate(7deg);
+        -webkit-transform: rotate(5deg);
+        -moz-transform: rotate(5deg);
+        transform: rotate(5deg);
         background-image: url("../images/main/cnt5_photo4.jpg"); }
     #cnt4 #photo_box .box:not(#box1) {
       margin-left: 33vw; }
     #cnt4 #photo_box .controller {
       position: absolute;
-      top: 80%;
+      top: 85%;
       left: 0;
       display: -webkit-box;
       display: -moz-box;
@@ -452,7 +452,7 @@
         height: 70px; }
       #cnt4 #photo_box .controller .button-prev {
         background-image: url("../images/icon/slide_left_small.png");
-        margin-right: 26.25vw; }
+        margin-right: 28.25vw; }
       #cnt4 #photo_box .controller .button-next {
         background-image: url("../images/icon/slide_right_small.png"); }
 
@@ -485,7 +485,8 @@
     line-height: 37vh; }
     #cnt2 h2 span {
       font-size: 6.5vw;
-      margin-right: -3vw; }
+      margin-right: -3vw;
+      top: 0; }
   #cnt2 .swiper-wrapper .swiper-slide .slide {
     height: 40vw; }
     #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto img {
@@ -573,7 +574,7 @@
       height: 50px; }
     #cnt4 #photo_box .controller .button-prev {
       background-image: url("../images/icon/slide_left_small.png");
-      margin-right: 28vw; }
+      margin-right: 29vw; }
     #cnt4 #photo_box .controller .button-next {
       background-image: url("../images/icon/slide_right_small.png"); } }
 @media screen and (max-width: 1440px) {
@@ -592,7 +593,8 @@
     left: -6vw; } }
 @media screen and (max-width: 1080px) {
   #cnt1 {
-    display: block; }
+    display: block;
+    height: auto; }
     #cnt1 .move_box_wrap {
       display: -webkit-box;
       display: -moz-box;
@@ -639,12 +641,12 @@
       #cnt1 .txt h2 {
         font-family: ComicNeue;
         font-weight: 700;
-        font-size: 6vw;
+        font-size: 6.5vw;
         color: #e23e3d;
         margin-bottom: 1vw; }
       #cnt1 .txt p {
-        font-size: 1.5vw;
-        line-height: 2.5vw;
+        font-size: 2.2vw;
+        line-height: 3.5vw;
         letter-spacing: -0.05vw; }
       #cnt1 .txt .txt1 {
         position: absolute;
@@ -659,7 +661,7 @@
 
   #cnt2 {
     display: block;
-    min-height: 90vh; }
+    min-height: auto; }
     #cnt2 h2 {
       background: none;
       text-align: center;
@@ -676,11 +678,11 @@
         margin-right: 0vw; }
     #cnt2 .swiper-container {
       width: 75vw;
-      height: 90vh; }
+      /* height: auto; */ }
     #cnt2 .swiper-wrapper {
-      -webkit-align-items: flex-end;
-      align-items: flex-end;
-      height: 80vh;
+      -webkit-align-items: center;
+      align-items: center;
+      /*  height: auto; */
       width: auto; }
       #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto::before {
         -webkit-transition: opacity, 0s;
@@ -721,9 +723,10 @@
         -webkit-justify-content: center;
         justify-content: center; }
         #cnt2 .swiper-wrapper .swiper-slide .slide {
+          -webkit-justify-content: center;
+          justify-content: center;
           width: 35vh;
-          height: 85vh;
-          min-height: 85vh; }
+          min-height: 65vh; }
           #cnt2 .swiper-wrapper .swiper-slide .slide > *:not(.winePhoto) {
             visibility: hidden; }
           #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto {
@@ -897,6 +900,8 @@
         #cnt3 .left_txt article .atc_txt:hover .num, #cnt3 .left_txt article .atc_txt:hover strong, #cnt3 .left_txt article .atc_txt:focus .num, #cnt3 .left_txt article .atc_txt:focus strong {
           color: #e23e3d;
           font-weight: 700; }
+        #cnt3 .left_txt article .atc_txt:hover strong, #cnt3 .left_txt article .atc_txt:focus strong {
+          text-decoration: underline; }
     #cnt3 #video {
       width: auto;
       height: 80vh;
@@ -916,9 +921,10 @@
     justify-content: flex-start;
     height: 100vh;
     min-height: auto;
-    margin: 8vw 0; }
+    margin: 0; }
     #cnt4 .txt_box {
-      text-align: center; }
+      text-align: center;
+      margin-left: 3vw; }
       #cnt4 .txt_box h2 {
         font-size: 5.5vw;
         margin-left: 0;
@@ -984,33 +990,32 @@
     #cnt1 .move_box .photo {
       width: 130.6363636364vw;
       height: 147.2727272727vw; }
+  #cnt1 .txt h2 {
+    font-size: 7vw; }
   #cnt1 .txt p {
-    font-size: 1.6vw; }
+    font-size: 2vw; }
   #cnt1 .txt .txt2 {
     top: 66%; }
   #cnt1 .scrollDown {
     font-size: 3vw; }
 
-  #cnt2 {
-    height: 95vh;
-    min-height: 95vh; }
-    #cnt2 h2 {
-      margin-top: 5vw; }
-    #cnt2 .swiper-container {
-      width: 75vw;
-      height: 80vh; }
-    #cnt2 .swiper-wrapper {
-      height: 45vh; }
-    #cnt2 .swiper-button-prev {
-      background-image: url("../images/icon/slide_left.png");
-      left: 0vw;
-      top: 40%;
-      margin-top: -3vw; }
-    #cnt2 .swiper-button-next {
-      background-image: url("../images/icon/slide_right.png");
-      right: 0vw;
-      top: 40%;
-      margin-top: -3vw; }
+  #cnt2 h2 {
+    margin-top: 5vw; }
+  #cnt2 .swiper-container {
+    width: 75vw;
+    /*  height: 80vh; */ }
+  #cnt2 .swiper-wrapper {
+    /* height: 45vh; */ }
+  #cnt2 .swiper-button-prev {
+    background-image: url("../images/icon/slide_left.png");
+    left: 0vw;
+    top: 40%;
+    margin-top: -3vw; }
+  #cnt2 .swiper-button-next {
+    background-image: url("../images/icon/slide_right.png");
+    right: 0vw;
+    top: 40%;
+    margin-top: -3vw; }
 
   #cnt3 {
     min-height: 100vh;
@@ -1071,6 +1076,8 @@
       #cnt3 .left_txt article .atc_txt:hover .num, #cnt3 .left_txt article .atc_txt:hover strong, #cnt3 .left_txt article .atc_txt:focus .num, #cnt3 .left_txt article .atc_txt:focus strong {
         color: #e23e3d;
         font-weight: 700; }
+      #cnt3 .left_txt article .atc_txt:hover strong, #cnt3 .left_txt article .atc_txt:focus strong {
+        text-decoration: underline; }
     #cnt3 #video {
       -webkit-transform: translate(-50%, -50%);
       -moz-transform: translate(-50%, -50%);
@@ -1082,6 +1089,70 @@
       width: auto;
       height: 100vh;
       padding: 0vw;
-      vertical-align: middle; } }
+      vertical-align: middle; }
+
+  #cnt4 {
+    height: 100vh; }
+    #cnt4 .txt_box {
+      text-align: center;
+      margin-left: 3vw; }
+      #cnt4 .txt_box h2 {
+        font-size: 7.5vw;
+        margin-left: 0;
+        margin-top: 10vw; }
+      #cnt4 .txt_box p {
+        font-size: 1.9vw;
+        line-height: 1.5;
+        padding: 2vw 0 2.5vw; }
+      #cnt4 .txt_box .btn_subscript {
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+        position: absolute;
+        top: 30vw;
+        right: 15vw;
+        width: 13vw;
+        height: 5.1vw;
+        font-size: 1.8vw;
+        line-height: 5vw;
+        font-weight: 700;
+        margin-left: 18vw;
+        background-image: url("../images/icon/btn_on.png");
+        color: #fff; }
+      #cnt4 .txt_box .finger {
+        position: absolute;
+        top: 90%;
+        left: 70%;
+        display: block;
+        width: 5vw;
+        height: 5vw;
+        visibility: visible; }
+    #cnt4 #photo_box {
+      width: 100%;
+      text-align: center;
+      height: 50vh; }
+      #cnt4 #photo_box .box {
+        top: 50%;
+        left: 50%;
+        width: 40vw;
+        height: 50vw;
+        margin-left: -17.4vw;
+        margin-top: -24vw;
+        padding-bottom: 2vw; }
+        #cnt4 #photo_box .box h3 {
+          font-size: 2.5vw;
+          padding-bottom: 1vw;
+          padding-left: 0; }
+        #cnt4 #photo_box .box p {
+          padding: 0vw;
+          font-size: 1.8vw;
+          line-height: 1.5; }
+      #cnt4 #photo_box .box:not(#box1) {
+        margin-left: 50vw; }
+      #cnt4 #photo_box .controller {
+        position: absolute;
+        top: 50%;
+        left: 1.5vw;
+        -webkit-justify-content: space-around;
+        justify-content: space-around; } }
 
 /*# sourceMappingURL=main.css.map */

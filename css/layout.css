@@ -323,7 +323,7 @@
 
   #mHeader {
     visibility: visible;
-    height: 60px;
+    height: 80px;
     position: fixed;
     z-index: 900;
     width: 100%; }
@@ -338,15 +338,15 @@
       -webkit-align-items: center;
       align-items: center;
       width: 100%;
-      height: 60px;
+      height: 80px;
       padding: 0 40px; }
       #mHeader .headerTop .logo a img {
-        width: 50px;
-        height: 42px; }
+        width: 60px;
+        height: 50px; }
       #mHeader .headerTop .btn_gnb_open {
         position: relative;
-        width: 30px;
-        height: 40px;
+        width: 40px;
+        height: 50px;
         background: url("../images/icon/btn_nav_menu.png") no-repeat 50%/cover; }
     #mHeader #mGnb {
       visibility: hidden;
@@ -357,7 +357,7 @@
       width: 100%;
       overflow-y: auto;
       z-index: 950;
-      padding: 13vw 6vw 0vw;
+      padding: 13vw 10vw 0vw;
       background: #ffe2e2 url("../images/common/nav_bg.png") no-repeat bottom right; }
       #mHeader #mGnb .btn_gnb_close {
         position: absolute;
@@ -366,14 +366,14 @@
         width: 5vw;
         height: 5vw; }
       #mHeader #mGnb > ul > li {
-        margin-bottom: 5vw; }
+        margin-bottom: 6vw; }
         #mHeader #mGnb > ul > li:last-child {
           margin-bottom: 0; }
         #mHeader #mGnb > ul > li > a {
           position: relative;
           display: block;
           font-family: ComicNeue;
-          font-size: 4vw;
+          font-size: 5vw;
           font-weight: 700; }
           #mHeader #mGnb > ul > li > a::before {
             -webkit-transform: rotate(135deg);
@@ -403,8 +403,8 @@
         max-height: 0;
         overflow: hidden; }
         #mHeader #mGnb .dep2 > li {
-          padding: 4vw 0 1vw 3vw;
-          font-size: 2.5vw; }
+          padding: 4vw 0 1vw 4vw;
+          font-size: 2.8vw; }
 
   .footer {
     display: -webkit-box;
@@ -487,7 +487,7 @@
       height: 4.5vw;
       border-radius: 100%;
       background: #e23e3d url("../images/icon/btn_top.png") no-repeat center;
-      background-size: 2vw 2vw;
+      background-size: 2vw 2.5vw;
       box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15);
       z-index: 90;
       position: absolute;
@@ -520,7 +520,7 @@
     justify-content: flex-end;
     text-align: center;
     height: 40vh;
-    font-size: 1.6vw;
+    font-size: 1.8vw;
     padding-right: 0vw; }
     .footer .btn_top {
       width: 4.5vw;
@@ -537,26 +537,23 @@
       padding-right: 0;
       margin-left: 0;
       margin-bottom: 1.5vw; }
-    .footer .logo a img {
-      width: 60px;
-      height: 50px; }
     .footer .foot_left strong {
-      font-size: 2.8vw;
+      font-size: 3vw;
       font-weight: 400;
       margin-bottom: 2vw; }
     .footer .foot_left address p {
-      padding-top: 1.5vw; }
+      padding-top: 1.7vw; }
     .footer .foot_left span {
-      padding-right: 1.5vw; }
+      padding-right: 1.7vw; }
     .footer .foot_center {
       padding: 0; }
       .footer .foot_center p {
-        padding-top: 1.5vw; }
+        padding-top: 1.7vw; }
       .footer .foot_center .copy {
-        font-size: 1.5vw;
+        font-size: 1.7vw;
         color: #676767; }
       .footer .foot_center span {
-        padding-right: 1.5vw; }
+        padding-right: 1.7vw; }
     .footer .foot_right {
       display: -webkit-box;
       display: -moz-box;
@@ -569,7 +566,7 @@
       margin-bottom: 3vw; }
       .footer .foot_right p {
         padding-bottom: 0.8vw;
-        font-size: 1.6vw; }
+        font-size: 1.8vw; }
       .footer .foot_right .sns_wrap {
         margin-right: 1.8vw; }
       .footer .foot_right .sns {
@@ -582,17 +579,17 @@
         .footer .foot_right .sns li {
           width: 2.2vw;
           height: 2.2vw;
-          margin-right: 1.5vw; }
+          margin-right: 1.7vw; }
       .footer .foot_right .help {
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
-        padding-bottom: 1.5vw; }
+        padding-bottom: 1.7vw; }
         .footer .foot_right .help li {
-          margin-right: 1.5vw;
-          font-size: 1.5vw;
+          margin-right: 1.7vw;
+          font-size: 1.75vw;
           line-height: 2.2vw; } }
 
 /*# sourceMappingURL=layout.css.map */

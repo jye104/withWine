@@ -138,8 +138,8 @@
   @include align-items;
   min-height: 100vh; text-align: center; margin: 0 1vw;
   .left_txt{
-    width: 60%;
-    h2{font-size: 5vw; font-family: AmaticSC; padding: 3vw 0;}
+    width: 50%;
+    h2{font-size: 5vw; font-family: AmaticSC; padding: 1.5vw 0;}
     article{
       @include flex;
       @include align-items;
@@ -172,7 +172,7 @@
     }
   }
   #hoverLine{
-    position: absolute;top: -6vw;left: 0; pointer-events: none; z-index: 10; opacity: 0.8;
+    position: absolute;top: -3vw;left: 0; pointer-events: none; z-index: 10; opacity: 0.8;
     #line2{fill: none; stroke: #e23e3d; stroke-linecap: round; stroke-width: 5; stroke-dasharray: 897; stroke-dashoffset: 897; animation: lineHover 0.5s linear forwards;}
   }
   @keyframes lineHover {
@@ -220,19 +220,19 @@
         @include transform(rotate(-10deg));
         background-image: url("../images/main/cnt5_photo3.jpg");}
       &#box4{
-        @include transform(rotate(7deg));
+        @include transform(rotate(5deg));
         background-image: url("../images/main/cnt5_photo4.jpg");
       }      
     }
     .box:not(#box1){margin-left: 33vw;}
     .controller{
-      position: absolute; top: 80%; left: 0;
+      position: absolute; top: 85%; left: 0;
       @include flex;
       @include justify-content(flex-start);
       @include align-items;
       width: 100%; height: 70px; z-index: 10; 
       .button-prev,.button-next{background: no-repeat 50% / cover; width: 72px; height: 70px;}
-      .button-prev{background-image: url("../images/icon/slide_left_small.png");   margin-right: 26.25vw;}
+      .button-prev{background-image: url("../images/icon/slide_left_small.png");   margin-right: 28.25vw;}
       .button-next{background-image: url("../images/icon/slide_right_small.png");}
     }
   }
@@ -259,7 +259,7 @@
   #cnt2{
     h2{
       width: 31vw; height: 37vw; margin-top: 5vw; line-height: 37vh;
-      span{font-size: 6.5vw; margin-right: -3vw;}
+      span{font-size: 6.5vw; margin-right: -3vw; top: 0;}
     }
     .swiper-wrapper{
       .swiper-slide{
@@ -311,7 +311,7 @@
       .controller{
         position: absolute; bottom: 10%; left: 8%;
         .button-prev,.button-next{background: no-repeat 50% / cover; width: 52px; height: 50px;}
-        .button-prev{background-image: url("../images/icon/slide_left_small.png");   margin-right: 28vw;}
+        .button-prev{background-image: url("../images/icon/slide_left_small.png");   margin-right: 29vw;}
         .button-next{background-image: url("../images/icon/slide_right_small.png");}
       }
     }
@@ -334,7 +334,7 @@
 }
 @media screen and (max-width: 1080px) {
   #cnt1{
-    display : block;
+    display : block; height: auto;
     .move_box_wrap{
       @include flex;
       @include justify-content;
@@ -356,8 +356,8 @@
     .txt{
       display: block;
       width: 100%; top: 60%; left: 0; height: 100vh;padding: 0 7vw;
-      h2{font-family: ComicNeue; font-weight: 700; font-size: 6vw; color: $red; margin-bottom: 1vw;}
-      p{font-size: 1.5vw; line-height: 2.5vw; letter-spacing: -0.05vw;}
+      h2{font-family: ComicNeue; font-weight: 700; font-size: 6.5vw; color: $red; margin-bottom: 1vw;}
+      p{font-size: 2.2vw; line-height: 3.5vw; letter-spacing: -0.05vw;}
       .txt1{position: absolute; top: 5%;}
       .txt2{text-align: right; position: absolute; top: 65%; right: 7vw;}
     }
@@ -368,18 +368,18 @@
   }
   #cnt2{
     display: block;
-    min-height: 90vh;
+    min-height: auto;
     h2{
       background: none; text-align: center; width: 100%; height: 15vw; line-height: 15vw;
       /* max-width: none; */ border-radius: 45%; padding: 0; margin: 2vw 0;
       span{position: static; font-size: 8vw; margin-right: 0vw; }
     }
     .swiper-container{
-      width: 75vw; height: 90vh;
+      width: 75vw; /* height: auto; */
     }
     .swiper-wrapper{
-      @include align-items(flex-end);
-      height: 80vh;
+      @include align-items;
+     /*  height: auto; */
       width: auto;
       .swiper-slide .slide .winePhoto{
         &::before{
@@ -395,7 +395,8 @@
           @include align-items;
           @include justify-content;
         .slide{
-          width: 35vh; height: 85vh; min-height: 85vh;
+         @include justify-content;
+          width: 35vh; min-height: 65vh;
           > *:not(.winePhoto){visibility: hidden;}
           .winePhoto{
             position: relative; display: block; text-align: center; width: 13.5vw; min-width: 13.5vw;
@@ -493,7 +494,8 @@
             background-image: url("../images/icon/btn_on.png"); color: #fff;}
         }
         .atc_txt:hover, .atc_txt:focus{
-          .num, strong{color: $red; font-weight: 700;}          
+          .num, strong{color: $red; font-weight: 700;}
+          strong{text-decoration: underline;}     
         }
       }
     }
@@ -506,9 +508,9 @@
     @include flex-direction;
     @include align-items;
     @include justify-content(flex-start);
-    height: 100vh; min-height: auto; margin: 8vw 0;
+    height: 100vh; min-height: auto; margin: 0;
     .txt_box{
-      text-align: center;
+      text-align: center;margin-left: 3vw;
       h2{font-size: 5.5vw; margin-left: 0; margin-top: 2vw;}
       p{font-size: 1.5vw; line-height: 1.5; padding: 2vw 0 2.5vw;}
       .btn_subscript{
@@ -543,7 +545,8 @@
       }
     }
     .txt{
-      p{font-size: 1.6vw;}
+      h2{font-size: 7vw;}
+      p{font-size: 2vw;}
       .txt2{top: 66%;}
     }
     .scrollDown{
@@ -551,10 +554,10 @@
     }    
   }
   #cnt2{
-    height: 95vh; min-height: 95vh;
+    // height: 95vh; min-height: 95vh;
     h2{margin-top: 5vw;}
-    .swiper-container{width: 75vw; height: 80vh;}
-    .swiper-wrapper{height: 45vh;}
+    .swiper-container{width: 75vw;/*  height: 80vh; */}
+    .swiper-wrapper{/* height: 45vh; */}
     .swiper-button-prev{background-image: url("../images/icon/slide_left.png"); left: 0vw; top: 40%; margin-top: -3vw}
     .swiper-button-next{background-image: url("../images/icon/slide_right.png"); right: 0vw; top: 40%; margin-top: -3vw}
   }
@@ -577,7 +580,8 @@
           &::before{content: "";position: absolute;top: -4vw;left: -1vw; width: 25vw; height: 25vw; background: rgba(37,37,37,.4); border-radius: 50%; z-index: -5;}
         }
         .atc_txt:hover, .atc_txt:focus{
-          .num, strong{color: $red; font-weight: 700;}          
+          .num, strong{color: $red; font-weight: 700;}
+          strong{text-decoration: underline;}             
         }
       }
     }
@@ -585,6 +589,33 @@
       @include translate-50;
       position: absolute; top: 50%;left: 50%; z-index: -3;
        width: auto;  height: 100vh; padding: 0vw; vertical-align: middle;
+    }
+  }
+  #cnt4{
+    height: 100vh;
+    .txt_box{
+      text-align: center;margin-left: 3vw;
+      h2{font-size: 7.5vw; margin-left: 0; margin-top: 10vw;}
+      p{font-size: 1.9vw; line-height: 1.5; padding: 2vw 0 2.5vw;}
+      .btn_subscript{
+        @include transition(all 0.5s);
+        position: absolute; top: 30vw; right: 15vw;  width: 13vw; height: 5.1vw; 
+        font-size: 1.8vw;line-height: 5vw; font-weight: 700; margin-left: 18vw; background-image: url("../images/icon/btn_on.png"); color: #fff;
+      }  
+      .finger{position: absolute; top: 90%; left: 70%; display: block; width: 5vw; height: 5vw; visibility: visible;}
+    }
+    #photo_box{
+      width: 100%; text-align: center; height: 50vh;
+      .box{
+        top: 50%; left: 50%; width: 40vw; height: 50vw; margin-left: -17.4vw; margin-top: -24vw; padding-bottom: 2vw;
+        h3{font-size: 2.5vw; padding-bottom: 1vw; padding-left: 0;}
+        p{padding: 0vw; font-size: 1.8vw; line-height: 1.5;}
+      }
+      .box:not(#box1){margin-left: 50vw;}
+      .controller{
+        position: absolute; top: 50%; left: 1.5vw;
+        @include justify-content(space-around);
+      }
     }
   }
 }
