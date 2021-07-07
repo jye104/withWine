@@ -1,14 +1,14 @@
 $(document).ready(function () {
   // #cnt1 mouse effect
-  $('.move_box_wrap').on('mousemove', function (e) {
+  $('.photo_wrap').on('mousemove', function (e) {
     const cntX = $(this).width() / 2 + $(this).offset().left;
     const cntY = $(this).height() / 2 + $(this).offset().top;
-    const translateX = (e.offsetX - cntX) / 7;
-    const translateY = (e.offsetY - cntY) / 7;
+    const translateX = (e.offsetX - cntX) / 10;
+    const translateY = (e.offsetY - cntY) / 10;
 
-    $(this).find('.photo img').attr({
+     $(this).find('.photo img').attr({
       style: 'transform:translate(' + translateX + 'px, ' + translateY + 'px)'
-    });
+    }); 
   });
 
 

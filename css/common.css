@@ -1,13 +1,15 @@
 @font-face {
-  font-family: AmaticSC;
+  font-family: NotoSansKR;
   font-style: normal;
   font-weight: 400;
-  src: local("Amatic SC"), url("../font/AmaticSC-Regular.ttf") format("truetype"); }
+  src: url("../font/NotoSansKR-Regular.eot");
+  src: local("Noto Sans KR"), url("../font/NotoSansKR-Regular.eot?#iefix") format("embedded-opentype"), url("../font/NotoSansKR-Regular.woff2") format("woff2"), url("../font/NotoSansKR-Regular.woff") format("woff"), url("../font/NotoSansKR-Regular.otf") format("opentype"), url("../font/NotoSansKR-Regular.svg#NotoSansKR") format("svg"); }
 @font-face {
-  font-family: AmaticSC;
+  font-family: NotoSansKR;
   font-style: normal;
-  font-weight: 700;
-  src: local("Amatic SC"), url("../font/AmaticSC-Bold.ttf") format("truetype"); }
+  font-weight: 400;
+  src: url("../../../font/NotoSansKR-Regular.eot");
+  src: local("Noto Sans KR"), url("../../../font/NotoSansKR-Regular.eot?#iefix") format("embedded-opentype"), url("../../../font/NotoSansKR-Regular.woff2") format("woff2"), url("../../../font/NotoSansKR-Regular.woff") format("woff"), url("../../../font/NotoSansKR-Regular.otf") format("opentype"), url("../../../font/NotoSansKR-Regular.svg#NotoSansKR") format("svg"); }
 @font-face {
   font-family: ComicNeue;
   font-style: normal;
@@ -19,15 +21,15 @@
   font-weight: 700;
   src: local("Comic Neue"), url("../font/ComicNeue-Bold.ttf") format("truetype"); }
 @font-face {
-  font-family: Spoqa;
+  font-family: Hyemin;
   font-style: normal;
   font-weight: 400;
-  src: local("Spoqa Han Sans Neo Regular"), url("../font/SpoqaHanSansNeo-Regular.otf") format("opentype"); }
+  src: local("IM Hyemin Regular"), url("../font/IM_Hyemin-Regular.ttf") format("truetype"); }
 @font-face {
-  font-family: Spoqa;
+  font-family: Hyemin;
   font-style: normal;
   font-weight: 700;
-  src: local("Spoqa Han Sans Neo Bold"), url("../font/SpoqaHanSansNeo-Bold.otf") format("opentype"); }
+  src: local("IM Hyemin Bold"), url("../font/IM_Hyemin-Bold.ttf") format("truetype"); }
 body, h1, h2, h3, h4, h5, h6, ul, p, button {
   padding: 0;
   margin: 0; }
@@ -60,8 +62,17 @@ address {
 header, nav, section, article, address, footer {
   display: block; }
 
-section {
-  overflow: hidden; }
+body {
+  font-family: NotoSansKR, Hyemin, ComicNeue;
+  color: #373737;
+  font-weight: 400;
+  word-break: keep-all;
+  background: rgba(255, 245, 245, 0.8);
+  font-size: 16.5px;
+  line-height: 1.7;
+  letter-spacing: -0.05vw; }
+  body * {
+    box-sizing: border-box; }
 
 .p_r {
   position: relative; }
@@ -94,6 +105,10 @@ section {
   max-width: 1440px;
   margin: 0 auto; }
 
+.wrap {
+  width: 1650px;
+  margin: 0 auto; }
+
 .hidden {
   visibility: hidden; }
 
@@ -101,38 +116,40 @@ section {
   visibility: visible; }
 
 .beige {
-  background: #fdf6ee;
-  /*  border-bottom: 1px solid $beige2; */ }
+  background: rgba(255, 245, 245, 0.8); }
 
 .m_0 {
   margin-left: 0; }
 
 .btn_more {
-  font-size: 1.3vw;
+  font-size: 16px;
   background: url("../images/icon/btn_red.png") no-repeat 50%/cover;
   width: 7.4vw;
   height: 2.95vw;
-  font-family: ComicNeue;
+  line-height: 2.95vw;
+  font-family: Hyemin;
   font-weight: 700; }
 
 .btn_more_bk {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  font-size: 1.2vw;
+  font-size: 16px;
   background: url("../images/icon/btn_bk.png") no-repeat 50%/cover;
   width: 7.4vw;
   height: 2.95vw;
-  font-family: ComicNeue;
+  line-height: 2.95vw;
+  font-family: Hyemin;
   font-weight: 700; }
 
 .btn_more_on {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  font-size: 1.2vw;
+  font-size: 16px;
   background: url("../images/icon/btn_on.png") no-repeat 50%/cover;
   width: 7.4vw;
   height: 2.95vw;
-  font-family: ComicNeue;
+  line-height: 2.95vw;
+  font-family: Hyemin;
   color: #fff;
   font-weight: 700; }
 
@@ -178,17 +195,6 @@ section {
 .delay-9 {
   -webkit-transition-delay: 0.6s !important;
   transition-delay: 0.6s !important; }
-
-body {
-  font-family: Spoqa, AmaticSC, ComicNeue;
-  font-size: 16px;
-  color: #373737;
-  line-height: 1;
-  font-weight: 400;
-  word-break: keep-all;
-  background: #fdf6ee; }
-  body * {
-    box-sizing: border-box; }
 
 #skip a {
   position: absolute;

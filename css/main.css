@@ -1,4 +1,4 @@
-#cnt1 {
+#cnt1 .wrap {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -9,69 +9,104 @@
   -webkit-align-items: center;
   align-items: center;
   min-height: 100vh;
-  background: #ffe2e2; }
-  #cnt1 .move_box_wrap {
-    overflow: hidden;
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    margin-top: 5%; }
-  #cnt1 .move_box {
-    width: 550px;
-    height: 550px;
-    border-radius: 50%; }
-    #cnt1 .move_box .photo {
-      -webkit-transition: transform 0.5s ease;
-      transition: transform 0.5s ease;
-      width: 958px;
-      height: 1080px; }
-  #cnt1 .move_box:hover .photo {
-    transform: scale(1.03); }
-  #cnt1 .photo img {
-    -webkit-transition: transform 0.5s ease;
-    transition: transform 0.5s ease;
-    position: absolute;
-    top: -10%;
-    left: -15%;
-    width: 100%;
-    text-align: center;
-    vertical-align: middle; }
-  #cnt1 .txt {
+  margin-top: 50px; }
+  #cnt1 .wrap .photo_wrap {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.84);
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.84);
+    width: 50%; }
+    #cnt1 .wrap .photo_wrap::before, #cnt1 .wrap .photo_wrap::after {
+      content: "";
+      display: block;
+      position: absolute;
+      background: no-repeat 50% / cover;
+      width: 650px;
+      height: 650px;
+      z-index: -2; }
+    #cnt1 .wrap .photo_wrap::before {
+      top: 17%;
+      left: 10%;
+      background-image: url("../images/icon/cnt1_round_2.png");
+      animation: rotate 11s ease infinite; }
+    #cnt1 .wrap .photo_wrap::after {
+      bottom: 7%;
+      left: 15%;
+      background-image: url("../images/icon/cnt1_round_1.png");
+      animation: rotate 10s ease infinite reverse; }
+  #cnt1 .wrap .photo_box {
+    position: relative;
+    z-index: 100;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    overflow: hidden; }
+    #cnt1 .wrap .photo_box .photo {
+      position: relative;
+      width: 928px;
+      height: 1080px;
+      top: -15%;
+      left: -25%; }
+      #cnt1 .wrap .photo_box .photo img {
+        position: absolute; }
+  #cnt1 .wrap .txt_box {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
     -webkit-align-items: center;
     align-items: center;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    transform: translateY(-50%);
-    width: 100%;
-    top: 60%;
-    left: 0;
-    padding: 0 15.3vw 0 13.4vw; }
-    #cnt1 .txt h2 {
-      font-family: ComicNeue;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    width: 50%; }
+    #cnt1 .wrap .txt_box h2 {
+      font-family: Hyemin;
       font-weight: 700;
-      font-size: 6.25vw;
-      color: #e23e3d;
-      margin-bottom: 1vw; }
-    #cnt1 .txt p {
-      font-size: 1.1vw;
-      line-height: 2vw;
-      letter-spacing: -0.05vw; }
-    #cnt1 .txt .txt2 {
-      text-align: right; }
-  #cnt1 .scrollDown {
-    position: absolute;
-    top: 93%;
-    left: 3%;
-    font-family: AmaticSC;
-    font-size: 1.7vw; }
+      font-size: 80px;
+      color: #e23e3d; }
+    #cnt1 .wrap .txt_box p {
+      padding: 5px 0; }
+#cnt1 .scrollDown {
+  position: absolute;
+  top: 93%;
+  left: 3%;
+  font-family: Hyemin;
+  opacity: .8; }
+  #cnt1 .scrollDown img {
+    width: 30px;
+    height: 30px;
+    opacity: .5;
+    animation: upDown 1s ease-in-out infinite; }
 
+@keyframes upDown {
+  0% {
+    margin-top: -3px; }
+  50% {
+    margin-top: 0px; }
+  100% {
+    margin-top: -3px; } }
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  100% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg); }
+                                         /* 
+70%{@include transform(rotate(-90deg));}
+100%{@include transform(rotate(0deg));} */ }
 #cnt2 {
   display: -webkit-box;
   display: -moz-box;
@@ -80,49 +115,78 @@
   display: flex;
   -webkit-align-items: center;
   align-items: center;
-  min-height: 100vh; }
+  min-height: 100vh;
+  background: #fff; }
   #cnt2 h2 {
     background: url("../images/main/cnt2_bg.jpg") no-repeat 50%/cover;
     width: 25vw;
     height: 31vw;
     max-width: 100%;
     border-radius: 45%;
-    position: relative; }
+    position: relative;
+    line-height: 1.2; }
     #cnt2 h2 span {
       position: absolute;
-      top: 5vw;
-      right: -1vw;
-      font-family: AmaticSC;
-      font-size: 6vw;
-      margin-right: -3vw; }
+      top: 4.8vw;
+      right: 0.5vw;
+      font-family: Hyemin;
+      font-size: 4.5vw;
+      margin-right: -3vw;
+      text-align: right; }
   #cnt2 .swiper-wrapper {
     -webkit-align-items: flex-end;
     align-items: flex-end;
     width: 65vw; }
-    #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto::before {
+    #cnt2 .swiper-wrapper .swiper-slide .slide {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      -webkit-flex-direction: column;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: flex-end;
+      justify-content: flex-end;
+      font-family: Hyemin;
+      height: 36vw;
+      text-align: center; }
+      #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto {
+        position: relative; }
+        #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto img {
+          -webkit-transition: width, 0.35s;
+          transition: width, 0.35s;
+          width: 6vw; }
+      #cnt2 .swiper-wrapper .swiper-slide .slide strong {
+        margin: 1vw 0;
+        font-family: ComicNeue;
+        font-size: 25px; }
+    #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto img, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto img {
+      width: 8vw; }
+    #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto::before, #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto::after, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto::before, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto::after {
+      opacity: 1; }
+    #cnt2 .swiper-wrapper .swiper-slide .slide:hover .btn_more, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .btn_more {
+      background-image: url("../images/icon/btn_on.png");
+      color: #fff; }
+    #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto::before, #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto::after {
       -webkit-transition: opacity, 0.4s;
       transition: opacity, 0.4s;
       content: "";
       display: block;
       position: absolute;
+      background: no-repeat top left / cover;
+      opacity: 0; }
+    #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto::before {
       top: 5vw;
       left: -2vw;
-      background: no-repeat top left / cover;
       z-index: 1;
-      opacity: 0;
       width: 5.5vw;
       height: 5.2vw; }
     #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto::after {
-      -webkit-transition: opacity, 0.4s;
-      transition: opacity, 0.4s;
-      content: "";
-      display: block;
-      position: absolute;
       bottom: 0;
       right: -6vw;
-      background: no-repeat top left / cover;
       z-index: -1;
-      opacity: 0;
       width: 10vw;
       height: 10vw; }
     #cnt2 .swiper-wrapper #slide1 .slide .winePhoto::before {
@@ -171,41 +235,6 @@
       width: 10vw;
       height: 7.5vw;
       right: -5vw; }
-    #cnt2 .swiper-wrapper .swiper-slide .slide {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      flex-direction: column;
-      -webkit-flex-direction: column;
-      -webkit-align-items: center;
-      align-items: center;
-      -webkit-justify-content: flex-end;
-      justify-content: flex-end;
-      font-family: ComicNeue;
-      height: 36vw; }
-      #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto {
-        position: relative;
-        display: block;
-        text-align: center;
-        width: 8.5vw; }
-      #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto img {
-        -webkit-transition: width, 0.35s;
-        transition: width, 0.35s;
-        width: 6vw; }
-      #cnt2 .swiper-wrapper .swiper-slide .slide strong {
-        display: block;
-        text-align: center;
-        font-size: 1.5vw;
-        margin: 1vw 0; }
-    #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto img, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto img {
-      width: 8vw; }
-    #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto::before, #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto::after, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto::before, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto::after {
-      opacity: 1; }
-    #cnt2 .swiper-wrapper .swiper-slide .slide:hover .btn_more, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .btn_more {
-      background: url("../images/icon/btn_on.png") no-repeat 50%/cover;
-      color: #fff; }
   #cnt2 .swiper-button-prev, #cnt2 .swiper-button-next {
     margin-top: 0;
     width: 5vw;
@@ -233,13 +262,12 @@
   -webkit-align-items: center;
   align-items: center;
   min-height: 100vh;
-  text-align: center;
-  margin: 0 1vw; }
+  text-align: center; }
   #cnt3 .left_txt {
     width: 50%; }
     #cnt3 .left_txt h2 {
-      font-size: 5vw;
-      font-family: AmaticSC;
+      font-size: 4.5vw;
+      font-family: Hyemin;
       padding: 1.5vw 0; }
     #cnt3 .left_txt article {
       display: -webkit-box;
@@ -254,53 +282,16 @@
       flex-wrap: wrap;
       -webkit-flex-wrap: wrap;
       position: relative; }
-      #cnt3 .left_txt article::before {
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 60%;
-        height: 1px;
-        background: rgba(37, 37, 37, 0.3); }
-      #cnt3 .left_txt article::after {
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 1px;
-        height: 80%;
-        background: rgba(37, 37, 37, 0.3); }
       #cnt3 .left_txt article .atc_txt {
-        width: 400px;
         position: relative;
-        padding: 1.5vw 2vw; }
-        #cnt3 .left_txt article .atc_txt .num {
-          font-family: AmaticSC;
-          font-size: 4vw;
-          position: absolute;
-          top: 1vw;
-          left: 1.5vw;
-          font-weight: 700; }
+        padding: 1vw 3vw; }
         #cnt3 .left_txt article .atc_txt strong {
-          font-family: ComicNeue;
-          font-size: 1.5vw; }
+          font-family: Hyemin;
+          font-size: 25px;
+          font-weight: 700; }
         #cnt3 .left_txt article .atc_txt .txt {
-          font-size: 0.8vw;
-          line-height: 1.5;
           padding: 1vw 0; }
-        #cnt3 .left_txt article .atc_txt .btn_more_bk {
-          -webkit-transition: all 0.5s;
-          transition: all 0.5s;
-          font-size: 1vw;
-          width: 5.8vw;
-          height: 2.3vw; }
-      #cnt3 .left_txt article .atc_txt:hover .num, #cnt3 .left_txt article .atc_txt:hover strong, #cnt3 .left_txt article .atc_txt:focus .num, #cnt3 .left_txt article .atc_txt:focus strong {
+      #cnt3 .left_txt article .atc_txt:hover strong, #cnt3 .left_txt article .atc_txt:focus strong {
         color: #e23e3d;
         font-weight: 700; }
       #cnt3 .left_txt article .atc_txt:hover .btn_more_bk, #cnt3 .left_txt article .atc_txt:focus .btn_more_bk {
@@ -344,14 +335,13 @@
   height: 100vh;
   min-height: 100vh;
   position: relative;
-  margin: 0 0 0 8vw; }
+  padding: 0 0 0 8vw;
+  background: #fff; }
   #cnt4 .txt_box h2 {
-    font-family: AmaticSC;
-    font-size: 5vw; }
+    font-family: Hyemin;
+    font-size: 4.5vw; }
   #cnt4 .txt_box p {
-    font-size: 0.9vw;
-    line-height: 1.6;
-    padding: 1.5vw 0.5vw 3vw; }
+    padding: 1vw 0.5vw 3vw; }
   #cnt4 .txt_box .btn_subscript {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
@@ -360,7 +350,7 @@
     background: url("../images/icon/btn_bk.png") no-repeat 50%/cover;
     width: 7.14vw;
     height: 2.85vw;
-    font-family: ComicNeue;
+    font-family: Hyemin;
     font-size: 1vw;
     text-align: center;
     line-height: 2.85vw;
@@ -374,7 +364,7 @@
     background: url("../images/icon/btn_on.png") no-repeat 50%/cover;
     width: 7.14vw;
     height: 2.85vw;
-    font-family: ComicNeue;
+    font-family: Hyemin;
     font-size: 1vw;
     text-align: center;
     line-height: 2.85vw;
@@ -389,7 +379,7 @@
     display: block;
     width: 3vw;
     height: 3vw;
-    visibility: hidden; }
+    /* visibility: hidden; */ }
   #cnt4 #photo_box {
     position: relative;
     width: 60%;
@@ -402,6 +392,8 @@
       width: 25vw;
       height: 38vw;
       background: no-repeat 50% / cover; }
+      #cnt4 #photo_box .box h3, #cnt4 #photo_box .box p {
+        text-shadow: 2px 2px 50px rgba(0, 0, 0, 0.4); }
       #cnt4 #photo_box .box h3 {
         padding-top: 2vw;
         padding-left: 1vw;
@@ -422,7 +414,8 @@
         -webkit-transform: rotate(-10deg);
         -moz-transform: rotate(-10deg);
         transform: rotate(-10deg);
-        background-image: url("../images/main/cnt5_photo3.jpg"); }
+        background-image: url("../images/main/cnt5_photo3.jpg");
+        color: #fff; }
       #cnt4 #photo_box .box#box4 {
         -webkit-transform: rotate(5deg);
         -moz-transform: rotate(5deg);
@@ -456,6 +449,65 @@
       #cnt4 #photo_box .controller .button-next {
         background-image: url("../images/icon/slide_right_small.png"); }
 
+#cnt5 .wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+  #cnt5 .wrap .left {
+    position: sticky;
+    -webkit-position: sticky;
+    top: 140px;
+    width: 650px;
+    height: 700px;
+    margin: 5px;
+    border-radius: 60px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 3px 7px 50px rgba(0, 0, 0, 0.2); }
+    #cnt5 .wrap .left .txt {
+      height: 228px;
+      display: block;
+      padding: 30px 40px; }
+      #cnt5 .wrap .left .txt h2 {
+        font-family: Hyemin;
+        font-weight: 700;
+        font-size: 4.5vw;
+        color: #e23e3d;
+        padding-bottom: 15px; }
+      #cnt5 .wrap .left .txt .tag {
+        display: block; }
+    #cnt5 .wrap .left .img {
+      display: block;
+      height: calc(100% - 228px); }
+  #cnt5 .wrap .right {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    position: relative;
+    width: 600px;
+    height: 2500px;
+    margin: 5px;
+    flex: 1; }
+    #cnt5 .wrap .right .wrap_card {
+      width: 400px;
+      height: 420px;
+      border-radius: 60px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 3px 7px 50px rgba(0, 0, 0, 0.2); }
+      #cnt5 .wrap .right .wrap_card .txt, #cnt5 .wrap .right .wrap_card img {
+        display: block; }
+      #cnt5 .wrap .right .wrap_card .txt {
+        height: 100px; }
+    #cnt5 .wrap .right .txt_wrap {
+      height: 210px; }
+
 @media screen and (max-width: 1440px) {
   #cnt1 .move_box_wrap {
     overflow: hidden;
@@ -475,8 +527,6 @@
       font-size: 1.2vw;
       line-height: 2vw;
       letter-spacing: -0.05vw; }
-  #cnt1 .scrollDown {
-    font-size: 2vw; }
 
   #cnt2 h2 {
     width: 31vw;

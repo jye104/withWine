@@ -10,22 +10,24 @@
   z-index: 900; }
   #pcHeader::before {
     -webkit-transition: all 0.5s;
-    transition: all 0.5s; }
-  #pcHeader.active::before {
+    transition: all 0.5s;
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 400px;
-    background: #ffe2e2;
+    height: 0;
+    background: #FFE3E3;
     z-index: -1;
-    border-radius: 0 0 30% 30%; }
+    border-radius: 0 0 30% 30%;
+    opacity: 0; }
+  #pcHeader.active::before {
+    opacity: 1;
+    height: 480px; }
+  #pcHeader.on.active::before {
+    height: 580px; }
   #pcHeader.on .headerTop {
-    position: relative;
-    margin: 30px 0 10px;
-    width: 100%;
-    height: 70px; }
+    position: relative; }
     #pcHeader.on .headerTop .logo a {
       -webkit-transform: translateX(-50%);
       -moz-transform: translateX(-50%);
@@ -33,25 +35,9 @@
       position: absolute;
       top: 0;
       left: 50%;
-      width: 70px;
-      height: 65px;
-      background: url("../images/common/logo_small.png"); }
-    #pcHeader.on .headerTop .util {
-      position: absolute;
-      right: 3%;
-      line-height: 70px; }
-      #pcHeader.on .headerTop .util button {
-        margin-left: 20px; }
-  #pcHeader.on.active::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 500px;
-    background: #ffe2e2;
-    z-index: -1;
-    border-radius: 0 0 30% 30%; }
+      width: 75px;
+      height: 63px;
+      background: url("../images/common/logo.png") no-repeat center/cover; }
   #pcHeader .headerTop {
     position: absolute;
     margin: 30px 0 10px;
@@ -65,13 +51,18 @@
       top: 0;
       left: 5vw;
       width: 50px;
-      height: 46px;
-      background: url("../images/common/logo_50.png") no-repeat;
+      height: 42px;
+      background: url("../images/common/logo_50.png") no-repeat center/cover;
       z-index: 10; }
     #pcHeader .headerTop .util {
       position: absolute;
-      right: 3%; }
+      right: 3%;
+      vertical-align: middle; }
       #pcHeader .headerTop .util button {
+        margin-left: 20px;
+        width: 25px;
+        height: 25px; }
+      #pcHeader .headerTop .util button:last-child {
         margin-left: 20px; }
   #pcHeader #pcGnb > ul {
     display: -webkit-box;
@@ -166,7 +157,7 @@
   justify-content: center;
   -webkit-align-items: center;
   align-items: center;
-  background: url("../images/common/footer_bg.png") no-repeat top center/cover;
+  background: #fff url("../images/common/footer_bg.png") no-repeat top center/cover;
   height: 65vh;
   font-size: 0.8333vw;
   padding-right: 5vw; }
@@ -236,7 +227,7 @@
         top: 20%;
         width: 50px;
         height: 42px;
-        background: url("../images/common/logo_50.png");
+        background: url("../images/common/logo.png") no-repeat 50%/cover;
         line-height: 70px; }
       #pcHeader.on .headerTop .util {
         right: 5%;
@@ -259,14 +250,16 @@
       #pcHeader #pcGnb > ul > li:hover, #pcHeader #pcGnb > ul > li:focus, #pcHeader #pcGnb > ul > li.on {
         padding-bottom: 10px; }
       #pcHeader #pcGnb > ul > li > a {
-        line-height: 50px; }
+        line-height: 50px;
+        color: #373737; }
       #pcHeader #pcGnb > ul > li ul {
         padding: 0; }
         #pcHeader #pcGnb > ul > li ul li {
           padding: 10px 0; }
           #pcHeader #pcGnb > ul > li ul li a {
             font-family: Spoqa;
-            font-size: 16px; }
+            font-size: 16px;
+            color: #373737; }
 
   #gnbLine {
     position: absolute;
@@ -358,7 +351,7 @@
       overflow-y: auto;
       z-index: 950;
       padding: 13vw 10vw 0vw;
-      background: #ffe2e2 url("../images/common/nav_bg.png") no-repeat bottom right; }
+      background: #FFE3E3 url("../images/common/nav_bg.png") no-repeat bottom right; }
       #mHeader #mGnb .btn_gnb_close {
         position: absolute;
         top: 5vw;
