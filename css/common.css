@@ -68,7 +68,7 @@ body {
   font-weight: 400;
   word-break: keep-all;
   background: rgba(255, 245, 245, 0.8);
-  font-size: 16.5px;
+  font-size: 0.86vw;
   line-height: 1.7;
   letter-spacing: -0.05vw; }
   body * {
@@ -121,37 +121,28 @@ body {
 .m_0 {
   margin-left: 0; }
 
-.btn_more {
-  font-size: 16px;
-  background: url("../images/icon/btn_red.png") no-repeat 50%/cover;
+.btn_more, .btn_more_bk, .btn_more_on {
+  background: no-repeat 50% / cover;
   width: 7.4vw;
   height: 2.95vw;
   line-height: 2.95vw;
-  font-family: Hyemin;
-  font-weight: 700; }
+  font-family: ComicNeue;
+  font-weight: 700;
+  font-size: 1.05vw; }
+
+.btn_more {
+  background-image: url("../images/icon/btn_red.png"); }
 
 .btn_more_bk {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  font-size: 16px;
-  background: url("../images/icon/btn_bk.png") no-repeat 50%/cover;
-  width: 7.4vw;
-  height: 2.95vw;
-  line-height: 2.95vw;
-  font-family: Hyemin;
-  font-weight: 700; }
+  background-image: url("../images/icon/btn_bk.png"); }
 
 .btn_more_on {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  font-size: 16px;
-  background: url("../images/icon/btn_on.png") no-repeat 50%/cover;
-  width: 7.4vw;
-  height: 2.95vw;
-  line-height: 2.95vw;
-  font-family: Hyemin;
-  color: #fff;
-  font-weight: 700; }
+  background-image: url("../images/icon/btn_on.png");
+  color: #fff; }
 
 .fade .fade_up, .fade .fade_down, .fade .fade_right, .fade .fade_left {
   -webkit-transition: all 1s;
