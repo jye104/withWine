@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // #cnt1 mouse effect
-  $('.photo_wrap').on('mousemove', function (e) {
+  $('#cnt1 .photo_box').on('mousemove', function (e) {
     const cntX = $(this).width() / 2 + $(this).offset().left;
     const cntY = $(this).height() / 2 + $(this).offset().top;
     const translateX = (e.offsetX - cntX) / 10;
@@ -10,7 +10,6 @@ $(document).ready(function () {
       style: 'transform:translate(' + translateX + 'px, ' + translateY + 'px)'
     }); 
   });
-
 
   // #cnt2 swiper
   const swiper = new Swiper('#cnt2 .swiper-container', {
@@ -28,7 +27,6 @@ $(document).ready(function () {
 
   });
 
-
   // #cnt3 hover, focus
   const $hoverLine = $('#hoverLine');
   let timer = 0;
@@ -44,8 +42,9 @@ $(document).ready(function () {
             $(this).find('svg').remove();
           }
         });
-        // #cnt4 hover-finger
-        const $btn_subSt = $('#cnt4 .btn_subscript');
+
+        // #cnt3 hover-finger
+        const $btn_subSt = $('#cnt3 .btn_subscript');
         $btn_subSt.on('mouseenter focusin', function () {
           $(this).children().css({
             visibility: 'visible'
@@ -101,8 +100,7 @@ $(document).ready(function () {
   });
   $(window).trigger('resize');
 
-
-
+  // 작은 사이즈에서 효과 없애기
   let timers = 0;
   $(window).on('resize', function () {
     clearTimeout(timers);

@@ -83,6 +83,7 @@ body{
 .wrap{width: 1650px; margin: 0 auto;}
 .hidden{visibility: hidden;}
 .visible{visibility: visible;}
+.d_none{display: none;}
 .beige{background: $beige;}
 .m_0{margin-left: 0;}
 .btn_more, .btn_more_bk, .btn_more_on{background: no-repeat 50% / cover; width: 7.4vw; height: 2.95vw;line-height: 2.95vw; font-family: ComicNeue; font-weight: 700; font-size: 1.05vw;}
@@ -97,6 +98,8 @@ body{
   @include transition(all 0.5s);
   background-image: url("../images/icon/btn_on.png"); color: #fff;
 }
+.w100{width: 100% !important;}
+
 
 // fade effect
 .fade .fade_up, .fade .fade_down, .fade .fade_right, .fade .fade_left{

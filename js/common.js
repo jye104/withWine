@@ -125,7 +125,7 @@ $(document).ready(function () {
   // fade 효과
   $(window).on('scroll', function () {
     var scrollY = $(this).scrollTop() + $(this).height() * 2 / 3;
-    console.log(scrollY);
+    //console.log(scrollY);
 
     $('.fade').each(function (idx) {
       if (scrollY > $(this).offset().top) {

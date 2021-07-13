@@ -13,8 +13,8 @@
     @include transition(all 0.5s);
     content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 0; background: $pink; z-index: -1; border-radius: 0 0 30% 30%; opacity: 0;
   }
-  &.active::before{opacity: 1; height: 480px;}
-  &.on.active::before{height: 580px;}
+  &.active::before{opacity: 1; height: 450px;}
+  &.on.active::before{height: 550px;}
   &.on .headerTop{
     position: relative;
     .logo{
@@ -42,16 +42,11 @@
   #pcGnb > ul{
       @include flex;
       @include justify-content;
-      position: relative; width: 100%; font-family: ComicNeue; font-size: 24px; margin-top: 15px;
-      &::before{
-        @include translateX-50;
-        @include transition(width 0.5s);
-        position: absolute; content: "";  top: 60px; left: 50%; width: 900px; height: 1px; background: #373737; opacity: 0;
-      }      
+      position: relative; width: 100%; font-family: ComicNeue; font-size: 24px; margin-top: 15px;            
       > li{
         // @include transition(background 0.5s);
         text-align: center;
-        &:hover, &:focus, &.on{border-radius: 44px; background: $lightPink; padding-bottom: 5px;}
+        &:hover, &:focus, &.on{border-radius: 44px; background: $lightPink;}
         &:hover a::after, &:focus a::after, &.on a::after{opacity: 1;}
         > a{        
           position: relative; display: block; padding: 0 50px; height: 60px; line-height: 60px;
@@ -61,11 +56,11 @@
           }        
         }
         ul{
-          padding: 10px 0 30px;
+          padding: 10px 0 30px; font-family: NotoSansKR;
           li{
-            padding: 10px 0; position: relative;
+            position: relative; padding: 5px 0;
             a{
-              font-family: Spoqa; font-size: 16px;
+              font-size: 0.86vw;
               }
             }
           }
@@ -75,8 +70,8 @@
 #mHeader{visibility: hidden;height: 0;overflow: hidden;}
 
 #gnbLine{
-  position: absolute;top: -10px;left: 50%; margin-left: -40px; pointer-events: none;
-  #line1{fill: none; stroke: #e23e3d; stroke-linecap: round; stroke-width: 3; stroke-dasharray: 175; stroke-dashoffset: 175; animation: lineGnb 0.5s linear forwards;}
+  position: absolute;top: -10px;left: 50%; margin-left: -40px; pointer-events: none; opacity: 0.8;
+  #line1{fill: none; stroke: #e23e3d; stroke-linecap: round; stroke-width: 3; stroke-dasharray: 175; stroke-dashoffset: 175; animation: lineGnb 0.3s linear forwards;}
 }
 
 .footer{
@@ -85,7 +80,7 @@
   @include justify-content;
   @include align-items;
   background: #fff url("../images/common/footer_bg.png") no-repeat top center / cover; height: 65vh; font-size: 0.8333vw;
-  padding-right: 5vw;
+  padding-right: 5vw; letter-spacing: 1;
   .btn_top{
     width: 3vw; height: 3vw; border-radius: 100%; background: $red url("../images/icon/btn_top.png") no-repeat center; background-size: 1.2vw 1.5vw; box-shadow: 0 10px 20px 0 rgba(0,0,0,.15); z-index: 90; position: absolute; bottom: 10vw; right: 10vw;
   }

@@ -23,9 +23,9 @@
     opacity: 0; }
   #pcHeader.active::before {
     opacity: 1;
-    height: 480px; }
+    height: 450px; }
   #pcHeader.on.active::before {
-    height: 580px; }
+    height: 550px; }
   #pcHeader.on .headerTop {
     position: relative; }
     #pcHeader.on .headerTop .logo a {
@@ -77,26 +77,11 @@
     font-family: ComicNeue;
     font-size: 24px;
     margin-top: 15px; }
-    #pcHeader #pcGnb > ul::before {
-      -webkit-transform: translateX(-50%);
-      -moz-transform: translateX(-50%);
-      transform: translateX(-50%);
-      -webkit-transition: width 0.5s;
-      transition: width 0.5s;
-      position: absolute;
-      content: "";
-      top: 60px;
-      left: 50%;
-      width: 900px;
-      height: 1px;
-      background: #373737;
-      opacity: 0; }
     #pcHeader #pcGnb > ul > li {
       text-align: center; }
       #pcHeader #pcGnb > ul > li:hover, #pcHeader #pcGnb > ul > li:focus, #pcHeader #pcGnb > ul > li.on {
         border-radius: 44px;
-        background: #FFF1F1;
-        padding-bottom: 5px; }
+        background: #FFF1F1; }
       #pcHeader #pcGnb > ul > li:hover a::after, #pcHeader #pcGnb > ul > li:focus a::after, #pcHeader #pcGnb > ul > li.on a::after {
         opacity: 1; }
       #pcHeader #pcGnb > ul > li > a {
@@ -118,13 +103,13 @@
           height: 7px;
           opacity: 0; }
       #pcHeader #pcGnb > ul > li ul {
-        padding: 10px 0 30px; }
+        padding: 10px 0 30px;
+        font-family: NotoSansKR; }
         #pcHeader #pcGnb > ul > li ul li {
-          padding: 10px 0;
-          position: relative; }
+          position: relative;
+          padding: 5px 0; }
           #pcHeader #pcGnb > ul > li ul li a {
-            font-family: Spoqa;
-            font-size: 16px; }
+            font-size: 0.86vw; }
 
 #mHeader {
   visibility: hidden;
@@ -136,7 +121,8 @@
   top: -10px;
   left: 50%;
   margin-left: -40px;
-  pointer-events: none; }
+  pointer-events: none;
+  opacity: 0.8; }
   #gnbLine #line1 {
     fill: none;
     stroke: #e23e3d;
@@ -144,7 +130,7 @@
     stroke-width: 3;
     stroke-dasharray: 175;
     stroke-dashoffset: 175;
-    animation: lineGnb 0.5s linear forwards; }
+    animation: lineGnb 0.3s linear forwards; }
 
 .footer {
   position: relative;
@@ -160,7 +146,8 @@
   background: #fff url("../images/common/footer_bg.png") no-repeat top center/cover;
   height: 65vh;
   font-size: 0.8333vw;
-  padding-right: 5vw; }
+  padding-right: 5vw;
+  letter-spacing: 1; }
   .footer .btn_top {
     width: 3vw;
     height: 3vw;

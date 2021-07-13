@@ -52,6 +52,11 @@
   -moz-transform: translate(0, 0);
   transform: translate(0, 0);
 }
+@mixin translateY($value) {
+  -webkit-transform: translateY($value);
+  -moz-transform: translateY($value);
+  transform: translateY($value);
+}
 @mixin transition($value...) {
   -webkit-transition: $value;
   transition: $value;

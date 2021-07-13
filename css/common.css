@@ -115,6 +115,9 @@ body {
 .visible {
   visibility: visible; }
 
+.d_none {
+  display: none; }
+
 .beige {
   background: rgba(255, 245, 245, 0.8); }
 
@@ -143,6 +146,9 @@ body {
   transition: all 0.5s;
   background-image: url("../images/icon/btn_on.png");
   color: #fff; }
+
+.w100 {
+  width: 100% !important; }
 
 .fade .fade_up, .fade .fade_down, .fade .fade_right, .fade .fade_left {
   -webkit-transition: all 1s;
