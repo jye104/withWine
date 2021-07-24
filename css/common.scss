@@ -80,7 +80,6 @@ body{
 .clearfix::after{content: ""; clear: both; display: block;}
 .blind{width: 1px; height: 1px; position: absolute; overflow: hidden; border: none; clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%);}
 .max1440{width: 100%; max-width: 1440px; margin: 0 auto;}
-.wrap{width: 1650px; margin: 0 auto;}
 .hidden{visibility: hidden;}
 .visible{visibility: visible;}
 .d_none{display: none;}
