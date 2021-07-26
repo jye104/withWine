@@ -205,7 +205,7 @@
   }
   .footer{
     @include flex-direction;
-    height: 60vh; font-size: 1.42vw; padding: 5vw 0 2vw 13vw;
+    height: 60vh; font-size: 1.42vw; padding: 0;
     .logo_wrap{
       @include flex;
       @include align-items;

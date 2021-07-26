@@ -446,8 +446,8 @@
       .photo_wrap{
         width: auto;
         &::before, &::after{width: 520px; height: 520px;}
-        &::before{top: 92px; left: 42px;}
-        &::after{bottom: 86px; left: 75px;}
+        &::before{top: 50%; left: 5vw; margin-top: -280px;}
+        &::after{bottom: 50%; left: 8vw; margin-bottom: -280px;}
       }
       .photo_box{width: 490px; height: 490px;}       
       .txt_box{
@@ -663,8 +663,8 @@
       .photo_wrap{
         width: auto; position: absolute; bottom: 10%; left: 7%;
         &::before, &::after{width: 400px; height: 400px;}
-        &::before{top: 0px; left: 15px;}
-        &::after{bottom: 0px; left: -15px;}
+        &::before{top: 50%; left: -5vw; margin-top: -215px;}
+        &::after{bottom: 50%; left: 3vw; margin-bottom: -215px;}
       }
       .photo_box{
         width: 380px; height: 380px;
@@ -719,7 +719,7 @@
         &.swiper-slide-active{
           .winePhoto img{width: 17.5vw;}
           strong{font-size: 3.2vw; line-height: 1.2;}
-          .btn_more{font-size: 2.5vw; width: 15vw; height: 6vw;}
+          .btn_more{font-size: 2.5vw; width: 15vw; height: 6vw; line-height: 6vw;}
         }
         .slide:hover, .slide:focus{
           .winePhoto img{width: 17.5vw;}
