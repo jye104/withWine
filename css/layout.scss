@@ -42,7 +42,7 @@
   #pcGnb > ul{
       @include flex;
       @include justify-content;
-      position: relative; width: 100%; font-family: ComicNeue; font-size: 24px; margin-top: 15px;            
+      position: relative; width: 100%; font-family: ComicNeue; font-size: 1.25vw; margin-top: 15px;            
       > li{
         // @include transition(background 0.5s);
         text-align: center;
@@ -70,24 +70,26 @@
 #mHeader{visibility: hidden;height: 0;overflow: hidden;}
 
 #gnbLine{
-  position: absolute;top: -10px;left: 50%; margin-left: -40px; pointer-events: none; opacity: 0.8;
+  position: absolute;top: -5px;left: 50%; margin-left: -40px; pointer-events: none; opacity: 0.8;
   #line1{fill: none; stroke: #e23e3d; stroke-linecap: round; stroke-width: 3; stroke-dasharray: 175; stroke-dashoffset: 175; animation: lineGnb 0.3s linear forwards;}
 }
 
 .footer{
-  position: relative;
+  position: relative; height: 100vh; padding-top: 8vw;
   @include flex;
   @include justify-content;
   @include align-items;
   background: #fff url("../images/common/footer_bg.png") no-repeat top center / cover; height: 65vh; font-size: 0.8333vw;
-  padding-right: 5vw; letter-spacing: 1;
+  padding-right: 5vw; width: 100%;
   .btn_top{
-    width: 3vw; height: 3vw; border-radius: 100%; background: $red url("../images/icon/btn_top.png") no-repeat center; background-size: 1.2vw 1.5vw; box-shadow: 0 10px 20px 0 rgba(0,0,0,.15); z-index: 90; position: absolute; bottom: 10vw; right: 10vw;
+    width: 50px; height: 50px; background: url("../images/icon/btn_top.png") no-repeat center / cover; z-index: 90; position: absolute; bottom: 10vw; right: 5vw; box-shadow: 2px 2px 10px $bk2; border-radius: 100%;
   }
-  .logo{padding-right: 1vw;}
+  .logo_wrap{position: relative;}
+  .logo{
+    position: absolute; top: 10px; left: -100px; padding-right: 1vw;}
   .foot_left{
-    strong{font-family: ComicNeue; font-size: 1.5vw;}
-    address p{padding-top: 1vw;}
+    strong{font-family: ComicNeue; font-size: 1.5vw; line-height: 1.5;}
+    address p{padding-top: 0.7vw;}
     span{padding-right: 1vw;}
   }
   .foot_center{
@@ -119,87 +121,45 @@
 // 작은 pc
 @media screen and (max-width: 1440px) {
   #pcHeader{
-    height: 80px;
-    &.active::before{height: 500px;}
-    &.on .headerTop{
-     margin: 10px 0 10px; height: 70px; line-height: 70px;
-      .logo{
-        a{top: 20%; width: 50px; height: 42px; background: url("../images/common/logo.png") no-repeat 50% / cover; line-height: 70px;}
-      }
-      .util{right: 5%; line-height: 70px;}
-    }
-    .headerTop{
-     margin: 10px 0 0px; height: 80px;
-      .logo{
-        a{top: 10%; left: 5vw; width: 50px; height: 46px; background-image: url("../images/common/logo_50.png");}
-      }
-      .util{top: 15%; right: 3%;}
-    }
-    #pcGnb > ul{
-        font-size: 26px; margin-top: 15px;
-        > li{
-          &:hover, &:focus, &.on{padding-bottom: 10px;}
-          > a{
-            line-height: 50px;  color: #373737;
-            }
-          ul{
-            padding: 0;
-            li{
-              padding: 10px 0;
-              a{
-                font-family: Spoqa; font-size: 16px; color: #373737;
-                  }
-              }
-            }
-          }
+    #pcGnb> ul{
+      font-size: 1.75vw;            
+      li ul li a{font-size: 1.15vw;}
     }
   }
   
-  #gnbLine{
-    position: absolute;top: -10px;left: 50%; margin-left: -40px; pointer-events: none; opacity: 0.8;
-    #line1{fill: none; stroke: #e23e3d; stroke-linecap: round; stroke-width: 3; stroke-dasharray: 175; stroke-dashoffset: 175; animation: lineGnb 0.5s linear forwards;}
-  }
-
   .footer{
-    font-size: 1.07vw;
-    .logo{padding-right: 1.5vw; margin-left: -3vw;}
+   font-size: 1.15vw;
+    .logo{padding-right: 1.5vw;}
     .foot_left{
-      strong{font-size: 1.85vw;}
-      address p{padding-top: 1.3vw;}
+      strong{font-size: 2vw;}
       span{padding-right: 1.5vw;}
     }
     .foot_center{
-      padding: 0 5vw 0 4vw;
-      p{padding-top: 1.3vw;}
-      .copy{font-size: 0.98vw;}
+      padding: 0 6vw 0 4vw;
+      .copy{font-size: 1vw;}
       span{padding-right: 1.5vw;}
     }
-
+  
     .foot_right{
-      font-size: 1vw;
-      p{
-        padding-bottom: 0.7vw;
-      }
+      p{padding-bottom: 0.7vw;}
       .sns{
-        padding-bottom: 1.7vw;
-        li{width: 2.2vw; height: 2.2vw; margin-right: 1.7vw;}
+        li{width: 1.9vw; height: 1.9vw; margin-right: 0.8vw;}
       }
       .help{
-        padding-bottom: 1.7vw;
-        li{
-          margin-right: 1.7vw;
-        }
+        @include flex;
+        padding-bottom: 1vw;
       }
     }
   }
 }
+
 
 @media screen and (max-width: 1080px) {
   // header
   // pcHeader는 태블릿에서 보이지 않게 숨긴다
   #pcHeader{display: none;}
   #mHeader{
-    visibility: visible; height: 80px; position: fixed; z-index: 900; width: 100%;
+    visibility: visible; height: 80px; position: fixed; z-index: 900; width: 100%; top: 0; left: 0;
     .headerTop{
       @include flex;
       @include justify-content(space-between);
@@ -218,14 +178,14 @@
       }
       > ul{
         > li{
-          margin-bottom: 6vw;
+          margin-bottom: 3vw;
          &:last-child{margin-bottom: 0;}
          > a{
-           position: relative; display: block; font-family: ComicNeue; font-size: 5vw; font-weight: 700;
+           position: relative; display: block; font-family: ComicNeue; font-size: 4vw; font-weight: 700;
            &::before{
              @include transform(rotate(135deg));
              @include transition(all 0.5s);
-             content:""; display: block; width: 2vw; height: 2vw; border-top: 0.5vw solid $bk; border-right: 0.5vw solid $bk; position: absolute; top:50%; right: 5vw; margin-top: -1vw;
+             content:""; display: block; width: 1.5vw; height: 1.5vw; border-top: 0.5vw solid $bk; border-right: 0.5vw solid $bk; position: absolute; top:50%; right: 5vw; margin-top: -1vw;
            }
          }
          &.on > a{
@@ -239,114 +199,98 @@
       }
       .dep2{
         visibility: hidden;max-height: 0;overflow: hidden;
-        > li {padding: 4vw 0 1vw 4vw; font-size: 2.8vw;}
+        > li {padding: 2vw 0 1vw 2vw; font-size: 2.2vw;}
       }     
     }
   }
   .footer{
-    @include flex;
     @include flex-direction;
-    @include align-items;
-    @include justify-content(flex-end);
-    text-align: center;
-    height: 50vh; font-size: 1.42vw; padding-right: 0vw;
-    .logo {padding-right: 0; margin-left: 0; margin-bottom: 1.5vw;}
+    height: 60vh; font-size: 1.42vw; padding: 5vw 0 2vw 13vw;
+    .logo_wrap{
+      @include flex;
+      @include align-items;
+    }
+    .btn_top{
+      width: 50px; height: 50px; background: url("../images/icon/btn_top.png") no-repeat center / cover; z-index: 90; position: absolute; bottom: 10vw; right: 5vw; box-shadow: 2px 2px 10px $bk2; border-radius: 100%;
+    }
+    .logo {padding-right: 0vw; margin-left: 13vw; margin-top: 1.5vw;}
     .logo a img{
       width: 70px; height: 60px;
     }
-    .foot_left{
-      strong{font-size: 2.5vw;font-weight: 400; margin-bottom: 2vw;}
-      address p{padding-top: 1.5vw;}
+    .foot_left{margin-left: 15vw;
+      strong{font-size: 2.5vw;font-weight: 700; margin-bottom: 0; line-height: 1;}
+      address p{padding-top: 1.2vw;}
       span{padding-right: 1.5vw;}
     }
     .foot_center{
       padding: 0;
-      p{padding-top: 1.5vw;}
+      p{padding-top: 1.2vw;}
       .copy{font-size: 1.2vw; color: #676767;}
-      span{padding-right: 1.5vw;}
+      span{padding-right: 3vw;}
     }
   
     .foot_right{
       @include flex;
       @include justify-content;
-      padding-top: 1.8vw;
+      padding-top: 1vw;
       p{
-       padding-bottom: 0.8vw; font-size: 1.42vw;
+       padding-bottom: 0.8vw; font-size: 1.42vw; text-align: center;
       }
       .sns_wrap{margin-right: 1.8vw;}
       .sns{
         @include flex;
         padding-bottom: 0vw;
-        li{width: 2.2vw; height: 2.2vw; margin-right: 1.5vw;}
+        li{width: 2.5vw; height: 2.5vw; margin-right: 1.5vw;}
       }
       .help{
         @include flex;
         padding-bottom: 1.5vw;
         li{
-          margin-right: 1.5vw; font-size: 1.3vw; line-height: 2.2vw;
+          margin-right: 1.5vw; font-size: 1.4vw; line-height: 2.2vw;
         }
       }
-    }
-    .btn_top{
-      width: 4.5vw; height: 4.5vw; border-radius: 100%; background: $red url("../images/icon/btn_top.png") no-repeat center; background-size: 2vw 2.5vw; box-shadow: 0 10px 20px 0 rgba(0,0,0,.15); z-index: 90; position: absolute; bottom: 5vw; right: 5vw;
-    }
+    }    
   }
 }
 @media screen and (max-width: 770px) {
   #mHeader{
-    height: vw-calc770(60);
+    height: vw-calc770(80);
     .headerTop{
-      height: vw-calc770(60);padding: 0 vw-calc770(30);
-      .logo a img{width: vw-calc770(50); height: vw-calc770(42);}
+      height: vw-calc770(80); padding: 0 vw-calc770(40);
+      .logo a img{width: vw-calc770(60); height: vw-calc770(50);}
       .btn_gnb_open{
-        width: vw-calc770(30); height: vw-calc770(40);        
+        width: vw-calc770(40); height: vw-calc770(50);
       }
     }
+    #mGnb > ul > li > a{font-size: 5vw;}
+    .dep2 li {padding: 2vw 0 1vw 2vw; font-size: 2.5vw;}
   }
+  
   .footer{
-    @include flex;
-    @include flex-direction;
-    @include align-items;
-    @include justify-content(flex-end);
-    text-align: center;
-    height: 40vh; font-size: 1.8vw; padding-right: 0vw;
-    .btn_top{
-      width: 4.5vw; height: 4.5vw; border-radius: 100%; background: $red url("../images/icon/btn_top.png") no-repeat center; background-size: 2.2vw 3vw; box-shadow: 0 10px 20px 0 rgba(0,0,0,.15); z-index: 90; position: absolute; bottom: 5vw; right: 5vw;
+    font-size: 2.2vw;
+    .logo {padding-right: 0vw; margin-left: 21vw;}
+    .logo a img{
+      width:  vw-calc770(70); height:  vw-calc770(60);
     }
-    .logo {padding-right: 0; margin-left: 0; margin-bottom: 1.5vw;}
     .foot_left{
-      strong{font-size: 3vw;font-weight: 400; margin-bottom: 2vw;}
-      address p{padding-top: 1.7vw;}
-      span{padding-right: 1.7vw;}
+      margin-left: 23vw;
+      strong{font-size: 3.5vw;}
     }
     .foot_center{
-      padding: 0;
-      p{padding-top: 1.7vw;}
-      .copy{font-size: 1.7vw; color: #676767;}
-      span{padding-right: 1.7vw;}
+      .copy{font-size: 2.2vw;}
     }
   
-    .foot_right{
-      @include flex;
-      @include justify-content;
-      padding-top: 1.8vw;
-      margin-bottom: 3vw;
-      p{
-       padding-bottom: 0.8vw; font-size: 1.8vw;
-      }
-      .sns_wrap{margin-right: 1.8vw;}
+    .foot_right{padding-top: 2.5vw;
+      p{font-size: 2.4vw;}
       .sns{
-        @include flex;
-        padding-bottom: 0vw;
-        li{width: 2.2vw; height: 2.2vw; margin-right: 1.7vw;}
+        li{width: 3.85vw; height: 3.85vw; margin-right: 2vw;}
       }
       .help{
-        @include flex;
         padding-bottom: 1.7vw;
         li{
-          margin-right: 1.7vw; font-size: 1.75vw; line-height: 2.2vw;
+          margin-right: 1.7vw; font-size: 2vw; line-height: 3.8vw;
         }
       }
-    }
+    }    
   }
 }

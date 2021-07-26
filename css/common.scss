@@ -80,13 +80,12 @@ body{
 .clearfix::after{content: ""; clear: both; display: block;}
 .blind{width: 1px; height: 1px; position: absolute; overflow: hidden; border: none; clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%);}
 .max1440{width: 100%; max-width: 1440px; margin: 0 auto;}
-.wrap{width: 1650px; margin: 0 auto;}
 .hidden{visibility: hidden;}
 .visible{visibility: visible;}
 .d_none{display: none;}
 .beige{background: $beige;}
 .m_0{margin-left: 0;}
-.btn_more, .btn_more_bk, .btn_more_on{background: no-repeat 50% / cover; width: 7.4vw; height: 2.95vw;line-height: 2.95vw; font-family: ComicNeue; font-weight: 700; font-size: 1.05vw;}
+.btn_more, .btn_more_bk, .btn_more_on{background: no-repeat 50% / cover; width: 7.4vw; height: 2.95vw;line-height: 2.95vw; font-family: ComicNeue; font-weight: 700; font-size: 1.05vw; display: inline-block;}
 .btn_more{
   background-image: url("../images/icon/btn_red.png"); 
 }

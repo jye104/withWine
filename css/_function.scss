@@ -3,5 +3,5 @@
 }
 
 @function vw-calc770($px) {
-  @return #{($px * 1.05) / (770 / 100)}vw;
+  @return #{($px * 1.07) / (770 / 100)}vw;
 }
