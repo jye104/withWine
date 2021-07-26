@@ -445,11 +445,11 @@
       margin-top: 0; 
       .photo_wrap{
         width: auto;
-        &::before, &::after{width: 540px; height: 540px;}
-        &::before{top: 93px; left: 43px;}
-        &::after{bottom: 88px; left: 77px;}
+        &::before, &::after{width: 520px; height: 520px;}
+        &::before{top: 92px; left: 42px;}
+        &::after{bottom: 86px; left: 75px;}
       }
-      .photo_box{width: 520px; height: 520px;}       
+      .photo_box{width: 490px; height: 490px;}       
       .txt_box{
         width: auto;
         h2{font-size: 5.2vw;}

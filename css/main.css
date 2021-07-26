@@ -725,17 +725,17 @@
     #cnt1 .wrap .photo_wrap {
       width: auto; }
       #cnt1 .wrap .photo_wrap::before, #cnt1 .wrap .photo_wrap::after {
-        width: 540px;
-        height: 540px; }
+        width: 520px;
+        height: 520px; }
       #cnt1 .wrap .photo_wrap::before {
-        top: 93px;
-        left: 43px; }
+        top: 92px;
+        left: 42px; }
       #cnt1 .wrap .photo_wrap::after {
-        bottom: 88px;
-        left: 77px; }
+        bottom: 86px;
+        left: 75px; }
     #cnt1 .wrap .photo_box {
-      width: 520px;
-      height: 520px; }
+      width: 490px;
+      height: 490px; }
     #cnt1 .wrap .txt_box {
       width: auto; }
       #cnt1 .wrap .txt_box h2 {
