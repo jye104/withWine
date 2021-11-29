@@ -21,13 +21,13 @@
       @include flex;
       @include justify-content;
       @include transition(transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.84));
-      width: 50%;
+      width: 50%; position: relative;
       &::before, &::after{content: ""; display: block; position: absolute; ;background: no-repeat 50% / cover; width: 650px; height: 650px; z-index: -2;}
       &::before{
-        top: 17%; left: 5%; background-image: url("../images/icon/cnt1_round_2.png"); animation: rotate 16.5s linear infinite;
+        top: 50%; left: 50%; margin-top: -300px; margin-left: -300px; background-image: url("../images/icon/cnt1_round_2.png"); animation: rotate 16.5s linear infinite;
       }
       &::after{
-        bottom: 3%; left: 8%; background-image: url("../images/icon/cnt1_round_1.png"); animation: rotate 16.5s linear reverse infinite;
+        top: 50%; left: 50%; margin-left: -333px; margin-top: -333px; background-image: url("../images/icon/cnt1_round_1.png"); animation: rotate 16.5s linear reverse infinite;
       }
     }
     .photo_box{
@@ -323,10 +323,10 @@
       .photo_wrap{        
         &::before, &::after{width: 500px; height: 500px;}
         &::before{
-          top: 11.8vw; left: 2.8vw;
+          margin-top: -220px; margin-left: -220px;
         }
         &::after{
-          bottom: 2vw; left: 7vw;
+         margin-top: -260px; margin-left: -260px;
         }
       }
       .photo_box{
@@ -446,8 +446,8 @@
       .photo_wrap{
         width: auto;
         &::before, &::after{width: 520px; height: 520px;}
-        &::before{top: 50%; left: 5vw; margin-top: -280px;}
-        &::after{bottom: 50%; left: 8vw; margin-bottom: -280px;}
+        &::before{top: 50%; right: 0vw; margin-top: -280px;}
+        &::after{top: 50%; right: 8vw; margin-bottom: -280px;}
       }
       .photo_box{width: 490px; height: 490px;}       
       .txt_box{
@@ -469,9 +469,9 @@
        border-radius: 45%; padding: 0; margin: 0;
       span{position: static; font-size: 5.2vw; padding: 0 3vw;}
     }
-    .swiper-container{
-      width: 71vw;
-    }
+    // .swiper-container{
+    //   width: 71vw;
+    // }
     .swiper-wrapper{
       @include align-items;
       width: auto;
@@ -662,9 +662,9 @@
       margin-top: 0; position: relative;
       .photo_wrap{
         width: auto; position: absolute; bottom: 10%; left: 7%;
-        &::before, &::after{width: 400px; height: 400px;}
-        &::before{top: 50%; left: -5vw; margin-top: -215px;}
-        &::after{bottom: 50%; left: 3vw; margin-bottom: -215px;}
+        &::before, &::after{width: 400px; height: 400px; margin-left: 0}
+        &::before{top: 50%; left: -3vw; margin-top: -200px;}
+        &::after{top: 50%; left: 1vw; margin-top: -200px;}
       }
       .photo_box{
         width: 380px; height: 380px;
@@ -681,7 +681,7 @@
   #cnt2{
     padding: 80px 0 0;
     h2 span{font-size: 7.5vw;} 
-    .swiper-container{width: 80vw;}
+    // .swiper-container{width: 80vw;}
     .swiper-wrapper{
       .swiper-slide{
         .slide{        
