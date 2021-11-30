@@ -22,16 +22,16 @@
       @include justify-content;
       @include transition(transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.84));
       width: 50%; position: relative;
-      &::before, &::after{content: ""; display: block; position: absolute; ;background: no-repeat 50% / cover; width: 650px; height: 650px; z-index: -2;}
+      &::before, &::after{content: ""; display: block; position: absolute; ;background: no-repeat 50% / cover; width: 30vw; height: 30vw; z-index: -2;}
       &::before{
-        top: 50%; left: 50%; margin-top: -300px; margin-left: -300px; background-image: url("../images/icon/cnt1_round_2.png"); animation: rotate 16.5s linear infinite;
+        top: 50%; left: 50%; margin-top: -17vw; margin-left: -17vw; background-image: url("../images/icon/cnt1_round_2.png"); animation: rotate 16.5s linear infinite;
       }
       &::after{
-        top: 50%; left: 50%; margin-left: -333px; margin-top: -333px; background-image: url("../images/icon/cnt1_round_1.png"); animation: rotate 16.5s linear reverse infinite;
+        top: 50%; left: 50%; margin-left: -17vw; margin-top: -17vw; background-image: url("../images/icon/cnt1_round_1.png"); animation: rotate 16.5s linear reverse infinite;
       }
     }
     .photo_box{
-      position: relative; z-index: 100; width: 600px; height: 600px; border-radius: 50%; overflow: hidden;
+      position: relative; z-index: 100; width: 30vw; height: 30vw; border-radius: 50%; overflow: hidden;
       .photo{
         position: relative; width: 928px; height: 1080px; top: -15%; left: -25%;
         img{position: absolute;}
@@ -440,6 +440,7 @@
 
 @media screen and (max-width: 1080px) {
   #cnt1{
+    height: 100vh; overflow: hidden;
     .wrap{
       @include justify-content;
       margin-top: 0; 
