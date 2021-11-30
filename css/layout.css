@@ -335,7 +335,7 @@
   .footer {
     flex-direction: column;
     -webkit-flex-direction: column;
-    height: 60vh;
+    height: 50vh;
     font-size: 1.42vw;
     padding: 0; }
     .footer .logo_wrap {
@@ -439,7 +439,8 @@
       font-size: 2.5vw; }
 
   .footer {
-    font-size: 2.2vw; }
+    height: 60vh;
+    font-size: 1.2rem; }
     .footer .logo {
       padding-right: 0vw;
       margin-left: 21vw; }
@@ -455,7 +456,7 @@
     .footer .foot_right {
       padding-top: 2.5vw; }
       .footer .foot_right p {
-        font-size: 2.4vw; }
+        font-size: 1.3rem; }
       .footer .foot_right .sns li {
         width: 3.85vw;
         height: 3.85vw;
@@ -464,7 +465,7 @@
         padding-bottom: 1.7vw; }
         .footer .foot_right .help li {
           margin-right: 1.7vw;
-          font-size: 2vw;
+          font-size: 1.2rem;
           line-height: 3.8vw; } }
 
 /*# sourceMappingURL=layout.css.map */
