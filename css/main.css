@@ -43,36 +43,36 @@
       display: block;
       position: absolute;
       background: no-repeat 50% / cover;
-      width: 36rem;
-      height: 36rem;
+      width: 33vw;
+      height: 33vw;
       z-index: -2; }
     #cnt1 .wrap .photo_wrap::before {
       top: 50%;
       left: 50%;
-      margin-top: -19rem;
-      margin-left: -19rem;
+      margin-top: -19vw;
+      margin-left: -19vw;
       background-image: url("../images/icon/cnt1_round_2.png");
       animation: rotate 16.5s linear infinite; }
     #cnt1 .wrap .photo_wrap::after {
       top: 50%;
       left: 50%;
-      margin-left: -17rem;
-      margin-top: -17rem;
+      margin-left: -17vw;
+      margin-top: -17vw;
       background-image: url("../images/icon/cnt1_round_1.png");
       animation: rotate 16.5s linear reverse infinite; }
   #cnt1 .wrap .photo_box {
     position: relative;
     z-index: 100;
-    width: 35rem;
-    height: 35rem;
+    width: 30vw;
+    height: 30vw;
     border-radius: 50%;
     overflow: hidden; }
     #cnt1 .wrap .photo_box .photo {
       position: relative;
       width: 928px;
       height: 1080px;
-      top: -6rem;
-      left: -10rem; }
+      top: -6vw;
+      left: -10vw; }
       #cnt1 .wrap .photo_box .photo img {
         position: absolute;
         top: 0;
@@ -83,7 +83,7 @@
     #cnt1 .wrap .txt_box h2 {
       font-family: Hyemin;
       font-weight: 700;
-      font-size: 4rem;
+      font-size: 4vw;
       color: #e23e3d; }
     #cnt1 .wrap .txt_box p {
       padding: 5px 0; }
@@ -93,7 +93,7 @@
   left: 2%;
   font-family: Hyemin;
   opacity: .8;
-  font-size: 1.2rem; }
+  font-size: 1.2vw; }
   #cnt1 .scrollDown img {
     width: 30px;
     height: 30px;
@@ -123,7 +123,7 @@
       top: 80px;
       right: 50px;
       font-family: Hyemin;
-      font-size: 4rem;
+      font-size: 4vw;
       margin-right: -3vw;
       text-align: right; }
     #cnt2 h2 .seller {
@@ -150,7 +150,7 @@
       #cnt2 .swiper-wrapper .swiper-slide .slide strong {
         margin: 1vw 0;
         font-family: ComicNeue;
-        font-size: 1.4rem; }
+        font-size: 1.4vw; }
     #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto img, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto img {
       width: 8vw; }
     #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto::before, #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto::after, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto::before, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto::after {
@@ -273,7 +273,7 @@
   background: #fff; }
   #cnt3 .txt_box h2 {
     font-family: Hyemin;
-    font-size: 4rem; }
+    font-size: 4vw; }
   #cnt3 .txt_box p {
     padding: 1vw 0.5vw 3vw; }
   #cnt3 .txt_box .btn_subscript {
@@ -284,7 +284,7 @@
     background: url("../images/icon/btn_bk.png") no-repeat 50%/cover;
     width: 7.14vw;
     height: 2.85vw;
-    font-size: 1rem;
+    font-size: 1vw;
     text-align: center;
     line-height: 2.85vw;
     margin-left: 18vw;
@@ -297,7 +297,7 @@
     background: url("../images/icon/btn_on.png") no-repeat 50%/cover;
     width: 7.14vw;
     height: 2.85vw;
-    font-size: 1rem;
+    font-size: 1vw;
     text-align: center;
     line-height: 2.85vw;
     font-weight: 700;
@@ -330,11 +330,11 @@
       #cnt3 #photo_box .box h3, #cnt3 #photo_box .box p {
         text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); }
       #cnt3 #photo_box .box h3 {
-        font-size: 1.6rem; }
+        font-size: 1.6vw; }
       #cnt3 #photo_box .box p {
         line-height: 1.7;
         padding: 10px 0;
-        font-size: 1.2rem; }
+        font-size: 1.2vw; }
       #cnt3 #photo_box .box#box1 {
         background-image: url("../images/main/cnt5_photo1.jpg"); }
       #cnt3 #photo_box .box#box2 {
@@ -406,7 +406,7 @@
     width: calc(100% / 4);
     height: 100vh; }
     #cnt4 .event p {
-      font-size: 1rem; }
+      font-size: 1vw; }
     #cnt4 .event#event1 {
       background: url("../images/main/cnt4_bg1.jpg") no-repeat center top/cover; }
     #cnt4 .event#event2 {
@@ -453,7 +453,7 @@
         transition: all 0.5s;
         display: block;
         padding-top: 90%;
-        font-size: 1.8rem;
+        font-size: 1.8vw;
         font-family: Hyemin;
         font-weight: 700;
         width: 100%;
@@ -503,8 +503,7 @@
       #cnt5 .cnt_wrap .main .txt .tag {
         display: block; }
     #cnt5 .cnt_wrap .main .img {
-      display: block;
-      height: 100%; }
+      display: block; }
       #cnt5 .cnt_wrap .main .img img {
         height: 100%; }
   #cnt5 .cnt_wrap .contents {
@@ -583,6 +582,12 @@
       height: 11.458vw; }
 
 @media screen and (max-width: 1440px) {
+  #cnt1 .wrap .photo_wrap .photo_box {
+    width: 35vw;
+    height: 35vw; }
+  #cnt1 .wrap .photo_wrap::before, #cnt1 .wrap .photo_wrap::after {
+    width: 37vw;
+    height: 37vw; }
   #cnt1 .wrap .txt_box {
     padding-left: 5vw; }
     #cnt1 .wrap .txt_box h2 {
@@ -676,7 +681,8 @@
 
   #cnt5 .cnt_wrap .main {
     width: 43%;
-    top: 130px; }
+    top: 130px;
+    left: 0; }
     #cnt5 .cnt_wrap .main .txt {
       padding: 0.5vw 2.5vw; }
       #cnt5 .cnt_wrap .main .txt .tag {
@@ -735,14 +741,14 @@
           right: 8vw;
           margin-bottom: -280px; }
       #cnt1 .wrap .photo_box {
-        width: 30rem;
-        height: 30rem; }
+        width: 30vw;
+        height: 30vw; }
       #cnt1 .wrap .txt_box {
         width: auto; }
         #cnt1 .wrap .txt_box h2 {
-          font-size: 4rem; }
+          font-size: 4vw; }
         #cnt1 .wrap .txt_box p {
-          font-size: 1.2rem; }
+          font-size: 1.2vw; }
     #cnt1 .scrollDown {
       font-size: 2vw; }
 
@@ -762,15 +768,15 @@
       background: none;
       text-align: center;
       width: 100%;
-      height: 8rem;
-      line-height: 8rem;
+      height: 8vw;
+      line-height: 8vw;
       text-align: center;
       border-radius: 45%;
       padding: 0;
       margin: 0; }
       #cnt2 h2 span {
         position: static;
-        font-size: 3.5rem;
+        font-size: 3.5vw;
         padding: 0 3vw; }
     #cnt2 .swiper-wrapper {
       -webkit-align-items: center;
@@ -1062,18 +1068,18 @@
       top: 15%;
       right: 5%;
       text-shadow: 2px 2px 5px #fff;
-      z-index: 10; }
+      z-index: 100; }
       #cnt1 .wrap .txt_box h2 {
-        font-size: 5rem;
+        font-size: 3vw;
         text-align: right; }
       #cnt1 .wrap .txt_box p {
-        font-size: 1.2rem;
+        font-size: 1.2vw;
         text-align: right; }
   #cnt1 .scrollDown {
-    font-size: 1.5rem; }
+    font-size: 1.5vw; }
 
   #cnt2 h2 span {
-    font-size: 5rem; }
+    font-size: 5vw; }
   #cnt2 .swiper-wrapper .swiper-slide .slide {
     width: 25vh;
     min-height: 80vh; }
@@ -1123,10 +1129,10 @@
   #cnt2 .swiper-wrapper .swiper-slide.swiper-slide-active .winePhoto img {
     width: 17.5vw; }
   #cnt2 .swiper-wrapper .swiper-slide.swiper-slide-active strong {
-    font-size: 2rem;
+    font-size: 2vw;
     line-height: 1.2; }
   #cnt2 .swiper-wrapper .swiper-slide.swiper-slide-active .btn_more {
-    font-size: 1.2rem;
+    font-size: 1.2vw;
     width: 15vw;
     height: 6vw;
     line-height: 6vw; }
@@ -1149,10 +1155,10 @@
     position: relative;
     padding-bottom: 0; }
     #cnt3 .txt_box h2 {
-      font-size: 5rem; }
+      font-size: 5vw; }
     #cnt3 .txt_box p {
       padding: 0.5vw 2vw 0vw;
-      font-size: 1.2rem;
+      font-size: 1.2vw;
       line-height: 1.5; }
     #cnt3 .txt_box .btn_subscript {
       position: absolute;
@@ -1175,13 +1181,13 @@
       width: 42vw;
       height: 53vw; }
       #cnt3 #photo_box .box h3 {
-        font-size: 1.5rem; }
+        font-size: 1.5vw; }
       #cnt3 #photo_box .box p {
         line-height: 1.5;
-        font-size: 1.2rem; }
+        font-size: 1.2vw; }
 
   #cnt4 a .event_detail strong {
-    font-size: 3rem; }
+    font-size: 3vw; }
 
   #cnt5 .cnt_wrap {
     display: block;
@@ -1198,9 +1204,9 @@
         display: block;
         padding: 0.5vw 1.823vw; }
         #cnt5 .cnt_wrap .main .txt h2 {
-          font-size: 5rem; }
+          font-size: 5vw; }
         #cnt5 .cnt_wrap .main .txt .tag {
-          font-size: 1.2rem; }
+          font-size: 1.2vw; }
       #cnt5 .cnt_wrap .main .img {
         visibility: hidden;
         max-height: 0; }
@@ -1222,13 +1228,13 @@
           #cnt5 .cnt_wrap .contents .wrap_card .txt strong {
             display: block;
             font-weight: 400;
-            font-size: 1.3rem;
+            font-size: 1.3vw;
             line-height: 1.2;
             padding-bottom: 0.8vw; }
           #cnt5 .cnt_wrap .contents .wrap_card .txt .tag {
             margin-right: 1.5vw;
             color: rgba(37, 37, 37, 0.5);
-            font-size: 1rem; }
+            font-size: 1vw; }
         #cnt5 .cnt_wrap .contents .wrap_card .img {
           height: calc(100% - 13vw);
           overflow: hidden; }
