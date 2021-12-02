@@ -24,7 +24,7 @@
       width: 50%; position: relative;
       &::before, &::after{content: ""; display: block; position: absolute; ;background: no-repeat 50% / cover; width: 33vw; height: 33vw; z-index: -2;}
       &::before{
-        top: 50%; left: 50%; margin-top: -19vw; margin-left: -19vw; background-image: url("../images/icon/cnt1_round_2.png"); animation: rotate 16.5s linear infinite;
+        top: 50%; left: 50%; margin-top: -17vw; margin-left: -17vw; background-image: url("../images/icon/cnt1_round_2.png"); animation: rotate 16.5s linear infinite;
       }
       &::after{
         top: 50%; left: 50%; margin-left: -17vw; margin-top: -17vw; background-image: url("../images/icon/cnt1_round_1.png"); animation: rotate 16.5s linear reverse infinite;
@@ -322,7 +322,7 @@
     .wrap{
       .photo_wrap{
         .photo_box{width: 35vw; height: 35vw}
-        &::before, &::after{width: 37vw; height: 37vw}
+        &::before, &::after{width: 37vw; height: 37vw; margin-top: -18.5vw; margin-left: -18.5vw;}
       }    
       .txt_box{
        padding-left: 5vw;
@@ -466,7 +466,7 @@
       width: auto;
       .swiper-slide{
         .slide{        
-          width: 35vh; min-height: 80vh;
+          width: 100%; min-height: 80vh;
           > *:not(.winePhoto){visibility: hidden;}
           .winePhoto{
             width: 11.5vw; min-width: 11.5vw;
@@ -664,7 +664,7 @@
     .swiper-wrapper{
       .swiper-slide{
         .slide{        
-          width: 25vh; min-height: 80vh;
+          min-height: 80vh;
           .winePhoto{width: 17.5vw; min-width: 15.5vw;}  
           .winePhoto img{width: 12vw;}         
         }

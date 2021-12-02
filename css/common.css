@@ -68,7 +68,7 @@ body {
   font-weight: 400;
   word-break: keep-all;
   background: #fff5f5cc;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.7;
   letter-spacing: -0.05vw; }
   body * {
@@ -122,12 +122,12 @@ body {
 
 .btn_more, .btn_more_bk, .btn_more_on {
   background: no-repeat 50% / cover;
-  width: 7.4vw;
-  height: 2.95vw;
-  line-height: 2.95vw;
+  width: 125px;
+  height: 50px;
+  line-height: 50px;
   font-family: ComicNeue;
   font-weight: 700;
-  font-size: 1.05vw;
+  font-size: 20px;
   display: inline-block; }
 
 .btn_more {

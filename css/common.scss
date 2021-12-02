@@ -68,7 +68,7 @@ address{font-style: normal;}
 header, nav, section, article, address, footer{display: block;}
 
 body{
-  font-family: NotoSansKR, Hyemin, ComicNeue; color: #373737; font-weight: 400; word-break: keep-all; background: $beige; font-size: 16px; line-height: 1.7; letter-spacing: -0.05vw;
+  font-family: NotoSansKR, Hyemin, ComicNeue; color: #373737; font-weight: 400; word-break: keep-all; background: $beige; font-size: 18px; line-height: 1.7; letter-spacing: -0.05vw;
   *{box-sizing: border-box;}
 }
 
@@ -85,7 +85,7 @@ body{
 .d_none{display: none;}
 .beige{background: $beige;}
 .m_0{margin-left: 0;}
-.btn_more, .btn_more_bk, .btn_more_on{background: no-repeat 50% / cover; width: 7.4vw; height: 2.95vw;line-height: 2.95vw; font-family: ComicNeue; font-weight: 700; font-size: 1.05vw; display: inline-block;}
+.btn_more, .btn_more_bk, .btn_more_on{background: no-repeat 50% / cover; width: 125px; height: 50px;line-height: 50px; font-family: ComicNeue; font-weight: 700; font-size: 20px; display: inline-block;}
 .btn_more{
   background-image: url("../images/icon/btn_red.png"); 
 }

@@ -75,7 +75,6 @@
     position: relative;
     width: 100%;
     font-family: ComicNeue;
-    font-size: 1.25vw;
     margin-top: 15px; }
     #pcHeader #pcGnb > ul > li {
       text-align: center; }
@@ -89,7 +88,8 @@
         display: block;
         padding: 0 50px;
         height: 60px;
-        line-height: 60px; }
+        line-height: 60px;
+        font-size: 25px; }
         #pcHeader #pcGnb > ul > li > a::after {
           -webkit-transition: opacity 0.5s;
           transition: opacity 0.5s;
@@ -109,7 +109,7 @@
           position: relative;
           padding: 5px 0; }
           #pcHeader #pcGnb > ul > li ul li a {
-            font-size: 0.86vw; }
+            font-size: 16px; }
 
 #mHeader {
   visibility: hidden;
@@ -133,9 +133,6 @@
     animation: lineGnb 0.3s linear forwards; }
 
 .footer {
-  position: relative;
-  height: 100vh;
-  padding-top: 8vw;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -145,9 +142,10 @@
   justify-content: center;
   -webkit-align-items: center;
   align-items: center;
-  background: #fff url("../images/common/footer_bg.png") no-repeat top center/cover;
+  position: relative;
+  padding-top: 8vw;
+  background: url("../images/common/footer_bg.png") no-repeat top center/cover;
   height: 65vh;
-  font-size: 0.8333vw;
   padding-right: 5vw;
   width: 100%; }
   .footer .btn_top {
@@ -169,7 +167,7 @@
     padding-right: 1vw; }
   .footer .foot_left strong {
     font-family: ComicNeue;
-    font-size: 1.5vw;
+    font-size: 35px;
     line-height: 1.5; }
   .footer .foot_left address p {
     padding-top: 0.7vw; }
@@ -180,7 +178,7 @@
     .footer .foot_center p {
       padding-top: 1vw; }
     .footer .foot_center .copy {
-      font-size: 0.729vw;
+      font-size: 16px;
       color: #676767; }
     .footer .foot_center span {
       padding-right: 1vw; }
@@ -208,26 +206,19 @@
     .footer .foot_right .help li {
       margin-right: 1vw; }
 
+@media screen and (max-width: 1300px) {
+  .footer .logo {
+    top: -65px;
+    left: 0; } }
 @media screen and (max-width: 1440px) {
-  #pcHeader #pcGnb > ul {
-    font-size: 1.75vw; }
-    #pcHeader #pcGnb > ul li ul li a {
-      font-size: 1.15vw; }
-
   .footer {
-    font-size: 1.15vw; }
+    padding-right: 0; }
     .footer .logo {
       padding-right: 1.5vw; }
-    .footer .foot_left strong {
-      font-size: 2vw; }
     .footer .foot_left span {
       padding-right: 1.5vw; }
-    .footer .foot_center {
-      padding: 0 6vw 0 4vw; }
-      .footer .foot_center .copy {
-        font-size: 1vw; }
-      .footer .foot_center span {
-        padding-right: 1.5vw; }
+    .footer .foot_center span {
+      padding-right: 1.5vw; }
     .footer .foot_right p {
       padding-bottom: 0.7vw; }
     .footer .foot_right .sns li {
@@ -299,7 +290,7 @@
           position: relative;
           display: block;
           font-family: ComicNeue;
-          font-size: 4vw;
+          font-size: 40px;
           font-weight: 700; }
           #mHeader #mGnb > ul > li > a::before {
             -webkit-transform: rotate(135deg);
@@ -329,14 +320,14 @@
         max-height: 0;
         overflow: hidden; }
         #mHeader #mGnb .dep2 > li {
-          padding: 2vw 0 1vw 2vw;
-          font-size: 2.2vw; }
+          padding: 1vw 0 1vw 2vw;
+          font-size: 25px; }
 
   .footer {
     flex-direction: column;
     -webkit-flex-direction: column;
     height: 50vh;
-    font-size: 1.42vw;
+    font-size: vw-calc77(18);
     padding: 0; }
     .footer .logo_wrap {
       display: -webkit-box;
@@ -366,7 +357,7 @@
     .footer .foot_left {
       margin-left: 15vw; }
       .footer .foot_left strong {
-        font-size: 2.5vw;
+        font-size: 40px;
         font-weight: 700;
         margin-bottom: 0;
         line-height: 1; }
@@ -379,7 +370,7 @@
       .footer .foot_center p {
         padding-top: 1.2vw; }
       .footer .foot_center .copy {
-        font-size: 1.2vw;
+        font-size: 14px;
         color: #676767; }
       .footer .foot_center span {
         padding-right: 3vw; }
@@ -394,7 +385,7 @@
       padding-top: 1vw; }
       .footer .foot_right p {
         padding-bottom: 0.8vw;
-        font-size: 1.42vw;
+        font-size: 20px;
         text-align: center; }
       .footer .foot_right .sns_wrap {
         margin-right: 1.8vw; }
@@ -417,9 +408,7 @@
         display: flex;
         padding-bottom: 1.5vw; }
         .footer .foot_right .help li {
-          margin-right: 1.5vw;
-          font-size: 1.4vw;
-          line-height: 2.2vw; } }
+          margin-right: 1.5vw; } }
 @media screen and (max-width: 770px) {
   #mHeader {
     height: 11.1168831169vw; }
@@ -440,7 +429,7 @@
 
   .footer {
     height: 60vh;
-    font-size: 1.2rem; }
+    font-size: 2.5012987013vw; }
     .footer .logo {
       padding-right: 0vw;
       margin-left: 21vw; }
@@ -450,13 +439,13 @@
     .footer .foot_left {
       margin-left: 23vw; }
       .footer .foot_left strong {
-        font-size: 3.5vw; }
+        font-size: 5.5584415584vw; }
     .footer .foot_center .copy {
-      font-size: 2.2vw; }
+      font-size: 1.9454545455vw; }
     .footer .foot_right {
       padding-top: 2.5vw; }
       .footer .foot_right p {
-        font-size: 1.3rem; }
+        font-size: 2.7792207792vw; }
       .footer .foot_right .sns li {
         width: 3.85vw;
         height: 3.85vw;
@@ -464,8 +453,6 @@
       .footer .foot_right .help {
         padding-bottom: 1.7vw; }
         .footer .foot_right .help li {
-          margin-right: 1.7vw;
-          font-size: 1.2rem;
-          line-height: 3.8vw; } }
+          margin-right: 1.7vw; } }
 
 /*# sourceMappingURL=layout.css.map */
