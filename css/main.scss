@@ -22,12 +22,12 @@
       @include justify-content;
       @include transition(transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.84));
       width: 50%; position: relative;
-      &::before, &::after{content: ""; display: block; position: absolute; ;background: no-repeat 50% / cover; width: 33vw; height: 33vw; z-index: -2;}
+      &::before, &::after{content: ""; display: block; position: absolute; ;background: no-repeat 50% / cover; width: 32vw; height: 32vw; z-index: -2;}
       &::before{
-        top: 50%; left: 50%; margin-top: -17vw; margin-left: -17vw; background-image: url("../images/icon/cnt1_round_2.png"); animation: rotate 16.5s linear infinite;
+        top: 50%; left: 50%; margin-top: -16vw; margin-left: -16vw; background-image: url("../images/icon/cnt1_round_2.png"); animation: rotate 16.5s linear infinite;
       }
       &::after{
-        top: 50%; left: 50%; margin-left: -17vw; margin-top: -17vw; background-image: url("../images/icon/cnt1_round_1.png"); animation: rotate 16.5s linear reverse infinite;
+        top: 50%; left: 50%; margin-left: -16vw; margin-top: -16vw; background-image: url("../images/icon/cnt1_round_1.png"); animation: rotate 16.5s linear reverse infinite;
       }
     }
     .photo_box{
@@ -39,7 +39,7 @@
     }      
     .txt_box{
       width: 50%; padding-left: 5vw;
-      h2{font-family: Hyemin; font-weight: 700; font-size: 4vw; color: $red;}
+      h2{font-family: Hyemin; font-weight: 700; font-size: 60px; color: $red;}
       p{padding: 5px 0;}
     } 
   }
@@ -52,7 +52,7 @@
 #cnt2{
   @include flex;
   @include align-items(flex-end);
-  background: #fff; padding: 2vw 0;
+  background: #fff; height: 100vh; padding-bottom: 20vh;
   h2{
     background: url("../images/main/cnt2_bg.jpg") no-repeat 50% / cover;  width: 25vw; height: 31vw; max-width: 100%; border-radius: 45%; position: relative; line-height: 1.2;
     span{position: absolute; top: 80px; right: 50px; font-family: Hyemin; font-size: 4vw; margin-right: -3vw; text-align: right;}
@@ -67,11 +67,11 @@
         @include flex-direction;
         @include align-items;
         @include justify-content(flex-end);
-        font-family: Hyemin; height: 36vw; text-align: center;
+        font-family: Hyemin; text-align: center; height: 70vh;
         strong{margin: 1vw 0; font-family: ComicNeue; font-size: 1.4vw;}
       }
       .slide:hover, .slide:focus{
-        .winePhoto img{width: 8vw;}
+        .winePhoto img{width: 7vw;}
         .winePhoto::before, .winePhoto::after{opacity: 1;}
         .btn_more{background-image: url("../images/icon/btn_on.png"); color: #fff;}
       }
@@ -140,13 +140,17 @@
     margin-top: 0; width: 4vw; height: 3.8vw; background: no-repeat 50% / cover;
     &::after{display: none;}
   }
-  .swiper-button-prev{background-image: url("../images/icon/btn_left_on.png"); left: 0;}
+  .swiper-button-prev{
+    left: 0; background-image: url("../images/icon/btn_left_red.png");
+  }
   .swiper-button-prev:hover, .swiper-button-prev:focus{
     @include transform(rotate(-360deg));
+    background-image: url("../images/icon/btn_left_on.png");
   }
-  .swiper-button-next{background-image: url("../images/icon/btn_right_on.png"); right: 0;}
+  .swiper-button-next{background-image: url("../images/icon/btn_right_red.png"); right: 0;}
   .swiper-button-next:hover, .swiper-button-next:focus{
-    @include transform(rotate(360deg));   
+    @include transform(rotate(360deg));
+    background-image: url("../images/icon/btn_right_on.png"); 
   }
   .md_cnt{display: none}
 }
@@ -155,10 +159,10 @@
   @include flex;
   @include justify-content(space-between);
   @include align-items;
-  height: 100vh; min-height: 100vh; position: relative; padding: 0 0 0 8vw; background: #fff;
+  height: 100vh; position: relative; padding: 0 0 0 8vw;
   .txt_box{
     h2{font-family: Hyemin; font-size: 4vw;}
-    p{padding: 1vw 0.5vw 3vw;}
+    p{padding-left: 0.6vw}
     .btn_subscript{
       @include transition(all 0.5s);
       position: relative; display: block; background: url("../images/icon/btn_bk.png") no-repeat 50% / cover; width: 7.14vw; height: 2.85vw; font-size: 1vw; text-align: center; line-height: 2.85vw;margin-left: 18vw; letter-spacing: 0;
@@ -170,12 +174,12 @@
     .finger{position: absolute; top: 80%; left: 100%; display: block; width: 3vw; height: 3vw; /* visibility: hidden; */}
   }
   #photo_box{
-    position: relative; width: 60%; height: 47vw; overflow: hidden;
+    position: relative; width: 60%; height: 88vh; overflow: hidden;
     .box{
       position: absolute; top: 10%; left: 10%; width: 25vw; height: 38vw; background: no-repeat 50% / cover; padding: 1vw 1.5vw; border-radius: 30px;
       h3, p{text-shadow: 2px 2px 2px rgba(0, 0, 0, .1)}
-      h3{font-size: 1.6vw }
-      p{line-height: 1.7; padding: 10px 0; font-size: 1.2vw}
+      h3{font-size: 25px;}
+      p{line-height: 1.7; padding: 10px 0; font-size: 18px}
       &#box1{background-image: url("../images/main/cnt5_photo1.jpg");}
       &#box2{
         @include transform(rotate(10deg));
@@ -183,10 +187,11 @@
       }
       &#box3{
         @include transform(rotate(-10deg));
-        background-image: url("../images/main/cnt5_photo3.jpg"); color: #fff; }
+        background-image: url("../images/main/cnt5_photo3.jpg"); color: #fff; 
+      }
       &#box4{
         @include transform(rotate(5deg));
-        background-image: url("../images/main/cnt5_photo4.jpg");
+        background-image: url("../images/main/cnt5_photo4.jpg"); color: #fff;
       }      
     }
     .box:not(#box1){margin-left: 38vw;}
@@ -218,7 +223,7 @@
   position: relative; overflow: hidden; width: 100%;
   .event{
     width: calc(100% / 4); height: 100vh;
-    p{font-size: 1vw}
+    p{font-size: 16px}
     &#event1{
       background: url("../images/main/cnt4_bg1.jpg")no-repeat center top / cover;
     }
@@ -240,7 +245,7 @@
       height: 100%;border-right: 1px solid $bk2;
       strong{
         @include transition(all 0.5s);
-        display: block; padding-top: 90%; font-size: 1.8vw; font-family: Hyemin; font-weight: 700; width: 100%; color: $lightPink; text-shadow: 2px 3px 3px $bk;
+        display: block; padding-top: 90%; font-size: 30px; font-family: Hyemin; font-weight: 700; width: 100%; color: $lightPink; text-shadow: 2px 3px 3px $bk;
       }
       p{
         text-shadow: 1px 1px 2px #fff;
@@ -265,15 +270,15 @@
     .main{
       position: sticky; -webkit-position: sticky; top: 150px; width: 40%; height: 75vh; border-radius: 60px; overflow: hidden; background: $lightPink; box-shadow: 3px 7px 50px rgba(0, 0, 0, .2);
       .txt {
-        height: 11.875vw; display: block; padding: 0.5vw 1.823vw;
+        height: 11.875vw; display: block; padding: 1.5vw 1.823vw;
         h2{
-          font-family: Hyemin; font-weight: 700; font-size: 4vw; color: $red;
+          font-family: Hyemin; font-weight: 700; font-size: 50px; color: $red;
         }
         .tag{display: block;}
       }
       .img{
-        display: block;
-        img{height: 100%;}
+        height: calc(100% - 11.875vw);
+        img{min-height: 100%; width: 100%; max-width: none;}
       }
     }
     .contents{     
@@ -291,7 +296,7 @@
         .txt{
           height: 8.854vw; padding: 2vw 1.823vw;
           strong{
-            display: block; font-size: 1.25vw; line-height: 1.2; padding-bottom: 0.8vw;
+            display: block; font-size: 23px; line-height: 1.2; padding-bottom: 0.8vw;
           }
           .tag{
             margin-right: 1.5vw; color: rgba(37,37,37,.5);
@@ -317,6 +322,15 @@
   }
 }
 
+@media screen and(max-width: 1536px) {
+  #cnt5 .cnt_wrap .contents .wrap_card {
+    border-radius: 45px;
+    .txt .tag{
+      margin-right: 1vw;
+    }
+  }
+}
+
 @media screen and (max-width: 1440px) {
   #cnt1{  
     .wrap{
@@ -326,16 +340,16 @@
       }    
       .txt_box{
        padding-left: 5vw;
-        h2{font-size: 5vw;}
-        p{padding: 3px 0; font-size: 1.15vw;}
       } 
     }
     .scrollDown{
-      font-size: 1.5vw;
+      font-size: 20px;
     }
   }
   
   #cnt2{
+    @include align-items(center);
+    height: 60vh; padding-bottom: 0;
     h2{
       width: 26vw; height: 33vw;
       span{top: 70px; right: 100px;}
@@ -345,9 +359,9 @@
       .swiper-slide{
         .slide{
           @include justify-content;
-         height: 35vw;
+         height: 38vw;
           .winePhoto img{width: 5.5vw;}          
-          strong{font-size: 1.45vw;}
+          strong{font-size: 22px}
         }
         .slide:hover, .slide:focus{
           .winePhoto img{width: 7.3vw;}
@@ -364,39 +378,28 @@
         &::before{width: 9vw; height: 9vw; top: 3vw; left: -4vw;}        
       }  
     }
-    .btn_more, .btn_more_bk, .btn_more_on{font-size: 1.2vw;}
+    .btn_more, .btn_more_bk, .btn_more_on{font-size: 18px;}
   }
   
   #cnt3{
-    padding: 0vw 0 5vw 5vw; height: auto; min-height: auto;
-    .txt_box{
-      p{padding: 0.5vw 0.5vw 3vw; font-size: 1.1vw;}
+    .txt_box{      
       .btn_subscript{
-        width: 8vw; height: 3.2vw; font-size: 1vw; line-height: 3.2vw; margin-left: 25vw;
+        width: 10.5vw; height: 4.2vw; font-size: 16px; line-height: 4.2vw; margin-left: 25vw;
       }
       .btn_subscript_on{
-        width: 8vw; height: 3.2vw; font-size: 1vw; line-height: 3.2vw; margin-left: 24.8vw;
+        width: 10.5vw; height: 4.2vw; font-size: 16px; line-height: 4.2vw; margin-left: 25vw;
       }
     }
     #photo_box{
-       width: 55%; height: 41vw;
+       width: 55%; height: 60vh;
       .box{
-        top: 11%; left: 12%; width: 24vw; height: 35vw;
-        h3{font-size: 1.3vw; }
-        p{line-height: 1.5; font-size: 1vw;}  
+        top: 11%; left: 12%; width: 25vw; height: 35vw;
+        h3{font-size: 20px}
+        p{line-height: 1.5; font-size: 16px}  
       }
       .box:not(#box1){margin-left: 38vw;}
-      .controller{top: 85%;}
+      .controller{top: auto; bottom: 20%;}
     }
-  }
-  
-  #cnt4{
-    padding: 0;
-    a .event_detail{        
-        strong{font-size: 2.2vw;}        
-        p{font-size: 1.1vw;}
-        button{font-size: 1.2vw;}
-      }    
   }
   
   #cnt5{  
@@ -404,17 +407,17 @@
       .main{
         width: 43%; top: 130px; left: 0;
         .txt {
-          padding: 0.5vw 2.5vw;          
-          .tag{display: block; font-size: 1.1vw;}
+          padding: 0.3vw 2.5vw;       
         }
       }
       .contents{     
        width: 49%;
         .wrap_card{
-          border-radius: 50px;
-          .txt{           
-            strong{font-size: 1.35vw; line-height: 1.2; padding-bottom: 0.8vw;}
-            .tag{font-size: 1.1vw;}
+          border-radius: 30px;
+          .txt{     
+            padding-top: 1.5vw;      
+            strong{font-size: 19px; line-height: 1.2; padding-bottom: 0.8vw;}
+            .tag{font-size: 16px}
           }
         }
         .wrap_card:nth-child(3){top: 30vw; left: 0;}
@@ -430,43 +433,39 @@
 }
 
 @media screen and (max-width: 1080px) {
-  #cnt1{
-    height: 100vh; overflow: hidden;
+  #cnt1{    
     .wrap{
       @include justify-content;
       margin-top: 0; 
       .photo_wrap{
         width: auto;
-        &::before, &::after{width: 520px; height: 520px;}
-        &::before{top: 50%; right: 0vw; margin-top: -280px;}
-        &::after{top: 50%; right: 8vw; margin-bottom: -280px;}
+        &::before, &::after{width: 540px; height: 540px;}
+        &::before{top: 50%; left: 50%; margin-top: -270px; margin-left: -270px;}
+        &::after{top: 50%; left: 50%; margin-top: -270px; margin-left: -270px;}
+        .photo_box{width: 515px; height: 515px}       
       }
-      .photo_box{width: 30vw; height: 30vw}       
       .txt_box{
         width: auto;
-        h2{font-size: 4vw;}
-        p{font-size: 1.2vw;}
+        h2{font-size: 60px;}
+        p{font-size: 18px;}
       }
     }
-    .scrollDown{font-size: 2vw;}    
+    .scrollDown{font-size: 20px;}    
   }
   #cnt2{
-    display: block; min-height: auto; height: 100vh; padding: 2vw;
+    display: block; min-height: auto; height: 100vh; min-height: 100vh; padding: 2vw;
     h2{
       @include flex;
       @include justify-content;
-      background: none; text-align: center; width: 100%; height: 8vw; line-height: 8vw; text-align: center; border-radius: 45%; padding: 0; margin: 0;
-      span{position: static; font-size: 3.5vw; padding: 0 3vw;}
+      background: none; text-align: center; width: 100%; height: 11vw; line-height: 11vw; text-align: center; border-radius: 45%; padding: 0; margin: 0;
+      span{position: static; font-size: 60px; padding: 2vw 3vw 0;}
     }
-    // .swiper-container{
-    //   width: 71vw;
-    // }
     .swiper-wrapper{
       @include align-items;
       width: auto;
       .swiper-slide{
         .slide{        
-          width: 100%; min-height: 80vh;
+          width: 100%; min-height: 70vh;
           > *:not(.winePhoto){visibility: hidden;}
           .winePhoto{
             width: 11.5vw; min-width: 11.5vw;
@@ -518,16 +517,16 @@
         }
         &.swiper-slide-active{
           *{visibility: visible !important;}
-          .winePhoto img{width: 15vw;}
-          .winePhoto::before, .winePhoto::after{opacity: 1;}
-          strong{font-size: 2.3vw; line-height: 1.2;}
+          .winePhoto img{width: 15vw !important;}
+          .winePhoto::before, .winePhoto::after{opacity: 1 !important;}
+          strong{font-size: 30px; line-height: 1.2;}
           .btn_more{
             background: url("../images/icon/btn_on.png") no-repeat 50% / cover; color: #fff;
-            font-size: 1.8vw; width: 10vw; height: 4vw; line-height: 4vw;}
+            font-size: 20px; width: 12vw; height: 4.8vw; line-height: 4.8vw;}
           }
         .slide:hover, .slide:focus{
-          .winePhoto img{width: 15vw;}
-          .winePhoto::before, .winePhoto::after{opacity: 1;}
+          .winePhoto img{width: 8vw}
+          .winePhoto::before, .winePhoto::after{opacity: 0;}
         }
       }
     }
@@ -542,26 +541,26 @@
   }
   #cnt3{
     @include flex-direction;
-    @include justify-content(flex-start);
-    background: $lightPink; height: auto; min-height: auto; height: 100vh;
+    @include justify-content(center);
+    background: $lightPink; min-height: auto; height: 100vh; padding: 0;
     .txt_box{
-      padding-top: 3vh; height: 35vh;
-      h2{font-size: 5.2vw;}
-      p{padding: 1vw 0vw 0vw; font-size: 1.4vw;}
+      h2{font-size: 50px}
+      p{padding: 1vw 0 2vw; font-size: 18px;}
+      p:last-of-type{max-height: 0; overflow: hidden; visibility: hidden; padding: 0;}
       .btn_subscript{
-        width: 10vw; height: 4vw;line-height: 4vw; 
-        font-size: 1.4vw; margin-left: 30vw; margin-top: -7vw;
+        width: 11.3vw; height: 4.5vw;line-height: 4vw;
+        font-size: 16px; margin: 0; letter-spacing: -0.05em;
         background-image: url("../images/icon/btn_on.png"); color: #fff;
       }      
-      .finger{position: absolute; top: 90%; left: 80%; display: block; width: 3.5vw; height: 3.5vw;}
+      .finger{visibility: hidden; overflow: hidden; max-height: 0; width: 0}
     }
     #photo_box{
-      position: relative; width: 60%; height: 50vh; overflow: hidden;
+      position: relative; width: 70%; height: 60vh; overflow: hidden;
       .box{
         @include translateX-50;
-        top: 5%; left: 50%; width: 55%; height: 40vw; padding: 1vw 2.5vw;        
-        h3{font-size: 2vw; line-height: 2.5;}
-        p{font-size: 1.4vw; line-height: 1.3;}
+        top: 5%; left: 50%; width: 55%; height: 55vh; padding: 1vw 2.5vw;        
+        h3{font-size: 25px; line-height: 2;}
+        p{font-size: 16px; line-height: 1.3;}
       }
       .controller{
         @include justify-content(space-between);
@@ -587,7 +586,7 @@
         @include align-items;
         border-top: 1px solid $bk2; border-bottom: 1px solid $bk2; border-bottom: 1px solid transparent;
         strong{
-          display: inline-block; padding-top: 0; font-size: 3.5vw; padding-left: 30%;
+          display: inline-block; padding-top: 0; font-size: 30px; padding-left: 30%;
         }
         p, span{visibility: hidden; max-height: 0; overflow: hidden;}
 
@@ -605,8 +604,8 @@
         top: 140px; width: 55%; height: 75vh; border-radius: 30px;
         .txt {
           height: 18vw; padding: 2vw 2.5vw;
-          h2{font-size: 5.2vw; line-height: 1.6;}
-          .tag{font-size: 1.6vw; line-height: 1.6;}
+          h2{font-size: 50px; line-height: 1.6;}
+          .tag{font-size: 18px; line-height: 1.6;}
         }
         .img, .img img{height: 100%;}
       }
@@ -615,19 +614,21 @@
         .wrap_card{
          width: 100%; height: 28vw; border-radius: 30px;
           .txt{
-            padding: 1vw 2vw;
+            padding: 1.5vw 2vw; height: 9.854vw;;
             strong{
-              font-size: 1.6vw; line-height: 1.3; 
+              font-size: 18px; line-height: 1.3;  padding-bottom: 0;
             }
-            .tag{font-size: 1.4vw;}
-          }  
+          } 
+          .img{
+            height: calc(100% - 9.854vw);
+          }
         }
         .txt_wrap{height: 11vw;}
-        .wrap_card:nth-child(2){top: 30vw; left: 0;}
+        .wrap_card:nth-child(2){top: 30vw; left: 0; padding-top: 0;}
         .wrap_card:nth-child(3){top: calc(30vw + 13vw); left: 0;}
         .wrap_card:nth-child(4){top: calc((30vw * 2) + 13vw); left: 0;}
         .wrap_card:nth-child(5){top: calc((30vw * 3) + 13vw); left: 0;}
-        .wrap_card:nth-child(7){top: calc((30vw * 4) + 13vw); left: 0;}
+        .wrap_card:nth-child(7){top: calc((30vw * 4) + 13vw); left: 0; padding-top: 0;}
         .wrap_card:nth-child(6){display: none;}
         .wrap_card:nth-child(8){display: none;}
       }
@@ -645,22 +646,19 @@
         &::before, &::after{width: 400px; height: 400px; margin-left: 0}
         &::before{top: 50%; left: -3vw; margin-top: -200px;}
         &::after{top: 50%; left: 1vw; margin-top: -200px;}
+        .photo_box{
+          width: 380px; height: 380px;
+          .photo{left: -45%; top: -40%;}
+        }       
       }
-      .photo_box{
-        width: 380px; height: 380px;
-        .photo{left: -45%; top: -40%;}
-      }       
       .txt_box{
         width: auto; position: absolute; top: 15%; right: 5%; text-shadow: 2px 2px 5px #fff; z-index: 100;
-        h2{font-size: 3vw; text-align: right;}
-        p{font-size: 1.2vw; text-align: right;}
+        h2, p{text-align: right;}
       }
     }
     .scrollDown{font-size: 1.5vw;}    
   }
   #cnt2{
-    h2 span{font-size: 5vw;} 
-    // .swiper-container{width: 80vw;}
     .swiper-wrapper{
       .swiper-slide{
         .slide{        
@@ -697,8 +695,8 @@
         }
         &.swiper-slide-active{
           .winePhoto img{width: 17.5vw;}
-          strong{font-size: 2vw; line-height: 1.2;}
-          .btn_more{font-size: 1.2vw; width: 15vw; height: 6vw; line-height: 6vw;}
+          strong{line-height: 1.2;}
+          .btn_more{width: 15vw; height: 6vw; line-height: 6vw;}
         }
         .slide:hover, .slide:focus{
           .winePhoto img{width: 17.5vw;}
@@ -716,11 +714,9 @@
   #cnt3{    
     .txt_box{
       position: relative; padding-bottom: 0;
-      h2{font-size: 5vw;}
-      p{padding: 0.5vw 2vw 0vw; font-size: 1.2vw; line-height: 1.5;}
+      p{padding: 0.5vw 2vw 0vw; line-height: 1.5;}
       .btn_subscript{
-        position: absolute; bottom: 5px; right: 0;
-        width: 20.2vw; height: 8.2vw; font-size: 2.5vw; line-height: 8.2vw; margin-left: 0;
+        width: 15.8vw; height: 6.2vw; line-height: 6.2vw; margin-top: 10px;
       }
       .finger{width: 5.5vw; height: 5.5vw;}
     }
