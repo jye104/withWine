@@ -60,7 +60,7 @@
   }
   .swiper-wrapper{
     @include align-items(flex-end);
-    width: 65vw;
+    width: 70vw;
     .swiper-slide{
       .slide{
         @include flex;
@@ -355,11 +355,9 @@
       span{top: 70px; right: 100px;}
     }
     .swiper-wrapper{
-      width: 64vw;
       .swiper-slide{
         .slide{
           @include justify-content;
-         height: 38vw;
           .winePhoto img{width: 5.5vw;}          
           strong{font-size: 22px}
         }
@@ -440,8 +438,8 @@
       .photo_wrap{
         width: auto;
         &::before, &::after{width: 540px; height: 540px;}
-        &::before{top: 50%; left: 50%; margin-top: -270px; margin-left: -270px;}
-        &::after{top: 50%; left: 50%; margin-top: -270px; margin-left: -270px;}
+        &::before{margin-top: -270px; margin-left: -270px;}
+        &::after{margin-top: -270px; margin-left: -270px;}
         .photo_box{width: 515px; height: 515px}       
       }
       .txt_box{
@@ -467,7 +465,7 @@
       .swiper-slide{
         .slide{        
           width: 100%; min-height: 70vh;
-          > *:not(.winePhoto){visibility: hidden;}
+          > *:not(.winePhoto){visibility: hidden; max-height: 0; overflow: hidden;}
           .winePhoto{
             width: 11.5vw; min-width: 11.5vw;
             &::before{
@@ -517,7 +515,7 @@
             }            
         }
         &.swiper-slide-active{
-          *{visibility: visible !important;}
+          *{visibility: visible !important; max-height: fit-content !important;}
           .winePhoto img{width: 15vw !important;}
           .winePhoto::before, .winePhoto::after{opacity: 1 !important;}
           strong{font-size: 30px; line-height: 1.2;}
@@ -642,10 +640,10 @@
     .wrap{
       display: block; position: relative;
       .photo_wrap{
-        position: absolute; bottom: 80px; left: 5.5vw;
+        position: absolute; bottom: 80px; left: 5.5vw; z-index: -1;
         &::before, &::after{width: 450px; height: 450px;}
-        &::before{top: 50%; left: 50%; margin-top: -210px; margin-left: -210px;}
-        &::after{top: 50%; left: 50%; margin-top: -220px; margin-left: -220px;}
+        &::before{margin-top: -210px; margin-left: -210px;}
+        &::after{margin-top: -220px; margin-left: -220px;}
         .photo_box{width: 420px; height: 420px}       
       }
       .txt_box{
@@ -691,6 +689,71 @@
         padding: 1vw 1.5vw;
         strong{font-size: 16px; line-height: 1.2;}
         .tag{font-size: 14px;}
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  #cnt1{    
+    .wrap{
+      .photo_box{
+        .photo{
+          width: 800px;
+          top: -35vw; left:-45vw;
+        }
+      }
+      .photo_wrap{
+        bottom: 80px; left: 5.5vw;
+        &::before, &::after{width: 320px; height: 320px;}
+        &::before{margin-top: -160px; margin-left: -160px;}
+        &::after{margin-top: -160px; margin-left: -160px;}
+        .photo_box{width: 300px; height: 300px} 
+      }
+      .txt_box{
+        h2{font-size: 40px;}
+        p{font-size: 14px;}
+      }
+    }
+  }
+  #cnt2{
+    h2 span{font-size: 40px;}
+    .swiper-wrapper .swiper-slide .slide{
+      height: 60vh; min-height: auto;
+      .winePhoto{
+        width: 15.5vw; min-width: 15.5vw;
+        img{width: 10vw}
+      }
+    }
+    .swiper-wrapper .swiper-slide.swiper-slide-active .btn_more{
+      width: 22vw; height: 8.9vw; line-height: 8.9vw;
+    }
+  }
+  #cnt3{
+    .txt_box{
+      .btn_subscript{
+        width: 20.3vw; height: 8.1vw; line-height: 8.1vw;
+      }
+    }
+    #photo_box {
+      width: 85%;
+      .box{
+        width: 77%; height: 50vh;
+        &:not(#box1){margin-left: 50vw;}
+      }
+    }
+  }
+  #cnt5{
+    .cnt_wrap{
+      display: block;
+      .main{
+        position: static; height: auto; width: 90%; margin: 0 auto;
+        .txt{height: auto;}
+        .img{visibility: hidden; max-height: 0; overflow: hidden; display: none;}
+      }
+      .contents{
+        .wrap_card{
+          position: static;
+        }
       }
     }
   }

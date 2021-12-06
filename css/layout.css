@@ -258,9 +258,17 @@
       width: 100%;
       height: 80px;
       padding: 0 40px; }
-      #mHeader .headerTop .logo a img {
-        width: 60px;
-        height: 50px; }
+      #mHeader .headerTop .logo a {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center; }
+        #mHeader .headerTop .logo a img {
+          width: 60px;
+          height: 50px; }
       #mHeader .headerTop .btn_gnb_open {
         position: relative;
         width: 40px;

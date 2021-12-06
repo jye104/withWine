@@ -90,8 +90,29 @@ $(document).ready(function () {
   $(window).on('resize', function () {
     clearTimeout(timers);
     timers = setTimeout(function () {
-      if ($(this).width() <= 1080) {
-        let current = 0;
+      let current = 0;
+      if ($(this).width() <= 480) {
+        $('#cnt3 .controller button').on('click', function () {
+          const btnNum = $(this).index();
+          if ($('#cnt3 .box').is(':animated')) return false;
+
+          if ((btnNum === 0 && current === 0) || (btnNum === 1 && current === 3)) return false;
+          if (btnNum === 0) {
+            $('#cnt3 .box').eq(current).animate({
+              marginLeft: '50vw'
+            }, ariaHidden);
+            current--;
+            console.log(current);
+          } else {
+            current++;
+            console.log(current);
+            $('#cnt3 .box').eq(current).animate({
+              marginLeft: '-30vw'
+            }, ariaHidden);
+          }
+        });
+      }
+      else if ($(this).width() <= 1080) {
         $('#cnt3 .controller button').on('click', function () {
           const btnNum = $(this).index();
           if ($('#cnt3 .box').is(':animated')) return false;
@@ -112,16 +133,17 @@ $(document).ready(function () {
           }
 
           // 접근성 추가
-          function ariaHidden() {
-            // 1) 모든 li를 aria-hidden: true 속성 설정
-            $('#cnt4 .box').attr('aria-hidden', true);
-
-            // 2) 현재 화면에 보여지는 하나만 aria-hidden: false로 바꾸기
-            $('#cnt4 .box').eq(current).attr('aria-hidden', false);
-          }
-          ariaHidden();
         });
       }
+      
+      function ariaHidden() {
+        // 1) 모든 li를 aria-hidden: true 속성 설정
+        $('#cnt4 .box').attr('aria-hidden', true);
+
+        // 2) 현재 화면에 보여지는 하나만 aria-hidden: false로 바꾸기
+        $('#cnt4 .box').eq(current).attr('aria-hidden', false);
+      }
+      ariaHidden();
     }, 100);
   });
   $(window).trigger('resize');

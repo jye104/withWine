@@ -132,7 +132,7 @@
   #cnt2 .swiper-wrapper {
     -webkit-align-items: flex-end;
     align-items: flex-end;
-    width: 65vw; }
+    width: 70vw; }
     #cnt2 .swiper-wrapper .swiper-slide .slide {
       display: -webkit-box;
       display: -moz-box;
@@ -615,32 +615,29 @@
       #cnt2 h2 span {
         top: 70px;
         right: 100px; }
-    #cnt2 .swiper-wrapper {
-      width: 64vw; }
-      #cnt2 .swiper-wrapper .swiper-slide .slide {
-        -webkit-justify-content: center;
-        justify-content: center;
-        height: 38vw; }
-        #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto img {
-          width: 5.5vw; }
-        #cnt2 .swiper-wrapper .swiper-slide .slide strong {
-          font-size: 22px; }
-      #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto img, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto img {
-        width: 7.3vw; }
-      #cnt2 .swiper-wrapper #slide3 .slide .winePhoto::before {
-        width: 9vw;
-        height: 9vw;
-        top: 4vw;
-        left: -3vw; }
-      #cnt2 .swiper-wrapper #slide3 .slide .winePhoto::after {
-        width: 9vw;
-        height: 8vw;
-        right: -5vw; }
-      #cnt2 .swiper-wrapper #slide5 .slide .winePhoto::before {
-        width: 9vw;
-        height: 9vw;
-        top: 3vw;
-        left: -4vw; }
+    #cnt2 .swiper-wrapper .swiper-slide .slide {
+      -webkit-justify-content: center;
+      justify-content: center; }
+      #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto img {
+        width: 5.5vw; }
+      #cnt2 .swiper-wrapper .swiper-slide .slide strong {
+        font-size: 22px; }
+    #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto img, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto img {
+      width: 7.3vw; }
+    #cnt2 .swiper-wrapper #slide3 .slide .winePhoto::before {
+      width: 9vw;
+      height: 9vw;
+      top: 4vw;
+      left: -3vw; }
+    #cnt2 .swiper-wrapper #slide3 .slide .winePhoto::after {
+      width: 9vw;
+      height: 8vw;
+      right: -5vw; }
+    #cnt2 .swiper-wrapper #slide5 .slide .winePhoto::before {
+      width: 9vw;
+      height: 9vw;
+      top: 3vw;
+      left: -4vw; }
     #cnt2 .btn_more, #cnt2 .btn_more_bk, #cnt2 .btn_more_on {
       font-size: 18px; }
 
@@ -725,13 +722,9 @@
         width: 540px;
         height: 540px; }
       #cnt1 .wrap .photo_wrap::before {
-        top: 50%;
-        left: 50%;
         margin-top: -270px;
         margin-left: -270px; }
       #cnt1 .wrap .photo_wrap::after {
-        top: 50%;
-        left: 50%;
         margin-top: -270px;
         margin-left: -270px; }
       #cnt1 .wrap .photo_wrap .photo_box {
@@ -781,7 +774,9 @@
         width: 100%;
         min-height: 70vh; }
         #cnt2 .swiper-wrapper .swiper-slide .slide > *:not(.winePhoto) {
-          visibility: hidden; }
+          visibility: hidden;
+          max-height: 0;
+          overflow: hidden; }
         #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto {
           width: 11.5vw;
           min-width: 11.5vw; }
@@ -840,7 +835,8 @@
         height: 13vw;
         right: -8vw; }
       #cnt2 .swiper-wrapper .swiper-slide.swiper-slide-active * {
-        visibility: visible !important; }
+        visibility: visible !important;
+        max-height: fit-content !important; }
       #cnt2 .swiper-wrapper .swiper-slide.swiper-slide-active .winePhoto img {
         width: 15vw !important; }
       #cnt2 .swiper-wrapper .swiper-slide.swiper-slide-active .winePhoto::before, #cnt2 .swiper-wrapper .swiper-slide.swiper-slide-active .winePhoto::after {
@@ -1040,18 +1036,15 @@
     #cnt1 .wrap .photo_wrap {
       position: absolute;
       bottom: 80px;
-      left: 5.5vw; }
+      left: 5.5vw;
+      z-index: -1; }
       #cnt1 .wrap .photo_wrap::before, #cnt1 .wrap .photo_wrap::after {
         width: 450px;
         height: 450px; }
       #cnt1 .wrap .photo_wrap::before {
-        top: 50%;
-        left: 50%;
         margin-top: -210px;
         margin-left: -210px; }
       #cnt1 .wrap .photo_wrap::after {
-        top: 50%;
-        left: 50%;
         margin-top: -220px;
         margin-left: -220px; }
       #cnt1 .wrap .photo_wrap .photo_box {
@@ -1100,5 +1093,73 @@
         line-height: 1.2; }
       #cnt5 .cnt_wrap .contents .wrap_card .txt .tag {
         font-size: 14px; } }
+@media screen and (max-width: 480px) {
+  #cnt1 .wrap .photo_box .photo {
+    width: 800px;
+    top: -35vw;
+    left: -45vw; }
+  #cnt1 .wrap .photo_wrap {
+    bottom: 80px;
+    left: 5.5vw; }
+    #cnt1 .wrap .photo_wrap::before, #cnt1 .wrap .photo_wrap::after {
+      width: 320px;
+      height: 320px; }
+    #cnt1 .wrap .photo_wrap::before {
+      margin-top: -160px;
+      margin-left: -160px; }
+    #cnt1 .wrap .photo_wrap::after {
+      margin-top: -160px;
+      margin-left: -160px; }
+    #cnt1 .wrap .photo_wrap .photo_box {
+      width: 300px;
+      height: 300px; }
+  #cnt1 .wrap .txt_box h2 {
+    font-size: 40px; }
+  #cnt1 .wrap .txt_box p {
+    font-size: 14px; }
+
+  #cnt2 h2 span {
+    font-size: 40px; }
+  #cnt2 .swiper-wrapper .swiper-slide .slide {
+    height: 60vh;
+    min-height: auto; }
+    #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto {
+      width: 15.5vw;
+      min-width: 15.5vw; }
+      #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto img {
+        width: 10vw; }
+  #cnt2 .swiper-wrapper .swiper-slide.swiper-slide-active .btn_more {
+    width: 22vw;
+    height: 8.9vw;
+    line-height: 8.9vw; }
+
+  #cnt3 .txt_box .btn_subscript {
+    width: 20.3vw;
+    height: 8.1vw;
+    line-height: 8.1vw; }
+  #cnt3 #photo_box {
+    width: 85%; }
+    #cnt3 #photo_box .box {
+      width: 77%;
+      height: 50vh; }
+      #cnt3 #photo_box .box:not(#box1) {
+        margin-left: 50vw; }
+
+  #cnt5 .cnt_wrap {
+    display: block; }
+    #cnt5 .cnt_wrap .main {
+      position: static;
+      height: auto;
+      width: 90%;
+      margin: 0 auto; }
+      #cnt5 .cnt_wrap .main .txt {
+        height: auto; }
+      #cnt5 .cnt_wrap .main .img {
+        visibility: hidden;
+        max-height: 0;
+        overflow: hidden;
+        display: none; }
+    #cnt5 .cnt_wrap .contents .wrap_card {
+      position: static; } }
 
 /*# sourceMappingURL=main.css.map */
