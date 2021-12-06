@@ -244,16 +244,16 @@
 }
 @media screen and (max-width: 770px) {
   #mHeader{
-    height: vw-calc770(80);
+    height: 80px;
     .headerTop{
-      height: vw-calc770(80); padding: 0 vw-calc770(40);
+      height: 80px; padding: 0 vw-calc770(40);
       .logo a img{width: vw-calc770(60); height: vw-calc770(50);}
       .btn_gnb_open{
         width: vw-calc770(40); height: vw-calc770(50);
       }
     }
     #mGnb > ul > li > a{font-size: 5vw;}
-    .dep2 li {padding: 2vw 0 1vw 2vw; font-size: 2.5vw;}
+    .dep2 li {padding: 2vw 0 1vw 2vw;}
   }
   
   .footer{

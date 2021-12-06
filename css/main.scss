@@ -453,7 +453,9 @@
     .scrollDown{font-size: 20px;}    
   }
   #cnt2{
-    display: block; min-height: auto; height: 100vh; min-height: 100vh; padding: 2vw;
+    // @include flex-direction;
+    @include justify-content(center);
+    height: 100vh; min-height: 100vh; padding: 2vw; flex-direction: column;
     h2{
       @include flex;
       @include justify-content;
@@ -462,7 +464,6 @@
     }
     .swiper-wrapper{
       @include align-items;
-      width: auto;
       .swiper-slide{
         .slide{        
           width: 100%; min-height: 70vh;
@@ -603,11 +604,11 @@
       .main{
         top: 140px; width: 55%; height: 75vh; border-radius: 30px;
         .txt {
-          height: 18vw; padding: 2vw 2.5vw;
+          height: 19vw; padding: 2vw 2.5vw;
           h2{font-size: 50px; line-height: 1.6;}
           .tag{font-size: 18px; line-height: 1.6;}
         }
-        .img, .img img{height: 100%;}
+        .img{height: calc(100% - 19vw);}
       }
       .contents{     
         width: 33%; height: 144.8vw;
@@ -637,150 +638,59 @@
 }
 
 @media screen and (max-width: 770px) {
-  #cnt1{
+  #cnt1{    
     .wrap{
-      display: block;
-      margin-top: 0; position: relative;
+      display: block; position: relative;
       .photo_wrap{
-        width: auto; position: absolute; bottom: 10%; left: 7%;
-        &::before, &::after{width: 400px; height: 400px; margin-left: 0}
-        &::before{top: 50%; left: -3vw; margin-top: -200px;}
-        &::after{top: 50%; left: 1vw; margin-top: -200px;}
-        .photo_box{
-          width: 380px; height: 380px;
-          .photo{left: -45%; top: -40%;}
-        }       
+        position: absolute; bottom: 80px; left: 5.5vw;
+        &::before, &::after{width: 450px; height: 450px;}
+        &::before{top: 50%; left: 50%; margin-top: -210px; margin-left: -210px;}
+        &::after{top: 50%; left: 50%; margin-top: -220px; margin-left: -220px;}
+        .photo_box{width: 420px; height: 420px}       
       }
       .txt_box{
-        width: auto; position: absolute; top: 15%; right: 5%; text-shadow: 2px 2px 5px #fff; z-index: 100;
-        h2, p{text-align: right;}
+        position: absolute; top: 90px; right: 5.5vw; padding-left: 0;
+        h2{font-size: 50px;}
+        p{font-size: 16px;}
       }
     }
-    .scrollDown{font-size: 1.5vw;}    
   }
   #cnt2{
-    .swiper-wrapper{
-      .swiper-slide{
-        .slide{        
-          min-height: 80vh;
-          .winePhoto{width: 17.5vw; min-width: 15.5vw;}  
-          .winePhoto img{width: 12vw;}         
-        }
-        .slide .winePhoto{
-          &::before{width: 9.9vw; height: 9.5vw;}
-          &::after{width: 18vw; height: 18vw; right: -11vw;}
-        }
-        &#slide2 .slide .winePhoto{
-          &::after{width: 10vw; height: 10vw;}
-        }
-        &#slide3 .slide .winePhoto{
-          &::before{
-            width: 14vw; height: 15vw;}
-          &::after{
-            width: 18vw; height: 15vw; right: -10vw;}
-        }
-        &#slide4 .slide .winePhoto{
-          &::before{
-            width: 12vw; height: 13vw;}
-          &::after{
-            width: 19vw; height: 19vw; right: -11vw;}
-        }
-        &#slide5 .slide .winePhoto{
-          &::before{width: 15vw; height: 17vw;}
-          &::after{width: 19vw; height: 19vw; right: -9vw;}            
-        }
-        &#slide7 .slide .winePhoto{
-          &::before{width: 13vw; height: 12vw; left: -5vw;}
-          &::after{width: 23vw; height: 17vw;}            
-        }
-        &.swiper-slide-active{
-          .winePhoto img{width: 17.5vw;}
-          strong{line-height: 1.2;}
-          .btn_more{width: 15vw; height: 6vw; line-height: 6vw;}
-        }
-        .slide:hover, .slide:focus{
-          .winePhoto img{width: 17.5vw;}
-        }
-      }
+    h2{
+      span{font-size: 45px;}
     }
-    .swiper-button-prev, .swiper-button-next{
-      margin-top: 0; width: 6.5vw; height: 6.5vw;
+    .swiper-wrapper .swiper-slide.swiper-slide-active strong{
+      font-size: 20px;
     }
-    .swiper-button-prev{background-image: url("../images/icon/btn_left_red.png");}
-    .swiper-button-next{background-image: url("../images/icon/btn_right_red.png");}
-    .swiper-button-prev:hover{background-image: url("../images/icon/btn_left_on.png");}
-    .swiper-button-next:hover{background-image: url("../images/icon/btn_right_on.png");}
+    .swiper-wrapper .swiper-slide.swiper-slide-active .btn_more{
+      font-size: 18px;
+    }
   }
-  #cnt3{    
+  #cnt3{
     .txt_box{
-      position: relative; padding-bottom: 0;
-      p{padding: 0.5vw 2vw 0vw; line-height: 1.5;}
-      .btn_subscript{
-        width: 15.8vw; height: 6.2vw; line-height: 6.2vw; margin-top: 10px;
-      }
-      .finger{width: 5.5vw; height: 5.5vw;}
+      h2{font-size: 45px;}
+      p{font-size: 16px;}
     }
-    #photo_box{
-       width: 70%; height: 63vw;
-      .box{
-        top: 11%; left: 50%; width: 42vw; height: 53vw;
-        h3{font-size: 1.5vw; }
-        p{line-height: 1.5; font-size: 1.2vw;}  
-      }
-    }
+    #photo_box .box h3{font-size: 20px;}
+
   }
-  #cnt4{
-    a{
-      .event_detail{
-        strong{font-size: 3vw}
-      }
-    }
-  }
-  #cnt5{  
-    .cnt_wrap{      
-      display: block; padding: 80px 30px 0;
+  #cnt5{
+    .cnt_wrap{
+      @include justify-content(space-evenly);
       .main{
-        position: static; width: auto; height: auto; background: transparent; box-shadow: none; margin-bottom: 30px;
-        .txt {
-          height: auto; display: block; padding: 0.5vw 1.823vw;
-          h2{font-size: 5vw;}
-          .tag{font-size: 1.2vw;}
-        }
-        .img{visibility: hidden; max-height: 0;
+        top: 150px; height: 70vh;
+        .txt{ 
+          h2{font-size: 40px;}
+          .tag{font-size: 16px;}
         }
       }
-      .contents{     
-        position: relative; width: 100%; height: 137vw;
-        .wrap_card{
-          position: absolute; width: 48%; height: 36vw; border-radius: 25px; box-shadow:4px 7px 10px rgba(0, 0, 0, .2);
-          &:hover, &:focus{
-            box-shadow: 5px 10px 15px rgba(0, 0, 0, .5);
-          }
-          .txt{
-            height: 13vw; padding: 2vw;
-            strong{
-              display: block; font-weight: 400; font-size: 1.3vw; line-height: 1.2; padding-bottom: 0.8vw;
-            }
-            .tag{
-              margin-right: 1.5vw; color: rgba(37,37,37,.5); font-size: 1vw;
-            }
-          }
-          .img{
-            height: calc(100% - 13vw); overflow: hidden;
-            img{min-height: 100%; width: 100%;max-width: none; margin-top: -45px;}
-          }
-          &.txt_wrap{padding-top: 1vw;}   
-        }
-        .wrap_card:nth-child(1){top: 0; left: 0;}
-        .wrap_card:nth-child(2){top: 0; right: 0; left: auto;}
-        .wrap_card:nth-child(3){top: 39vw; left: 0;}
-        .wrap_card:nth-child(4){top: 21vw; right: 0; left: auto;}
-        .wrap_card:nth-child(5){top: calc(39vw * 2); left: 0;}
-        .wrap_card:nth-child(6){top: calc(21vw + 39vw); right: 0; left: auto; display: block;}
-        .wrap_card:nth-child(7){top: calc(39vw * 3); left: 0;}
-        .wrap_card:nth-child(8){top: calc(21vw + (39vw * 2)); right: 0; left: auto; display: block;}
-        .wrap_card:nth-child(9){top: calc(39vw * 4); left: 0; display: block;}
-        .txt_wrap{height: 18vw;}
+    }
+    .cnt_wrap .contents .wrap_card {
+      border-radius: 20px;
+      .txt{
+        padding: 1vw 1.5vw;
+        strong{font-size: 16px; line-height: 1.2;}
+        .tag{font-size: 14px;}
       }
     }
   }

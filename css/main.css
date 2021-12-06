@@ -747,11 +747,12 @@
     font-size: 20px; }
 
   #cnt2 {
-    display: block;
-    min-height: auto;
+    -webkit-justify-content: center;
+    justify-content: center;
     height: 100vh;
     min-height: 100vh;
-    padding: 2vw; }
+    padding: 2vw;
+    flex-direction: column; }
     #cnt2 h2 {
       display: -webkit-box;
       display: -moz-box;
@@ -775,8 +776,7 @@
         padding: 2vw 3vw 0; }
     #cnt2 .swiper-wrapper {
       -webkit-align-items: center;
-      align-items: center;
-      width: auto; }
+      align-items: center; }
       #cnt2 .swiper-wrapper .swiper-slide .slide {
         width: 100%;
         min-height: 70vh; }
@@ -984,7 +984,7 @@
       height: 75vh;
       border-radius: 30px; }
       #cnt5 .cnt_wrap .main .txt {
-        height: 18vw;
+        height: 19vw;
         padding: 2vw 2.5vw; }
         #cnt5 .cnt_wrap .main .txt h2 {
           font-size: 50px;
@@ -992,8 +992,8 @@
         #cnt5 .cnt_wrap .main .txt .tag {
           font-size: 18px;
           line-height: 1.6; }
-      #cnt5 .cnt_wrap .main .img, #cnt5 .cnt_wrap .main .img img {
-        height: 100%; }
+      #cnt5 .cnt_wrap .main .img {
+        height: calc(100% - 19vw); }
     #cnt5 .cnt_wrap .contents {
       width: 33%;
       height: 144.8vw; }
@@ -1036,233 +1036,69 @@
 @media screen and (max-width: 770px) {
   #cnt1 .wrap {
     display: block;
-    margin-top: 0;
     position: relative; }
     #cnt1 .wrap .photo_wrap {
-      width: auto;
       position: absolute;
-      bottom: 10%;
-      left: 7%; }
+      bottom: 80px;
+      left: 5.5vw; }
       #cnt1 .wrap .photo_wrap::before, #cnt1 .wrap .photo_wrap::after {
-        width: 400px;
-        height: 400px;
-        margin-left: 0; }
+        width: 450px;
+        height: 450px; }
       #cnt1 .wrap .photo_wrap::before {
         top: 50%;
-        left: -3vw;
-        margin-top: -200px; }
+        left: 50%;
+        margin-top: -210px;
+        margin-left: -210px; }
       #cnt1 .wrap .photo_wrap::after {
         top: 50%;
-        left: 1vw;
-        margin-top: -200px; }
+        left: 50%;
+        margin-top: -220px;
+        margin-left: -220px; }
       #cnt1 .wrap .photo_wrap .photo_box {
-        width: 380px;
-        height: 380px; }
-        #cnt1 .wrap .photo_wrap .photo_box .photo {
-          left: -45%;
-          top: -40%; }
+        width: 420px;
+        height: 420px; }
     #cnt1 .wrap .txt_box {
-      width: auto;
       position: absolute;
-      top: 15%;
-      right: 5%;
-      text-shadow: 2px 2px 5px #fff;
-      z-index: 100; }
-      #cnt1 .wrap .txt_box h2, #cnt1 .wrap .txt_box p {
-        text-align: right; }
-  #cnt1 .scrollDown {
-    font-size: 1.5vw; }
+      top: 90px;
+      right: 5.5vw;
+      padding-left: 0; }
+      #cnt1 .wrap .txt_box h2 {
+        font-size: 50px; }
+      #cnt1 .wrap .txt_box p {
+        font-size: 16px; }
 
-  #cnt2 .swiper-wrapper .swiper-slide .slide {
-    min-height: 80vh; }
-    #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto {
-      width: 17.5vw;
-      min-width: 15.5vw; }
-    #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto img {
-      width: 12vw; }
-  #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto::before {
-    width: 9.9vw;
-    height: 9.5vw; }
-  #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto::after {
-    width: 18vw;
-    height: 18vw;
-    right: -11vw; }
-  #cnt2 .swiper-wrapper .swiper-slide#slide2 .slide .winePhoto::after {
-    width: 10vw;
-    height: 10vw; }
-  #cnt2 .swiper-wrapper .swiper-slide#slide3 .slide .winePhoto::before {
-    width: 14vw;
-    height: 15vw; }
-  #cnt2 .swiper-wrapper .swiper-slide#slide3 .slide .winePhoto::after {
-    width: 18vw;
-    height: 15vw;
-    right: -10vw; }
-  #cnt2 .swiper-wrapper .swiper-slide#slide4 .slide .winePhoto::before {
-    width: 12vw;
-    height: 13vw; }
-  #cnt2 .swiper-wrapper .swiper-slide#slide4 .slide .winePhoto::after {
-    width: 19vw;
-    height: 19vw;
-    right: -11vw; }
-  #cnt2 .swiper-wrapper .swiper-slide#slide5 .slide .winePhoto::before {
-    width: 15vw;
-    height: 17vw; }
-  #cnt2 .swiper-wrapper .swiper-slide#slide5 .slide .winePhoto::after {
-    width: 19vw;
-    height: 19vw;
-    right: -9vw; }
-  #cnt2 .swiper-wrapper .swiper-slide#slide7 .slide .winePhoto::before {
-    width: 13vw;
-    height: 12vw;
-    left: -5vw; }
-  #cnt2 .swiper-wrapper .swiper-slide#slide7 .slide .winePhoto::after {
-    width: 23vw;
-    height: 17vw; }
-  #cnt2 .swiper-wrapper .swiper-slide.swiper-slide-active .winePhoto img {
-    width: 17.5vw; }
+  #cnt2 h2 span {
+    font-size: 45px; }
   #cnt2 .swiper-wrapper .swiper-slide.swiper-slide-active strong {
-    line-height: 1.2; }
+    font-size: 20px; }
   #cnt2 .swiper-wrapper .swiper-slide.swiper-slide-active .btn_more {
-    width: 15vw;
-    height: 6vw;
-    line-height: 6vw; }
-  #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto img, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto img {
-    width: 17.5vw; }
-  #cnt2 .swiper-button-prev, #cnt2 .swiper-button-next {
-    margin-top: 0;
-    width: 6.5vw;
-    height: 6.5vw; }
-  #cnt2 .swiper-button-prev {
-    background-image: url("../images/icon/btn_left_red.png"); }
-  #cnt2 .swiper-button-next {
-    background-image: url("../images/icon/btn_right_red.png"); }
-  #cnt2 .swiper-button-prev:hover {
-    background-image: url("../images/icon/btn_left_on.png"); }
-  #cnt2 .swiper-button-next:hover {
-    background-image: url("../images/icon/btn_right_on.png"); }
+    font-size: 18px; }
 
-  #cnt3 .txt_box {
-    position: relative;
-    padding-bottom: 0; }
-    #cnt3 .txt_box p {
-      padding: 0.5vw 2vw 0vw;
-      line-height: 1.5; }
-    #cnt3 .txt_box .btn_subscript {
-      width: 15.8vw;
-      height: 6.2vw;
-      line-height: 6.2vw;
-      margin-top: 10px; }
-    #cnt3 .txt_box .finger {
-      width: 5.5vw;
-      height: 5.5vw; }
-  #cnt3 #photo_box {
-    width: 70%;
-    height: 63vw; }
-    #cnt3 #photo_box .box {
-      top: 11%;
-      left: 50%;
-      width: 42vw;
-      height: 53vw; }
-      #cnt3 #photo_box .box h3 {
-        font-size: 1.5vw; }
-      #cnt3 #photo_box .box p {
-        line-height: 1.5;
-        font-size: 1.2vw; }
-
-  #cnt4 a .event_detail strong {
-    font-size: 3vw; }
+  #cnt3 .txt_box h2 {
+    font-size: 45px; }
+  #cnt3 .txt_box p {
+    font-size: 16px; }
+  #cnt3 #photo_box .box h3 {
+    font-size: 20px; }
 
   #cnt5 .cnt_wrap {
-    display: block;
-    padding: 80px 30px 0; }
+    -webkit-justify-content: space-evenly;
+    justify-content: space-evenly; }
     #cnt5 .cnt_wrap .main {
-      position: static;
-      width: auto;
-      height: auto;
-      background: transparent;
-      box-shadow: none;
-      margin-bottom: 30px; }
-      #cnt5 .cnt_wrap .main .txt {
-        height: auto;
-        display: block;
-        padding: 0.5vw 1.823vw; }
-        #cnt5 .cnt_wrap .main .txt h2 {
-          font-size: 5vw; }
-        #cnt5 .cnt_wrap .main .txt .tag {
-          font-size: 1.2vw; }
-      #cnt5 .cnt_wrap .main .img {
-        visibility: hidden;
-        max-height: 0; }
-    #cnt5 .cnt_wrap .contents {
-      position: relative;
-      width: 100%;
-      height: 137vw; }
-      #cnt5 .cnt_wrap .contents .wrap_card {
-        position: absolute;
-        width: 48%;
-        height: 36vw;
-        border-radius: 25px;
-        box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.2); }
-        #cnt5 .cnt_wrap .contents .wrap_card:hover, #cnt5 .cnt_wrap .contents .wrap_card:focus {
-          box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5); }
-        #cnt5 .cnt_wrap .contents .wrap_card .txt {
-          height: 13vw;
-          padding: 2vw; }
-          #cnt5 .cnt_wrap .contents .wrap_card .txt strong {
-            display: block;
-            font-weight: 400;
-            font-size: 1.3vw;
-            line-height: 1.2;
-            padding-bottom: 0.8vw; }
-          #cnt5 .cnt_wrap .contents .wrap_card .txt .tag {
-            margin-right: 1.5vw;
-            color: rgba(37, 37, 37, 0.5);
-            font-size: 1vw; }
-        #cnt5 .cnt_wrap .contents .wrap_card .img {
-          height: calc(100% - 13vw);
-          overflow: hidden; }
-          #cnt5 .cnt_wrap .contents .wrap_card .img img {
-            min-height: 100%;
-            width: 100%;
-            max-width: none;
-            margin-top: -45px; }
-        #cnt5 .cnt_wrap .contents .wrap_card.txt_wrap {
-          padding-top: 1vw; }
-      #cnt5 .cnt_wrap .contents .wrap_card:nth-child(1) {
-        top: 0;
-        left: 0; }
-      #cnt5 .cnt_wrap .contents .wrap_card:nth-child(2) {
-        top: 0;
-        right: 0;
-        left: auto; }
-      #cnt5 .cnt_wrap .contents .wrap_card:nth-child(3) {
-        top: 39vw;
-        left: 0; }
-      #cnt5 .cnt_wrap .contents .wrap_card:nth-child(4) {
-        top: 21vw;
-        right: 0;
-        left: auto; }
-      #cnt5 .cnt_wrap .contents .wrap_card:nth-child(5) {
-        top: calc(39vw * 2);
-        left: 0; }
-      #cnt5 .cnt_wrap .contents .wrap_card:nth-child(6) {
-        top: calc(21vw + 39vw);
-        right: 0;
-        left: auto;
-        display: block; }
-      #cnt5 .cnt_wrap .contents .wrap_card:nth-child(7) {
-        top: calc(39vw * 3);
-        left: 0; }
-      #cnt5 .cnt_wrap .contents .wrap_card:nth-child(8) {
-        top: calc(21vw + (39vw * 2));
-        right: 0;
-        left: auto;
-        display: block; }
-      #cnt5 .cnt_wrap .contents .wrap_card:nth-child(9) {
-        top: calc(39vw * 4);
-        left: 0;
-        display: block; }
-      #cnt5 .cnt_wrap .contents .txt_wrap {
-        height: 18vw; } }
+      top: 150px;
+      height: 70vh; }
+      #cnt5 .cnt_wrap .main .txt h2 {
+        font-size: 40px; }
+      #cnt5 .cnt_wrap .main .txt .tag {
+        font-size: 16px; }
+  #cnt5 .cnt_wrap .contents .wrap_card {
+    border-radius: 20px; }
+    #cnt5 .cnt_wrap .contents .wrap_card .txt {
+      padding: 1vw 1.5vw; }
+      #cnt5 .cnt_wrap .contents .wrap_card .txt strong {
+        font-size: 16px;
+        line-height: 1.2; }
+      #cnt5 .cnt_wrap .contents .wrap_card .txt .tag {
+        font-size: 14px; } }
 
 /*# sourceMappingURL=main.css.map */

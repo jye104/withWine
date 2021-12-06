@@ -408,9 +408,9 @@
           margin-right: 1.5vw; } }
 @media screen and (max-width: 770px) {
   #mHeader {
-    height: 11.1168831169vw; }
+    height: 80px; }
     #mHeader .headerTop {
-      height: 11.1168831169vw;
+      height: 80px;
       padding: 0 5.5584415584vw; }
       #mHeader .headerTop .logo a img {
         width: 8.3376623377vw;
@@ -421,8 +421,7 @@
     #mHeader #mGnb > ul > li > a {
       font-size: 5vw; }
     #mHeader .dep2 li {
-      padding: 2vw 0 1vw 2vw;
-      font-size: 2.5vw; }
+      padding: 2vw 0 1vw 2vw; }
 
   .footer {
     height: 50vh;
