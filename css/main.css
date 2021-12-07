@@ -776,7 +776,7 @@
         #cnt2 .swiper-wrapper .swiper-slide .slide > *:not(.winePhoto) {
           visibility: hidden;
           max-height: 0;
-          overflow: hidden; }
+          width: 200%; }
         #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto {
           width: 11.5vw;
           min-width: 11.5vw; }
@@ -1032,11 +1032,12 @@
 @media screen and (max-width: 770px) {
   #cnt1 .wrap {
     display: block;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     #cnt1 .wrap .photo_wrap {
       position: absolute;
       bottom: 80px;
-      left: 5.5vw;
+      right: 15%;
       z-index: -1; }
       #cnt1 .wrap .photo_wrap::before, #cnt1 .wrap .photo_wrap::after {
         width: 450px;
@@ -1053,7 +1054,7 @@
     #cnt1 .wrap .txt_box {
       position: absolute;
       top: 90px;
-      right: 5.5vw;
+      left: 5.5vw;
       padding-left: 0; }
       #cnt1 .wrap .txt_box h2 {
         font-size: 50px; }

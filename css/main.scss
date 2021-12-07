@@ -465,7 +465,7 @@
       .swiper-slide{
         .slide{        
           width: 100%; min-height: 70vh;
-          > *:not(.winePhoto){visibility: hidden; max-height: 0; overflow: hidden;}
+          > *:not(.winePhoto){visibility: hidden; max-height: 0; width: 200%;}
           .winePhoto{
             width: 11.5vw; min-width: 11.5vw;
             &::before{
@@ -638,16 +638,16 @@
 @media screen and (max-width: 770px) {
   #cnt1{    
     .wrap{
-      display: block; position: relative;
+      display: block; position: relative; overflow: hidden;
       .photo_wrap{
-        position: absolute; bottom: 80px; left: 5.5vw; z-index: -1;
+        position: absolute; bottom: 80px; right: 15%; z-index: -1;
         &::before, &::after{width: 450px; height: 450px;}
         &::before{margin-top: -210px; margin-left: -210px;}
         &::after{margin-top: -220px; margin-left: -220px;}
         .photo_box{width: 420px; height: 420px}       
       }
       .txt_box{
-        position: absolute; top: 90px; right: 5.5vw; padding-left: 0;
+        position: absolute; top: 90px; left: 5.5vw; padding-left: 0;
         h2{font-size: 50px;}
         p{font-size: 16px;}
       }

@@ -169,9 +169,9 @@
       }
     }
     #mGnb{
-      visibility: hidden; left: 100%; position: fixed; top: 0; height: 100%; width: 100%; overflow-y: auto; z-index: 950; padding: 13vw 10vw 0vw;background: $pink url("../images/common/nav_bg.png") no-repeat bottom right;
+      visibility: hidden; left: 100%; position: fixed; top: 0; height: 100%; width: 100%; overflow-y: auto; z-index: 950; padding: 13vw 10vw 0vw; background: $pink url("../images/common/nav_bg.png") no-repeat bottom right;
       .btn_gnb_close{
-        position: absolute; top: 5vw; right: 5vw; width: 5vw; height: 5vw;
+        position: absolute; top: 5vw; right: 8vw; width: 5vw; height: 5vw;
       }
       > ul{
         > li{
@@ -196,7 +196,7 @@
       }
       .dep2{
         visibility: hidden;max-height: 0;overflow: hidden;
-        > li {padding: 1vw 0 1vw 2vw; font-size: 25px;}
+        > li {padding: 1vw 0 1vw 2vw; font-size: 18px;}
       }     
     }
   }
@@ -256,7 +256,7 @@
         width: vw-calc770(40); height: vw-calc770(50);
       }
     }
-    #mGnb > ul > li > a{font-size: 5vw;}
+    #mGnb > ul > li > a{font-size: 25px;}
     .dep2 li {padding: 2vw 0 1vw 2vw;}
   }
   

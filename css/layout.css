@@ -288,7 +288,7 @@
       #mHeader #mGnb .btn_gnb_close {
         position: absolute;
         top: 5vw;
-        right: 5vw;
+        right: 8vw;
         width: 5vw;
         height: 5vw; }
       #mHeader #mGnb > ul > li {
@@ -330,7 +330,7 @@
         overflow: hidden; }
         #mHeader #mGnb .dep2 > li {
           padding: 1vw 0 1vw 2vw;
-          font-size: 25px; }
+          font-size: 18px; }
 
   .footer {
     flex-direction: column;
@@ -427,7 +427,7 @@
         width: 5.5584415584vw;
         height: 6.9480519481vw; }
     #mHeader #mGnb > ul > li > a {
-      font-size: 5vw; }
+      font-size: 25px; }
     #mHeader .dep2 li {
       padding: 2vw 0 1vw 2vw; }
 
