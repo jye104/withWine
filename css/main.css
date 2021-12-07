@@ -776,7 +776,7 @@
         #cnt2 .swiper-wrapper .swiper-slide .slide > *:not(.winePhoto) {
           visibility: hidden;
           max-height: 0;
-          width: 200%; }
+          width: 300%; }
         #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto {
           width: 11.5vw;
           min-width: 11.5vw; }
@@ -1067,13 +1067,19 @@
     font-size: 20px; }
   #cnt2 .swiper-wrapper .swiper-slide.swiper-slide-active .btn_more {
     font-size: 18px; }
+  #cnt2 .swiper-wrapper .swiper-slide .slide strong, #cnt2 .swiper-wrapper .swiper-slide .slide button {
+    margin-top: 15px; }
+  #cnt2 .swiper-button-prev, #cnt2 .swiper-button-next {
+    top: 45%; }
 
   #cnt3 .txt_box h2 {
-    font-size: 45px; }
+    font-size: 40px; }
   #cnt3 .txt_box p {
-    font-size: 16px; }
+    font-size: 14px; }
   #cnt3 #photo_box .box h3 {
-    font-size: 20px; }
+    font-size: 18px; }
+  #cnt3 #photo_box .box p {
+    font-size: 14px; }
 
   #cnt5 .cnt_wrap {
     -webkit-justify-content: space-evenly;
@@ -1129,6 +1135,8 @@
       min-width: 15.5vw; }
       #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto img {
         width: 10vw; }
+    #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto img {
+      width: 10vw; }
   #cnt2 .swiper-wrapper .swiper-slide.swiper-slide-active .btn_more {
     width: 22vw;
     height: 8.9vw;
@@ -1141,10 +1149,16 @@
   #cnt3 #photo_box {
     width: 85%; }
     #cnt3 #photo_box .box {
-      width: 77%;
-      height: 50vh; }
+      width: 70%;
+      height: 40vh;
+      border-radius: 15px; }
       #cnt3 #photo_box .box:not(#box1) {
         margin-left: 50vw; }
+    #cnt3 #photo_box .controller {
+      bottom: 50%; }
+      #cnt3 #photo_box .controller .button-prev, #cnt3 #photo_box .controller .button-next {
+        width: 25px;
+        height: 30px; }
 
   #cnt5 .cnt_wrap {
     display: block; }
@@ -1152,7 +1166,8 @@
       position: static;
       height: auto;
       width: 90%;
-      margin: 0 auto; }
+      margin: 0 auto;
+      border-radius: 20px; }
       #cnt5 .cnt_wrap .main .txt {
         height: auto; }
       #cnt5 .cnt_wrap .main .img {
@@ -1160,7 +1175,39 @@
         max-height: 0;
         overflow: hidden;
         display: none; }
-    #cnt5 .cnt_wrap .contents .wrap_card {
-      position: static; } }
+    #cnt5 .cnt_wrap .contents {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
+      width: 90%;
+      height: auto;
+      margin: 0 auto; }
+      #cnt5 .cnt_wrap .contents .wrap_card {
+        position: static;
+        width: 48%;
+        height: 50vw;
+        margin-top: 20px;
+        border-radius: 15px; }
+        #cnt5 .cnt_wrap .contents .wrap_card.wrap_card:nth-child(6), #cnt5 .cnt_wrap .contents .wrap_card.wrap_card:nth-child(8) {
+          display: block; }
+        #cnt5 .cnt_wrap .contents .wrap_card.txt_wrap {
+          display: none; }
+        #cnt5 .cnt_wrap .contents .wrap_card .txt {
+          height: 16.5vw;
+          letter-spacing: -0.05em;
+          padding: 1.5vw 1.8vw; }
+          #cnt5 .cnt_wrap .contents .wrap_card .txt strong {
+            font-size: 14px; }
+          #cnt5 .cnt_wrap .contents .wrap_card .txt .tag {
+            margin-right: 0;
+            font-size: 13px; }
+        #cnt5 .cnt_wrap .contents .wrap_card .img {
+          height: calc(100% - 16.5vw); } }
 
 /*# sourceMappingURL=main.css.map */

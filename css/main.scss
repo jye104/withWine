@@ -465,7 +465,7 @@
       .swiper-slide{
         .slide{        
           width: 100%; min-height: 70vh;
-          > *:not(.winePhoto){visibility: hidden; max-height: 0; width: 200%;}
+          > *:not(.winePhoto){visibility: hidden; max-height: 0; width: 300%;}
           .winePhoto{
             width: 11.5vw; min-width: 11.5vw;
             &::before{
@@ -657,19 +657,29 @@
     h2{
       span{font-size: 45px;}
     }
-    .swiper-wrapper .swiper-slide.swiper-slide-active strong{
-      font-size: 20px;
+
+    .swiper-wrapper {
+      .swiper-slide.swiper-slide-active{
+        strong{font-size: 20px;}
+        .btn_more{font-size: 18px;}
+      }
+      .swiper-slide .slide{
+        strong, button{margin-top: 15px;}
+      }
     }
-    .swiper-wrapper .swiper-slide.swiper-slide-active .btn_more{
-      font-size: 18px;
+    .swiper-button-prev, .swiper-button-next{
+      top: 45%;
     }
   }
   #cnt3{
     .txt_box{
-      h2{font-size: 45px;}
-      p{font-size: 16px;}
+      h2{font-size: 40px;}
+      p{font-size: 14px;}
     }
-    #photo_box .box h3{font-size: 20px;}
+    #photo_box .box {
+      h3{font-size: 18px;}
+      p{font-size: 14px;}
+    }
 
   }
   #cnt5{
@@ -723,6 +733,7 @@
         width: 15.5vw; min-width: 15.5vw;
         img{width: 10vw}
       }
+      &:hover .winePhoto img{width: 10vw;}
     }
     .swiper-wrapper .swiper-slide.swiper-slide-active .btn_more{
       width: 22vw; height: 8.9vw; line-height: 8.9vw;
@@ -737,8 +748,14 @@
     #photo_box {
       width: 85%;
       .box{
-        width: 77%; height: 50vh;
+        width: 70%; height: 40vh; border-radius: 15px ;
         &:not(#box1){margin-left: 50vw;}
+      }
+      .controller{
+        bottom: 50%;
+        .button-prev, .button-next{
+          width: 25px; height: 30px;
+        }
       }
     }
   }
@@ -746,13 +763,25 @@
     .cnt_wrap{
       display: block;
       .main{
-        position: static; height: auto; width: 90%; margin: 0 auto;
+        position: static; height: auto; width: 90%; margin: 0 auto; border-radius: 20px;
         .txt{height: auto;}
         .img{visibility: hidden; max-height: 0; overflow: hidden; display: none;}
       }
       .contents{
+        @include flex;
+        @include flex-wrap;
+        @include justify-content(space-between);
+        width: 90%; height: auto; margin: 0 auto;
         .wrap_card{
-          position: static;
+          position: static; width: 48%; height: 50vw; margin-top: 20px; border-radius: 15px;
+          &.wrap_card:nth-child(6), &.wrap_card:nth-child(8){display: block;}
+          &.txt_wrap{display: none;}
+          .txt{
+            height: 16.5vw; letter-spacing: -0.05em; padding: 1.5vw 1.8vw;
+            strong{font-size: 14px;}
+            .tag{margin-right: 0; font-size: 13px;}
+          }
+          .img{height: calc(100% - 16.5vw);}
         }
       }
     }

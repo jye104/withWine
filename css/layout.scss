@@ -261,7 +261,7 @@
   }
   
   .footer{
-    height: 50vh; font-size: vw-calc770(18);
+    font-size: vw-calc770(18);
     .logo {padding-right: 0vw;}
     .logo a img{
       width:  vw-calc770(70); height:  vw-calc770(60);
@@ -287,3 +287,6 @@
     }    
   }
 }
+  @media screen and (max-width: 770px) {
+    .footer{height: 40vh; font-size: 14px;}
+  }
