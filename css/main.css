@@ -716,34 +716,36 @@
   #cnt5 .cnt_wrap .contents .wrap_card .txt .tag {
     margin-right: 0.5vw; } }
 @media screen and (max-width: 1080px) {
-  #cnt1 .wrap {
-    display: block;
-    position: relative;
-    overflow: hidden; }
-    #cnt1 .wrap .photo_wrap {
-      position: absolute;
-      bottom: 15%;
-      right: 5.5vw;
-      z-index: -1; }
-      #cnt1 .wrap .photo_wrap::before, #cnt1 .wrap .photo_wrap::after {
-        width: 520px;
-        height: 520px;
-        margin-top: -260px;
-        margin-left: -260px; }
-      #cnt1 .wrap .photo_wrap .photo_box {
-        width: 500px;
-        height: 500px; }
-    #cnt1 .wrap .txt_box {
-      position: absolute;
-      top: 90px;
-      left: 5.5vw;
-      padding-left: 0; }
-      #cnt1 .wrap .txt_box h2 {
-        font-size: 60px; }
-      #cnt1 .wrap .txt_box p {
-        font-size: 18px; }
-  #cnt1 .scrollDown {
-    font-size: 20px; }
+  #cnt1 {
+    height: 100vh; }
+    #cnt1 .wrap {
+      display: block;
+      position: relative;
+      overflow: hidden; }
+      #cnt1 .wrap .photo_wrap {
+        position: absolute;
+        bottom: 15%;
+        right: 5.5vw;
+        z-index: -1; }
+        #cnt1 .wrap .photo_wrap::before, #cnt1 .wrap .photo_wrap::after {
+          width: 520px;
+          height: 520px;
+          margin-top: -260px;
+          margin-left: -260px; }
+        #cnt1 .wrap .photo_wrap .photo_box {
+          width: 500px;
+          height: 500px; }
+      #cnt1 .wrap .txt_box {
+        position: absolute;
+        top: 90px;
+        left: 5.5vw;
+        padding-left: 0; }
+        #cnt1 .wrap .txt_box h2 {
+          font-size: 60px; }
+        #cnt1 .wrap .txt_box p {
+          font-size: 18px; }
+    #cnt1 .scrollDown {
+      font-size: 20px; }
 
   #cnt2 {
     -webkit-justify-content: center;
@@ -781,6 +783,8 @@
         min-height: 70vh; }
         #cnt2 .swiper-wrapper .swiper-slide .slide > *:not(.winePhoto) {
           visibility: hidden; }
+        #cnt2 .swiper-wrapper .swiper-slide .slide strong {
+          font-size: 0; }
         #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto {
           width: 11.5vw;
           min-width: 11.5vw; }
@@ -1045,7 +1049,8 @@
   #cnt1 .wrap {
     display: block;
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    margin-top: 0; }
     #cnt1 .wrap .photo_wrap {
       position: absolute;
       top: 45%;
@@ -1121,6 +1126,15 @@
     #cnt5 .cnt_wrap .contents .wrap_card .img {
       height: calc(100% - 11.854vw); } }
 @media screen and (max-width: 700px) {
+  #cnt1 .wrap .photo_wrap .photo_box {
+    width: 350px;
+    height: 350px; }
+  #cnt1 .wrap .photo_wrap::before, #cnt1 .wrap .photo_wrap::after {
+    width: 370px;
+    height: 370px;
+    margin-top: -185px;
+    margin-left: -185px; }
+
   #cnt3 .txt_box .btn_subscript {
     width: 16vw;
     height: 6.5vw;
@@ -1177,8 +1191,15 @@
         #cnt5 .cnt_wrap .contents .wrap_card .img {
           height: calc(100% - 13.5vw); } }
 @media screen and (max-width: 560px) {
+  #cnt2 .swiper-wrapper .swiper-slide.swiper-slide-active .btn_more {
+    width: 20vw;
+    height: 8.1vw;
+    line-height: 8.1vw; }
+
   #cnt5 .cnt_wrap .contents .wrap_card .txt {
-    height: 15.5vw; } }
+    height: 15.5vw; }
+  #cnt5 .cnt_wrap .contents .wrap_card .img {
+    height: calc(100% - 15.5vw); } }
 @media screen and (max-width: 480px) {
   #cnt1 .wrap .photo_box .photo {
     width: 800px;
@@ -1213,8 +1234,6 @@
         width: 10vw; }
     #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto img {
       width: 10vw; }
-    #cnt2 .swiper-wrapper .swiper-slide .slide strong {
-      font-size: 0; }
     #cnt2 .swiper-wrapper .swiper-slide .slide .btn_more {
       width: 22vw;
       height: 8.9vw;
@@ -1223,9 +1242,9 @@
     font-size: 20px; }
 
   #cnt3 .txt_box .btn_subscript {
-    width: 21vw;
-    height: 8.5vw;
-    line-height: 8.5vw; }
+    width: 25vw;
+    height: 10.2vw;
+    line-height: 10.2vw; }
   #cnt3 #photo_box {
     width: 85%;
     height: 50vh;
@@ -1242,7 +1261,22 @@
         width: 25px;
         height: 30px; }
 
+  #cnt5 .cnt_wrap .main .txt .tag {
+    font-size: 14px;
+    letter-spacing: -0.035em; }
   #cnt5 .cnt_wrap .contents .wrap_card .txt {
-    height: 17.5vw; } }
+    height: 17.5vw; }
+    #cnt5 .cnt_wrap .contents .wrap_card .txt strong {
+      font-size: 14px;
+      letter-spacing: -0.035em; }
+  #cnt5 .cnt_wrap .contents .wrap_card .img {
+    height: calc(100% - 17.5vw); } }
+@media screen and (max-width: 443px) {
+  #cnt5 .cnt_wrap {
+    padding: 30px 0; }
+    #cnt5 .cnt_wrap .contents .wrap_card .txt {
+      padding: 3vw; }
+      #cnt5 .cnt_wrap .contents .wrap_card .txt .tag {
+        display: none; } }
 
 /*# sourceMappingURL=main.css.map */

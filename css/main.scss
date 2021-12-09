@@ -438,6 +438,7 @@
 }
 @media screen and (max-width: 1080px) {
   #cnt1{    
+    height: 100vh;
     .wrap{
       display: block; position: relative; overflow: hidden;
       .photo_wrap{
@@ -469,6 +470,7 @@
         .slide{        
           width: 100%; min-height: 70vh;
           > *:not(.winePhoto){visibility: hidden;}
+          strong{font-size: 0}
           .winePhoto{
             width: 11.5vw; min-width: 11.5vw;
             &::before{
@@ -650,7 +652,7 @@
 @media screen and (max-width: 770px) {
   #cnt1{    
     .wrap{
-      display: block; position: relative; overflow: hidden;
+      display: block; position: relative; overflow: hidden; margin-top: 0;
       .photo_wrap{
         position: absolute; top:45%; bottom: auto; z-index: -1;
         &::before, &::after{width: 450px; height: 450px;}
@@ -723,6 +725,10 @@
   }
 }
 @media screen and (max-width: 700px) {
+  #cnt1 .wrap .photo_wrap{
+    .photo_box{width: 350px; height: 350px;}
+    &::before, &::after{width: 370px; height: 370px; margin-top: -185px; margin-left: -185px;}
+  }
   #cnt3{
     .txt_box{
       .btn_subscript{
@@ -759,8 +765,16 @@
   }
 }
 @media screen and (max-width: 560px) {
-  #cnt5 .cnt_wrap .contents .wrap_card .txt{
-    height: 15.5vw;
+  #cnt2 .swiper-wrapper .swiper-slide.swiper-slide-active .btn_more{
+    width: 20vw; height: 8.1vw; line-height: 8.1vw;
+  }
+  #cnt5 .cnt_wrap .contents .wrap_card{
+    .txt{
+      height: 15.5vw;
+    }
+    .img{
+      height: calc(100% - 15.5vw);
+    }
   }
 }
 @media screen and (max-width: 480px) {
@@ -793,7 +807,6 @@
         img{width: 10vw}
       }
       &:hover .winePhoto img{width: 10vw;}
-      strong{font-size: 0;}
       .btn_more{width: 22vw; height: 8.9vw; line-height: 8.9vw;}
     }
     .swiper-wrapper .swiper-slide.swiper-slide-active strong{
@@ -803,7 +816,7 @@
   #cnt3{
     .txt_box{
       .btn_subscript{
-        width: 21vw; height: 8.5vw; line-height: 8.5vw;
+        width: 25vw; height: 10.2vw; line-height: 10.2vw;
       }
     }
     #photo_box {
@@ -821,8 +834,26 @@
     }
   }
   #cnt5{
-    .cnt_wrap .contents .wrap_card .txt{
-      height: 17.5vw;
+    .cnt_wrap{
+      .main{
+        .txt .tag{font-size: 14px; letter-spacing: -0.035em;}
+      }
+      .contents .wrap_card{
+        .txt{
+          height: 17.5vw;
+          strong{font-size: 14px; letter-spacing: -0.035em;}
+        }
+        .img{height: calc(100% - 17.5vw);}
+      }
+    }
+  }
+}
+@media screen and (max-width: 443px) {
+  #cnt5 .cnt_wrap{
+    padding: 30px 0;
+    .contents .wrap_card .txt{
+      padding: 3vw;
+      .tag{display: none;}
     }
   }
 }
