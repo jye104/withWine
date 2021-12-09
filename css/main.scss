@@ -12,6 +12,7 @@
 
 // 1920
 #cnt1{  
+  position: relative;
   .wrap{
     @include flex;
     @include justify-content;
@@ -21,7 +22,8 @@
       @include flex;
       @include justify-content;
       @include transition(transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.84));
-      width: 50%; position: relative;
+      //width: 50%; 
+      position: relative;
       &::before, &::after{content: ""; display: block; position: absolute; ;background: no-repeat 50% / cover; width: 32vw; height: 32vw; z-index: -2;}
       &::before{
         top: 50%; left: 50%; margin-top: -16vw; margin-left: -16vw; background-image: url("../images/icon/cnt1_round_2.png"); animation: rotate 16.5s linear infinite;
@@ -44,7 +46,7 @@
     } 
   }
   .scrollDown{
-    position: absolute; bottom: 0%; left: 2%; font-family: Hyemin; opacity: .8; font-size: 1.2vw;
+    position: absolute; bottom: 2%; left: 2%; font-family: Hyemin; opacity: .8; font-size: 1.2vw;
     img{width: 30px; height: 30px; opacity: .5; animation: upDown 1s ease-in-out infinite;}
   }
 }
@@ -266,18 +268,18 @@
   .cnt_wrap{
     @include flex;
     @include justify-content(space-around);
-    padding: 15vh 0; background: #fff;
+    padding: 15vh 0 10vh; background: #fff;
     .main{
       position: sticky; -webkit-position: sticky; top: 150px; width: 40%; height: 75vh; border-radius: 60px; overflow: hidden; background: $lightPink; box-shadow: 3px 7px 50px rgba(0, 0, 0, .2);
       .txt {
-        height: 11.875vw; display: block; padding: 1.5vw 1.823vw;
+        height: 10.875vw; display: block; padding: 1.5vw 1.823vw;
         h2{
           font-family: Hyemin; font-weight: 700; font-size: 50px; color: $red;
         }
         .tag{display: block;}
       }
       .img{
-        height: calc(100% - 11.875vw);
+        height: calc(100% - 10.875vw);
         img{min-height: 100%; width: 100%; max-width: none;}
       }
     }
@@ -294,19 +296,19 @@
         a{width: 100%; height: 100%;}
         a, .txt, img{display: block;}
         .txt{
-          height: 8.854vw; padding: 2vw 1.823vw;
+          height: 7.854vw; padding: 1.8vw 2vw;
           strong{
-            display: block; font-size: 23px; line-height: 1.2; padding-bottom: 0.8vw;
+            display: block; font-size: 23px; line-height: 1.2; padding-bottom: 0.5vw;
           }
           .tag{
             margin-right: 1.5vw; color: rgba(37,37,37,.5);
           }
         }
         .img{
-          height: calc(100% - 8.854vw);
+          height: calc(100% - 7.854vw);
           img{min-height: 100%; width: 100%;max-width: none;}
         }
-        &.txt_wrap{padding-top: 1vw;}   
+        &.txt_wrap{padding-top: 1.5vw;}   
       }
       .wrap_card:nth-child(1){top: 0; left: 0;}
       .wrap_card:nth-child(2){top: 0; right: 0;}
@@ -429,21 +431,22 @@
     }
   }
 }
-
+@media screen and(max-width: 1274px) {
+  #cnt5 {
+    .cnt_wrap .contents .wrap_card .txt .tag{margin-right: 0.5vw;}
+  }
+}
 @media screen and (max-width: 1080px) {
   #cnt1{    
     .wrap{
-      @include justify-content;
-      margin-top: 0; 
+      display: block; position: relative; overflow: hidden;
       .photo_wrap{
-        width: auto;
-        &::before, &::after{width: 540px; height: 540px;}
-        &::before{margin-top: -270px; margin-left: -270px;}
-        &::after{margin-top: -270px; margin-left: -270px;}
-        .photo_box{width: 515px; height: 515px}       
+        position: absolute; bottom: 15%; right: 5.5vw; z-index: -1;
+        &::before, &::after{width: 520px; height: 520px; margin-top: -260px; margin-left: -260px;}
+        .photo_box{width: 500px; height: 500px}       
       }
       .txt_box{
-        width: auto;
+        position: absolute; top: 90px; left: 5.5vw; padding-left: 0;
         h2{font-size: 60px;}
         p{font-size: 18px;}
       }
@@ -465,7 +468,7 @@
       .swiper-slide{
         .slide{        
           width: 100%; min-height: 70vh;
-          > *:not(.winePhoto){visibility: hidden; max-height: 0; width: 300%;}
+          > *:not(.winePhoto){visibility: hidden;}
           .winePhoto{
             width: 11.5vw; min-width: 11.5vw;
             &::before{
@@ -518,7 +521,7 @@
           *{visibility: visible !important; max-height: fit-content !important;}
           .winePhoto img{width: 15vw !important;}
           .winePhoto::before, .winePhoto::after{opacity: 1 !important;}
-          strong{font-size: 30px; line-height: 1.2;}
+          strong{font-size: 30px; line-height: 1.2; width: 300%;}
           .btn_more{
             background: url("../images/icon/btn_on.png") no-repeat 50% / cover; color: #fff;
             font-size: 20px; width: 12vw; height: 4.8vw; line-height: 4.8vw;}
@@ -635,19 +638,31 @@
   }
 }
 
+@media screen and (max-width: 795px) {
+  #cnt2 .swiper-wrapper .swiper-slide.swiper-slide-active{
+    strong{margin-top: 15px;}
+    .btn_more{
+      width: 14vw; height: 5.6vw; line-height: 5.6vw;
+    }
+  }
+}
+
 @media screen and (max-width: 770px) {
   #cnt1{    
     .wrap{
       display: block; position: relative; overflow: hidden;
       .photo_wrap{
-        position: absolute; bottom: 80px; right: 15%; z-index: -1;
+        position: absolute; top:45%; bottom: auto; z-index: -1;
         &::before, &::after{width: 450px; height: 450px;}
         &::before{margin-top: -210px; margin-left: -210px;}
         &::after{margin-top: -220px; margin-left: -220px;}
-        .photo_box{width: 420px; height: 420px}       
+        .photo_box{
+          width: 420px; height: 420px;
+          .photo{top: -25vw; left: -25vw;}
+        }       
       }
       .txt_box{
-        position: absolute; top: 90px; left: 5.5vw; padding-left: 0;
+        position: absolute; top: 90px; left: 5.5vw; padding-left: 0; width: 100%;
         h2{font-size: 50px;}
         p{font-size: 16px;}
       }
@@ -663,9 +678,6 @@
         strong{font-size: 20px;}
         .btn_more{font-size: 18px;}
       }
-      .swiper-slide .slide{
-        strong, button{margin-top: 15px;}
-      }
     }
     .swiper-button-prev, .swiper-button-next{
       top: 45%;
@@ -675,6 +687,10 @@
     .txt_box{
       h2{font-size: 40px;}
       p{font-size: 14px;}
+      .btn_subscript{
+        width: 15vw; height: 6vw; line-height: 6vw;
+      }
+      
     }
     #photo_box .box {
       h3{font-size: 18px;}
@@ -696,11 +712,55 @@
     .cnt_wrap .contents .wrap_card {
       border-radius: 20px;
       .txt{
-        padding: 1vw 1.5vw;
+        height: 11.854vw;
         strong{font-size: 16px; line-height: 1.2;}
         .tag{font-size: 14px;}
       }
+      .img{
+        height: calc(100% - 11.854vw);
+      }
     }
+  }
+}
+@media screen and (max-width: 700px) {
+  #cnt3{
+    .txt_box{
+      .btn_subscript{
+        width: 16vw; height: 6.5vw; line-height: 6.5vw;
+      }
+    }
+  }
+  #cnt5{
+    .cnt_wrap{
+      display: block; padding: 70px 0;
+      .main{
+        position: static; height: auto; width: 90%; margin: 0 auto; border-radius: 20px;
+        .txt{height: auto;}
+        .img{visibility: hidden; max-height: 0; overflow: hidden; display: none;}
+      }
+      .contents{
+        @include flex;
+        @include flex-wrap;
+        @include justify-content(space-between);
+        width: 90%; height: auto; margin: 0 auto;
+        .wrap_card{
+          position: static; width: 48%; height: 50vw; margin-top: 20px; border-radius: 15px;
+          &.wrap_card:nth-child(6), &.wrap_card:nth-child(8){display: block;}
+          &.txt_wrap{display: none;}
+          .txt{
+            height: 13.5vw; letter-spacing: -0.05em; padding: 2vw;
+            strong{font-size: 16px;}
+            .tag{margin-right: 0; font-size: 14px;}
+          }
+          .img{height: calc(100% - 13.5vw);}
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 560px) {
+  #cnt5 .cnt_wrap .contents .wrap_card .txt{
+    height: 15.5vw;
   }
 }
 @media screen and (max-width: 480px) {
@@ -713,7 +773,6 @@
         }
       }
       .photo_wrap{
-        bottom: 80px; left: 5.5vw;
         &::before, &::after{width: 320px; height: 320px;}
         &::before{margin-top: -160px; margin-left: -160px;}
         &::after{margin-top: -160px; margin-left: -160px;}
@@ -734,21 +793,23 @@
         img{width: 10vw}
       }
       &:hover .winePhoto img{width: 10vw;}
+      strong{font-size: 0;}
+      .btn_more{width: 22vw; height: 8.9vw; line-height: 8.9vw;}
     }
-    .swiper-wrapper .swiper-slide.swiper-slide-active .btn_more{
-      width: 22vw; height: 8.9vw; line-height: 8.9vw;
+    .swiper-wrapper .swiper-slide.swiper-slide-active strong{
+      font-size: 20px;
     }
   }
   #cnt3{
     .txt_box{
       .btn_subscript{
-        width: 20.3vw; height: 8.1vw; line-height: 8.1vw;
+        width: 21vw; height: 8.5vw; line-height: 8.5vw;
       }
     }
     #photo_box {
-      width: 85%;
+      width: 85%; height: 50vh; margin-top: 5vh;
       .box{
-        width: 70%; height: 40vh; border-radius: 15px ;
+        width: 70%; height: 45vh; border-radius: 15px ;
         &:not(#box1){margin-left: 50vw;}
       }
       .controller{
@@ -760,30 +821,8 @@
     }
   }
   #cnt5{
-    .cnt_wrap{
-      display: block;
-      .main{
-        position: static; height: auto; width: 90%; margin: 0 auto; border-radius: 20px;
-        .txt{height: auto;}
-        .img{visibility: hidden; max-height: 0; overflow: hidden; display: none;}
-      }
-      .contents{
-        @include flex;
-        @include flex-wrap;
-        @include justify-content(space-between);
-        width: 90%; height: auto; margin: 0 auto;
-        .wrap_card{
-          position: static; width: 48%; height: 50vw; margin-top: 20px; border-radius: 15px;
-          &.wrap_card:nth-child(6), &.wrap_card:nth-child(8){display: block;}
-          &.txt_wrap{display: none;}
-          .txt{
-            height: 16.5vw; letter-spacing: -0.05em; padding: 1.5vw 1.8vw;
-            strong{font-size: 14px;}
-            .tag{margin-right: 0; font-size: 13px;}
-          }
-          .img{height: calc(100% - 16.5vw);}
-        }
-      }
+    .cnt_wrap .contents .wrap_card .txt{
+      height: 17.5vw;
     }
   }
 }

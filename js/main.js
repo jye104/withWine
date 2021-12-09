@@ -28,6 +28,7 @@ $(document).ready(function () {
 
   });
 
+
   // #cnt3 hover, focus
   const $hoverLine = $('#hoverLine');
   let timer = 0;
@@ -92,6 +93,7 @@ $(document).ready(function () {
     timers = setTimeout(function () {
       let current = 0;
       if ($(this).width() <= 480) {
+
         $('#cnt3 .controller button').on('click', function () {
           const btnNum = $(this).index();
           if ($('#cnt3 .box').is(':animated')) return false;
