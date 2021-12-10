@@ -128,7 +128,8 @@ body {
   font-family: ComicNeue;
   font-weight: 700;
   font-size: 20px;
-  display: inline-block; }
+  display: inline-block;
+  text-align: center; }
 
 .btn_more {
   background-image: url("../images/icon/btn_red.png"); }

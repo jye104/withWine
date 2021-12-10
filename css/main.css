@@ -107,8 +107,8 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-align-items: flex-end;
-  align-items: flex-end;
+  -webkit-align-items: center;
+  align-items: center;
   background: #fff;
   height: 100vh;
   padding-bottom: 20vh; }
@@ -259,6 +259,57 @@
     background-image: url("../images/icon/btn_right_on.png"); }
   #cnt2 .md_cnt {
     display: none; }
+
+#cnt22 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  background: #fff;
+  padding: 100px 0; }
+  #cnt22 h2 {
+    background: url("../images/main/cnt2_bg.jpg") no-repeat 50%/cover;
+    width: 25%;
+    height: 31vw;
+    max-width: 100%;
+    border-radius: 45%;
+    position: relative;
+    line-height: 1.2;
+    float: left; }
+    #cnt22 h2 span {
+      position: absolute;
+      top: 80px;
+      right: 50px;
+      font-family: Hyemin;
+      font-size: 4vw;
+      margin-right: -3vw;
+      text-align: right; }
+    #cnt22 h2 .seller {
+      top: 160px; }
+  #cnt22 .swiper-container {
+    width: 70%;
+    margin-right: unset; }
+    #cnt22 .swiper-container .swiper-wrapper {
+      -webkit-align-items: flex-end;
+      align-items: flex-end; }
+      #cnt22 .swiper-container .swiper-wrapper .slide {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        -webkit-align-items: center;
+        align-items: center; }
+        #cnt22 .swiper-container .swiper-wrapper .slide .winePhoto {
+          width: 140px; }
+        #cnt22 .swiper-container .swiper-wrapper .slide strong {
+          margin: 10px 0;
+          font-size: 20px; }
 
 #cnt3 {
   display: -webkit-box;
@@ -852,7 +903,7 @@
       #cnt2 .swiper-wrapper .swiper-slide.swiper-slide-active strong {
         font-size: 30px;
         line-height: 1.2;
-        width: 300%; }
+        width: 200%; }
       #cnt2 .swiper-wrapper .swiper-slide.swiper-slide-active .btn_more {
         background: url("../images/icon/btn_on.png") no-repeat 50%/cover;
         color: #fff;

@@ -25,7 +25,30 @@ $(document).ready(function () {
     slidesPerView: 3,
     spaceBetween: 0,
     // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 320px
+      300: {
+        slidesPerView: 1,
+        spaceBetween: 0
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 3,
+        spaceBetween: 0
+      }
+    }
+  });
 
+  const swiper2 = new Swiper('#cnt22 .swiper-container', {
+    loop: true,
+    effect: 'slide', //,'coverflow'
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    // Default parameters
+    slidesPerView: 3,
+    spaceBetween: 100
   });
 
 

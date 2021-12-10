@@ -53,7 +53,7 @@
 
 #cnt2{
   @include flex;
-  @include align-items(flex-end);
+  @include align-items(center);
   background: #fff; height: 100vh; padding-bottom: 20vh;
   h2{
     background: url("../images/main/cnt2_bg.jpg") no-repeat 50% / cover;  width: 25vw; height: 31vw; max-width: 100%; border-radius: 45%; position: relative; line-height: 1.2;
@@ -155,6 +155,30 @@
     background-image: url("../images/icon/btn_right_on.png"); 
   }
   .md_cnt{display: none}
+}
+
+#cnt22{
+  @include flex;
+  @include align-items;
+  background: #fff; padding: 100px 0;
+  h2{
+    background: url("../images/main/cnt2_bg.jpg") no-repeat 50% / cover;  width: 25%; height: 31vw; max-width: 100%; border-radius: 45%; position: relative; line-height: 1.2; float: left;
+    span{position: absolute; top: 80px; right: 50px; font-family: Hyemin; font-size: 4vw; margin-right: -3vw; text-align: right;}
+    .seller{top: 160px;}
+  }
+  .swiper-container{
+    width: 70%; margin-right: unset;
+    .swiper-wrapper{
+      @include align-items(flex-end);
+      .slide{
+        @include flex;
+        @include flex-direction;
+        @include align-items;
+        .winePhoto{width: 140px;}
+        strong{margin: 10px 0; font-size: 20px;}
+      }
+    }
+  }
 }
 
 #cnt3{
@@ -523,7 +547,7 @@
           *{visibility: visible !important; max-height: fit-content !important;}
           .winePhoto img{width: 15vw !important;}
           .winePhoto::before, .winePhoto::after{opacity: 1 !important;}
-          strong{font-size: 30px; line-height: 1.2; width: 300%;}
+          strong{font-size: 30px; line-height: 1.2; width: 200%;}
           .btn_more{
             background: url("../images/icon/btn_on.png") no-repeat 50% / cover; color: #fff;
             font-size: 20px; width: 12vw; height: 4.8vw; line-height: 4.8vw;}
