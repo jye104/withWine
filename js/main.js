@@ -23,19 +23,23 @@ $(document).ready(function () {
     },
     // Default parameters
     slidesPerView: 3,
-    spaceBetween: 0,
+    spaceBetween: 10,
     // Responsive breakpoints
     breakpoints: {
       // when window width is >= 320px
       300: {
         slidesPerView: 1,
-        spaceBetween: 0
+        spaceBetween: 50,
       },
       // when window width is >= 480px
       480: {
         slidesPerView: 3,
         spaceBetween: 0
-      }
+      },
+      1080: {
+        slidesPerView: 3,
+        spaceBetween: 100,
+      },
     }
   });
 
@@ -48,7 +52,7 @@ $(document).ready(function () {
     },
     // Default parameters
     slidesPerView: 3,
-    spaceBetween: 100
+    spaceBetween: 0
   });
 
 

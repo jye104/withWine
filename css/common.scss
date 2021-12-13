@@ -85,9 +85,13 @@ body{
 .d_none{display: none;}
 .beige{background: $beige;}
 .m_0{margin-left: 0;}
-.btn_more, .btn_more_bk, .btn_more_on{background: no-repeat 50% / cover; width: 125px; height: 50px;line-height: 50px; font-family: ComicNeue; font-weight: 700; font-size: 20px; display: inline-block; text-align: center;}
+.btn_more, .btn_more_bk, .btn_more_on{
+  @include transition(all 0.3s);
+  background: no-repeat 50% / cover; width: 125px; height: 50px;line-height: 50px; font-family: ComicNeue; font-weight: 700; font-size: 20px; display: inline-block; text-align: center; 
+}
 .btn_more{
-  background-image: url("../images/icon/btn_red.png"); 
+  background-image: url("../images/icon/btn_red.png");
+  &:hover, &:focus{ background-image: url("../images/icon/btn_on.png"); color: #fff;}
 }
 .btn_more_bk{
   @include transition(all 0.5s);
