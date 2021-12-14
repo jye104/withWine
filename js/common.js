@@ -4,11 +4,11 @@ $(document).ready(function () {
     if ($(this).scrollTop() > 10) $('#pcHeader').removeClass('on').addClass('beige');
     else $('#pcHeader').addClass('on').removeClass('beige');
   });
-  // mHeader.on
   $(window).on('scroll', function () {
     if ($(this).scrollTop() > 10) $('#mHeader').addClass('beige');
     else $('#pcHeader').removeClass('beige');
   });
+
   // pcGnb
   const $gnb = $('#pcGnb > ul');
   const $gnbD2 = $gnb.find('li ul');

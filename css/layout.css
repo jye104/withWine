@@ -432,7 +432,11 @@
       padding: 2vw 0 1vw 2vw; }
 
   .footer {
-    font-size: 2.5012987013vw; }
+    font-size: 14px;
+    height: 40vh; }
+    .footer .btn_top {
+      width: 40px;
+      height: 40px; }
     .footer .logo {
       padding-right: 0vw; }
     .footer .logo a img {
@@ -454,9 +458,9 @@
         padding-bottom: 1.7vw; }
         .footer .foot_right .help li {
           margin-right: 1.7vw; } }
-@media screen and (max-width: 770px) {
-  .footer {
-    height: 40vh;
-    font-size: 14px; } }
+@media screen and (max-width: 450px) {
+  .footer .btn_top {
+    top: 10vw;
+    bottom: auto; } }
 
 /*# sourceMappingURL=layout.css.map */

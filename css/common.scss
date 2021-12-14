@@ -130,7 +130,9 @@ body{
 .delay-9{-webkit-transition-delay: 0.6s !important; transition-delay: 0.6s !important;}
 
 // skip navigation
-#skip a{
-  position: absolute; top: 0; left: -9999px; z-index: 1000;
-  &:focus{left: 0; width: 100%; height: 50px; line-height: 50px; color: #fdf6ee; background: $bk; text-align: center; font-size: 25px;}
+#skip{
+  a{
+    position: absolute; top: 0; left: -9999px; z-index: 1000;
+    &:focus{left: 0; width: 100%; height: 50px; line-height: 50px; color: #fdf6ee; background: $bk; text-align: center; font-size: 25px;}
+  }
 }

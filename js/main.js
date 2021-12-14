@@ -32,32 +32,14 @@ $(document).ready(function () {
         spaceBetween: 50,
       },
       // when window width is >= 480px
-      480: {
+      500: {
         slidesPerView: 3,
-        spaceBetween: 0
-      },
-      1080: {
-        slidesPerView: 3,
-        spaceBetween: 100,
+        spaceBetween: 50,
       },
     }
   });
 
-  const swiper2 = new Swiper('#cnt22 .swiper-container', {
-    loop: true,
-    effect: 'slide', //,'coverflow'
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    // Default parameters
-    slidesPerView: 3,
-    spaceBetween: 0
-  });
-
-
   // #cnt3 hover, focus
-  const $hoverLine = $('#hoverLine');
   let timer = 0;
   $(window).on('resize', function () {
     clearTimeout(timer);
@@ -86,7 +68,7 @@ $(document).ready(function () {
           // 3-2) 다음버튼 클릭 제어(current를 1씩 증가) -> margin-left를 -12.5vw로 애니메이트
           if (btnNum === 0) {
             $('#cnt3 .box').eq(current).animate({
-              marginLeft: '38vw'
+              marginLeft: '40vw'
             }, ariaHidden);
             current--;
             console.log(current);
@@ -100,9 +82,8 @@ $(document).ready(function () {
 
           // 접근성 추가
           function ariaHidden() {
-            // 1) 모든 li를 aria-hidden: true 속성 설정
-            $('#cnt4 .box').attr('aria-hidden', true);
-
+            // 1) 모든 box를 aria-hidden: true 속성 설정
+            $('#cnt3 .box').attr('aria-hidden', true);
             // 2) 현재 화면에 보여지는 하나만 aria-hidden: false로 바꾸기
             $('#cnt3 .box').eq(current).attr('aria-hidden', false);
           }
@@ -167,10 +148,10 @@ $(document).ready(function () {
       
       function ariaHidden() {
         // 1) 모든 li를 aria-hidden: true 속성 설정
-        $('#cnt4 .box').attr('aria-hidden', true);
+        $('#cnt3 .box').attr('aria-hidden', true);
 
         // 2) 현재 화면에 보여지는 하나만 aria-hidden: false로 바꾸기
-        $('#cnt4 .box').eq(current).attr('aria-hidden', false);
+        $('#cnt3 .box').eq(current).attr('aria-hidden', false);
       }
       ariaHidden();
     }, 100);
